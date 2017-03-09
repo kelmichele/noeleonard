@@ -1,3 +1,43 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "mixins";
+@import "variables";
+
+.cst-header {
+	@include sec-default();
+	@include sec-bgimage();
+	margin-top:0;
+	padding-top: 50px;
+	text-align: center;
+
+	h1 {font-weight: bold; }
+}
+
+.resources { background-color: $light;
+	.cst-header {
+		background-image: url(image_path('lawyer-ph'));
+		background-position: center center;
+		height: 250px;
+		position: relative;z-index: 10;
+
+		h1 {color: $white; font-size: 45px; @include tshadow(rgba($dark, .6));}
+		h4 {font-weight: bold;}
+	}
+
+	.resource-list {
+		width: 85%;
+		@include center-block();
+		background-color: $white;
+		padding:20px 0;
+		padding-left: 10%;
+		position: relative; z-index: 11;
+		margin-top:-50px;
+		h3 {font-weight: bold; margin-top:25px; color: $blue; margin-bottom: 5px;}
+		p {margin-bottom: 10px; padding-left: 20px; font-size: 15px;
+			.res-link{color: $navy; &:hover {color: $br-blue; font-weight: bold;}}}
+
+			// .list {display: inline-block; width: 48%; float: left;
+				// &:nth-child(2n+2) {float: right;}}
+	}
+}

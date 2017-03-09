@@ -82,3 +82,8 @@ p, li, a, span {font-family: $lato; line-height:1.3em}
   @include bp(tb) { right: 30px; }
   @include bp(sm) { right: 15px; }
 }
+
+footer { @include sec-default(); border-top: 4px solid $navy;
+  background: -webkit-linear-gradient(-180deg, rgba($navy, .95), rgba($black, .9));
+  background: linear-gradient(-180deg, rgba($navy, .95), rgba($black, .9));
+}
