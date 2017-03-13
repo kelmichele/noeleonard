@@ -22,9 +22,10 @@ a:hover {text-decoration: none;}
 	.no-rpadding-xs {padding-right:0;}
 }
 
-h1, h2, h3, h4, h5 { font-family: $cinzel; line-height: 1.2em;}
-p, li, a, span {font-family: $lato; line-height:1.3em}
-
+h1, h2, h3, h4, h5 { font-family: $cinzel; line-height: 1.2em; margin-top:0;}
+p, li {font-family: $lato; line-height:1.4em}
+// a,span {font-family: $lato;}
+p {font-size: 16px;}
 
 .text-center{ text-align: center; }
 .nobg { background-color: transparent;}

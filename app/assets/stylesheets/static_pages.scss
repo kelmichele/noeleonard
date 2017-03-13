@@ -14,6 +14,124 @@
 	h1 {font-weight: bold; }
 }
 
+.main-content {
+	@include sec-default();
+	padding: $fullsec-padding;
+	&.less {padding: $sec-padding;}
+}
+
+.claim-info-scroll {
+  width: 25%;
+  display: none;
+  position: fixed;
+  bottom: 15%;
+  top:20%;
+  vertical-align: middle;
+  right: 5%;
+  background-color: $dark;
+  color: $white;
+  z-index: 100;
+  padding: 40px 30px;
+  box-shadow: 10px 15px 20px rgba($black, .4);
+
+  &.noscroll {
+	  position: static;
+		float: right;
+	  width: 30%;
+  }
+}
+
+
+
+.home {
+	.site-intro{
+		@include sec-default();
+		height:550px;
+		@include sec-bgimage();
+		background-image: url(image_path('hs-mr2.jpg'));
+		position: relative;z-index: 0;
+
+		.overlay {
+			@include sec-default(); height:100%;
+		  background: -webkit-linear-gradient(-120deg, rgba($white, .45), rgba($white, .6));
+		  background: linear-gradient(-120deg, rgba($white, .45), rgba($white, .6));
+		}
+
+		.title-block{
+			margin-top: 10%;
+			text-align: center;
+		}
+		h1, h2, h3 {font-weight: bold;}
+		h1 {font-size: 4em;margin-bottom: 0;}
+		h2 {font-size: 3em;}
+	}
+
+	.practice-areas {
+		@include sec-default();
+		padding: $fullsec-padding;
+
+		h3 { margin-bottom: 20px; color: $blue2; text-align: center; width: 60%; @include center-block();
+			span{font-size: .8em}}
+
+		.practice-box {display: inline-block; width: 31%; margin: 0 15px; float: left; padding:25px 30px 15px; text-align: center; color: $white;
+			@include sec-bgimage(); position: relative;z-index: 0;
+			background-image: url(image_path('lawyer.jpg'));
+			&::before {@include before(); background-color: rgba($blue,.8);}
+			.title-line {width:55%; @include center-block(); height: 1px; background-color: rgba($white, .6); margin-bottom: 20px;}
+			&.bike {padding: 30px;}
+		}
+	}
+
+	.home-sec1 {
+		@include sec-default();
+		@include sec-bgimage();
+		background-image: url(image_path('home-background.jpg'));
+		padding-top: 80px;
+		.text { @include sec-default(); padding: 40px;}
+		.info-top {width:75%; @include center-block(); h3, h4, p {color: $white; text-align: center;}}
+		.info-box {width:75%; @include center-block(); background-color: $white; padding: $sec-padding; margin-top:40px;}
+		.symbol {width: 100px; @include center-block(); }
+		.video-row { padding-top:30px; }
+		iframe { display: inline-block; width: 40%; height: 250px;
+			&.one {margin: 0 4%}
+		}
+	}
+}
+
+.about {
+	// .cst-header { background-color: $br-blue; padding: 40px 0;background-image: url(image_path('about-noel.jpg'));}
+	.main-content { @include sec-bgimage(); background-image: url(image_path('bcch1.jpg')); background-size: 40%;}
+	.body { width: 55%; float: right;}
+}
+
+.motorcycle-accidents {
+	.header-wrap {@include sec-default(); padding:20px; background-color: $tan;}
+	.cst-header { background-image: url(image_path('bike-claim.jpg')); height: 300px; padding-left: 5%;}
+	h1 {text-align: left; color: $white; @include tshadow($black); width: 30%;
+		span {font-size: 1.5em;}}
+
+
+	// .main-content {background-color: $light;}
+}
+
+.auto-accidents {
+	.cst-header {background-image: url(image_path('auto-accident.jpg'));height:300px; background-position: center center; position: relative; z-index: 0;
+	 	h4, h1 {color: $white; @include tshadow($dark);}
+	 	&::before {@include before (); background-color: rgba($black, .6);}
+	}
+
+	.banner { @include sec-default(); background-color: $br-blue; color: $white; text-align: center; padding-top: 10px; h5 {color: $white; font-weight: bold; font-size: 17px; }}
+}
+
+.truck-claims { @include sec-default();
+	.cst-header { background-color: $tan; background-image: url(image_path('semi.jpg')); height: 300px; background-size: 65%;background-position: left center;
+		.title-box {width: 35%; float: right; padding: 30px;}
+		h4 {font-weight: bold; margin-bottom: 0;}
+	}
+
+	// .main-content {position: relative; z-index: 0;}
+}
+
 .resources { background-color: $light;
 	.cst-header {
 		background-image: url(image_path('lawyer-ph'));

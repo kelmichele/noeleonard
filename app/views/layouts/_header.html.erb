@@ -1,7 +1,9 @@
 <header class="header">
   <div id="top-bar">
-    <!-- social link examples -->
-      <ul class="social-links">
+      <div class="block3">
+      <h5>Serving Baldwin, Mobile, &amp; Escambia Counties in Alabama</h5></div>
+      <div class="block-2">
+        <ul class="social-links">
           <li>
             <%= link_to '/fb', target: '_blank' do %>
               <i class="fa fa-facebook"></i>
@@ -31,62 +33,41 @@
               <i class="fa fa-youtube"></i>
             <% end %>
           </li>
-      </ul>
-      <div class="block2"><h4>Serving Baldwin, Mobile, &amp; Escambia Counties in Alabama</h4></div>
-      <div class="block3"><h5>218 N. Alston Street | Foley, AL 36535</h5></div>
+        </ul>
+      </div>
+
+      <!-- <div class="block-2">
+        <h5>218 N. Alston Street | Foley, AL 36535</h5>
+      </div> -->
   </div>
 
   <div class="main-header">
     <div class="logo-block">
       <%= link_to(image_tag( 'logo-nbl.png', alt: 'Noel Leonard Attorney - Logo', class: 'img-responsive logo-img'), root_path ) %>
-      <h2>Noel B. Leonard Attorney, LLC</h2>
     </div>
 
-    <div class="esp-block"><%= link_to('habla espanol? haga clic aqui', espanol_path, class: 'esp-link' ) %></div>
+    <div class="main-block">
+      <h4>Call Us Today:  <%= number_to_phone(2519438638, delimiter: '-', class: 'call-link') %></h4>
+      <h4><%= link_to('habla espanol? haga clic aqui', espanol_path, class: 'esp-link' ) %></h4>
+      <div class="mega-tab">
+        <ul class="megamenu-parent menu-zoom hidden-xs">
+          <li class="menu-item"><%= link_to "Home", root_path %></li>
+          <li class="menu-item"><%= link_to "Motorcycle Accidents", motorcycle_accidents_path %></li>
+          <li class="menu-item"><%= link_to "Auto Accidents", auto_accidents_path %></li>
+          <li class="menu-item"><%= link_to "18-Wheeler Accidents", trucker_accidents_path %></li>
+          <li class="menu-item"><%= link_to "About", about_path %></li>
+          <li class="menu-item"><%= link_to "Contact Us", contact_path %></li>
+          <li class="menu-item"><%= link_to "Resources", resources_path %></li>
+        </ul>
+      </div>
 
-    <div class="mega-tab">
-      <ul class="megamenu-parent menu-zoom hidden-xs">
-        <li class="menu-item"><%= link_to "Home", root_path %></li>
-        <li class="menu-item"><%= link_to "Motorcycle Accidents", motorcycle_accidents_path %></li>
-        <li class="menu-item"><%= link_to "Auto Accidents", auto_accidents_path %></li>
-        <li class="menu-item"><%= link_to "18-Wheeler Accidents", trucker_accidents_path %></li>
-        <li class="menu-item"><%= link_to "About", about_path %></li>
-        <li class="menu-item"><%= link_to "Contact Us", contact_path %></li>
-        <li class="menu-item"><%= link_to "Resources", resources_path %></li>
-      </ul>
-    </div>
-
-    <div>
-      <a href="#" id="offcanvas-toggler">
-          <span></span>
-          <span></span>
-          <span></span>
-      </a>
+      <div>
+        <a href="#" id="offcanvas-toggler">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+      </div>
     </div>
   </div>
 </header>
-<!--
-Auto Accidents
-  Bicycle and Pedestrian Injury Claims
-  Distracted Driving Accident Claims
-  DUI Accident Victims &amp; Injury Claims
-  Hit &amp; Run Accident Victims
-  Motorcyle Accident Injury Claims
-  Whiplash Injury Claims
-
-18 Wheeler Accidents
-  Claims Against the Driver
-  Claims Against the Trucking Company
-  Faulty Equipment or Safety Violation Claims
-  Hazardous Material &amp; Dangerous Cargo Claims
-
-
-Personal Injury
-  Food Poisoning Claims
-  Hoverboard Claims
-  Misfilled Prescriptions &amp; Medical Malpractice
-  Premises Liability &amp; Employer Negligence
-  Product Liability Claims
-  Slip and Fall Injury Claims
-  Wrongful Death Claims
- -->
