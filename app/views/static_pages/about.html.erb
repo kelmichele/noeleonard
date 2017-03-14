@@ -3,44 +3,50 @@
 
 <div class="cst-header">
 	<h1>About Noel B. Leonard</h1>
-	<h3>Providing Excellent Legal Services in Southern Alabama</h3>
+	<h4>Providing Excellent Legal Services in Southern Alabama</h4>
 </div>
 
 <div class="main-content">
-	<div class="body">
-			Providing Excellent Legal Services in Southern Alabama
-			<br>
-			Noel B. Leonard, Attorney LLC is a Foley Alabama based law firm representing clients in Mobile, Baldwin and Escambia counties for the following types of claims:
-			<br>
-			Auto Accidents &amp; Auto Injury
-			<br>
-			18-Wheeler Accidents &amp; Injury
-			<br>
-			Personal Injury Claims
-			<br>
-			Contact Noel B. Leonard to schedule a consultation  (251) 943-8638 or fill in our Case Evaluation Form and we will contact you as soon as possible.
-			<br>
-			What We Can Do For You
-			<br>
+		<!-- <div class="col-md-4"><%=image_tag('bcch1.jpg', class: 'img-responsive') %></div> -->
+	<div class="leftside">
+		<h4>Noel B. Leonard, Attorney LLC is a law firm based in Foley, Alabama.</h4>
+		<h5> We represent clients in Mobile, Baldwin, and Escambia counties for the following types of claims:</h5>
+		<div class="practice-claims">
+			<div class="practice-box"><%=link_to "Auto Accidents & Injury", auto_accidents_path, class: 'pbtext' %></div>
+			<div class="practice-box"><%=link_to "18-Wheeler Accidents & Injury", trucker_accidents_path, class: 'pbtext' %></div>
+			<div class="practice-box"><%=link_to "Motorcycle Accidents & Injury", motorcycle_accidents_path, class: 'pbtext' %></div>
+			<div class="practice-box"><%=link_to "Personal Injury Claims", root_path, class: 'pbtext' %></div>
+		</div>
 
-			Provide free telephone and office consultation
-			<br>
-			Accommodate evening and weekend appointments
-			<br>
-			Provide superior representation for all your legal concerns
-			<br>
-			Ensure first-class client service and personalized attention
-			<br>
-			Defend you against claims brought against you
-			<br>
-			Advance your expenses
-			<br>
-			Maximize your recovery
-			<br>
-			We are committed to giving back to our local community.
-			<br>
+		<div class="community">
+			<h5>We are committed to giving back to our local community. We currently support the following charitable organizations.</h5>
 
-			We currently support the following charitable organizations.
-			<br>
+			<%=image_tag('vfw-logo.jpg', class: 'img-responsive charity') %>
+			<%=image_tag('mcdonald-house.jpg', class: 'img-responsive charity') %>
+			<%=image_tag('st-judes.jpg', class: 'img-responsive charity') %>
+			<%=image_tag('manna.jpg', class: 'img-responsive charity') %>
+		</div>
+
 	</div>
+
+	<div class="blue-sidebar">
+		<h4>What We Can Do For You?</h4>
+		<ul>
+			<li>Provide free telephone and office consultation</li>
+			<li>Accommodate evening and weekend appointments</li>
+			<li>Provide superior representation for all your legal concerns</li>
+			<li>Ensure first-class client service and personalized attention</li>
+			<li>Defend you against claims brought against you</li>
+			<li>Advance your expenses</li>
+			<li>Maximize your recovery</li>
+		</ul>
+		<%=image_tag('gavel.png', class: 'img-responsive icon') %>
+	</div>
+
+
+	<!-- 	<div class="consult">
+			<p>Contact Noel B. Leonard today to schedule a consultation.<br>
+			Give us a call: (251) 943-8638 or fill in our Case Evaluation Form and we will contact you as soon as possible.</p>
+		</div> -->
+
 </div>
