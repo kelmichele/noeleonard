@@ -1,7 +1,10 @@
 @import "variables";
 @import "mixins";
 
-header {@include sec-default();background-color: lighten($blue, 62%);}
+header {@include sec-default();
+  background-color: $white;
+  // background-color: lighten($blue, 62%);
+}
 
 #top-bar {  @include sec-default(); padding: 5px 70px 0;
   // background-color: $blue;
