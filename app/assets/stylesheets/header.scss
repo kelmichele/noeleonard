@@ -3,8 +3,12 @@
 
 header {@include sec-default();background-color: lighten($blue, 62%);}
 
-#top-bar {  @include sec-default(); background-color: $blue; padding: 5px 70px 0;
-  .block1, .block-2, .block3 {display: inline-block;padding-top: 5px; width: 33%;}
+#top-bar {  @include sec-default(); padding: 5px 70px 0;
+  // background-color: $blue;
+  background: -webkit-linear-gradient(-180deg, rgba($navy, .95), rgba($black, .9));
+  background: linear-gradient(-180deg, rgba($navy, .95), rgba($black, .9));
+
+  .block1, .block-2, .block3 {display: inline-block;padding-top: 5px; width: 40%;}
   h4, h5 {color: $white; }
   h5 {font-size: 14px; margin: 5px 0 0; line-height: 1em;}
 }

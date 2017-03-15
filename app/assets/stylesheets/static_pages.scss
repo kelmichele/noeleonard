@@ -12,6 +12,10 @@
 	text-align: center;
 
 	h1 {font-weight: bold; }
+
+	&.filter {padding-top:0;
+		.overlay {@include sec-default(); height: 100%; padding-top: 50px; background-color: rgba($black, .6)}
+	}
 }
 
 .main-content {
@@ -41,7 +45,6 @@
   }
 }
 
-
 .slant-section {
 	@include sec-default();
 	position: relative;
@@ -60,6 +63,17 @@
 		top: 0;
 		position: absolute;
 	}
+}
+
+
+.topic-boxes {@include sec-default(); padding: 40px 60px; background-color: $white;
+	.intro {width: 80%; @include center-block();text-align: center; margin-bottom:30px; }
+	.b1, .b2, .b3 {display: inline-block; width: 32%; font-size: 17px; float: left; padding: 25px 25px 15px; border: 1px solid #dfdfdf;
+		background: -webkit-linear-gradient(-50deg, rgba($light, .85), rgba($light, .3));
+	  background: linear-gradient(-50deg, rgba($light, .85), rgba($light, .3));
+	  p{line-height: 1.5em;}
+	}
+	.b2 {margin: 0 15px;}
 }
 
 
@@ -94,12 +108,12 @@
 		h3 { margin-bottom: 20px; color: $blue; text-align: center; width: 60%; @include center-block();
 			span{font-size: .8em}}
 
-		.practice-box {display: inline-block; width: 31%; margin: 0 15px; float: left; padding:25px 30px 15px; text-align: center; color: $white;
+		.practice-box {display: inline-block; width: 30%; margin: 0 15px; float: left; padding:25px 30px 15px; text-align: center; color: $white;
 			@include sec-bgimage(); position: relative;z-index: 0;
 			background-image: url(image_path('lawyer.jpg'));
 			&::before {@include before(); background-color: rgba($blue,.8);}
 			.title-line {width:55%; @include center-block(); height: 1px; background-color: rgba($white, .6); margin-bottom: 20px;}
-			&.bike {padding: 30px;}
+			// &.bike {padding: 30px;}
 		}
 	}
 
@@ -148,14 +162,9 @@
 	h1 {text-align: left; color: $white; @include tshadow($black); width: 30%;
 		span {font-size: 1.5em;}}
 
-	.boxes {@include sec-default(); padding: 40px 60px;
+	.topic-boxes{
 		h3 {text-align: center; margin-bottom:30px;}
-		.b1, .b2, .b3 {display: inline-block; width: 32%; height:200px; font-size: 17px; float: left; padding: 25px 25px 15px; border: 1px solid #dfdfdf;
-			background: -webkit-linear-gradient(-50deg, rgba($light, .85), rgba($light, .3));
-		  background: linear-gradient(-50deg, rgba($light, .85), rgba($light, .3));
-		  p{line-height: 1.5em;}
-		}
-		.b2 {margin: 0 15px;}
+	 .b1, .b2, .b3 { height: 200px;}
 	}
 
 	.content{@include sec-default(); background-color: $dark; padding: 40px; @include sec-bgimage();
@@ -169,13 +178,30 @@
 }
 
 .auto-accidents {
-	.cst-header {background-image: url(image_path('auto-accident.jpg'));height:300px; background-position: center center; position: relative; z-index: 0;
+	.cst-header {background-image: url(image_path('auto-accident.jpg'));height:300px; background-position: center center;
 	 	h4, h1 {color: $white; @include tshadow($dark);}
-	 	&::before {@include before (); background-color: rgba($black, .6);}
 	}
 
-	.banner { @include sec-default(); background-color: $br-blue; color: $white; text-align: center; padding-top: 10px; h5 {color: $white; font-weight: bold; font-size: 17px; }}
+	.main-body {@include sec-default(); background-color: $light; }
+
+	.s1 {@include sec-default(); background-color: $white; position: relative; z-index: 0;
+		&::before {@include before(); width:58%; background-color: $navy;}
+		h3, h4 {color: $light; font-family: $open;}
+		h4 {font-size: 20px; margin-top:25px; color: $lt-blue; span{font-weight: bold;font-style: italic; }}
+		li { color: $blue; font-weight: bold; font-size: 17px; margin-bottom: 10px; }
+		.left {padding: 40px 55px; padding-bottom:0; text-align: center;}
+		.right {padding: 15px 40px;}
+	}
+
+	.topic-boxes .intro h3 {margin-bottom:5px; color: $blue; font-weight: bold;}
+
+	.banner {margin-top: -80px; width: 90%; @include center-block(); padding: 30px;
+		background-color: $navy; color: $white;
+		h5 {color: $white; font-weight: bold; font-size: 17px; }
+		p {width: 67%; font-size: 17px; line-height: 1.5em}
+	}
 }
+
 
 .truck-claims { @include sec-default();
 	.cst-header { background-color: $tan; background-image: url(image_path('semi.jpg')); height: 300px; background-size: 65%;background-position: left center;
