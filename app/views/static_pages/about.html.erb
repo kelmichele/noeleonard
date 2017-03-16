@@ -3,50 +3,56 @@
 
 <div class="cst-header">
 	<h1>About Noel B. Leonard</h1>
-	<h4>Providing Excellent Legal Services in Southern Alabama</h4>
+	<h4 class="open">Providing Excellent Legal Services in Southern Alabama</h4>
+	<h4 class="open">Noel B. Leonard, Attorney LLC is a law firm based in Foley, Alabama.</h4>
+	<h4 class="open"> We represent clients in Mobile, Baldwin, and Escambia counties for the following types of claims:</h5>
 </div>
 
-<div class="main-content">
-		<!-- <div class="col-md-4"><%=image_tag('bcch1.jpg', class: 'img-responsive') %></div> -->
-	<div class="leftside">
-		<h4>Noel B. Leonard, Attorney LLC is a law firm based in Foley, Alabama.</h4>
-		<h5> We represent clients in Mobile, Baldwin, and Escambia counties for the following types of claims:</h5>
-		<div class="practice-claims">
-			<div class="practice-box"><%=link_to "Auto Accidents & Injury", auto_accidents_path, class: 'pbtext' %></div>
-			<div class="practice-box"><%=link_to "18-Wheeler Accidents & Injury", trucker_accidents_path, class: 'pbtext' %></div>
-			<div class="practice-box"><%=link_to "Motorcycle Accidents & Injury", motorcycle_accidents_path, class: 'pbtext' %></div>
-			<div class="practice-box"><%=link_to "Personal Injury Claims", root_path, class: 'pbtext' %></div>
+<div class="main-wrap">
+	<div class="body-content">
+		<div class="s1">
+				<!-- <div class="practice-claims"> -->
+					<%=link_to "/auto_accidents_path", class: 'practice-boxes-op bike' do %>
+						<h4>Motorcyle Accident <br>Injury Claims</h4>
+					<% end %>
+
+					<%=link_to "/trucker_accidents_path", class: 'practice-boxes-op auto' do %>
+						<h4>Auto Accident <br>Injury Claims</h4>
+					<% end %>
+
+					<%=link_to "/motorcycle_accidents_path", class: 'practice-boxes-op trucker' do %>
+						<h4>18-Wheeler <br>Accident Victims</h4>
+					<% end %>
+
+					<%=link_to "/root_path", class: 'practice-boxes-op personal' do %>
+						<h4>Personal Injury<br> Claims</h4>
+					<% end %>
+			<!-- </div> -->
 		</div>
 
-		<div class="community">
-			<h5>We are committed to giving back to our local community. We currently support the following charitable organizations.</h5>
-
-			<%=image_tag('vfw-logo.jpg', class: 'img-responsive charity') %>
-			<%=image_tag('mcdonald-house.jpg', class: 'img-responsive charity') %>
-			<%=image_tag('st-judes.jpg', class: 'img-responsive charity') %>
-			<%=image_tag('manna.jpg', class: 'img-responsive charity') %>
+		<div class="s2">
+			<div class="blue-sidebar">
+				<h4 class="open">What We Can Do For You?</h4>
+				<ul>
+					<li>Provide free telephone and office consultation</li>
+					<li>Accommodate evening and weekend appointments</li>
+					<li>Provide superior representation for all your legal concerns</li>
+					<li>Ensure first-class client service and personalized attention</li>
+					<li>Defend you against claims brought against you</li>
+					<li>Advance your expenses</li>
+					<li>Maximize your recovery</li>
+				</ul>
+			</div>
 		</div>
 
+		<div class="s3">
+			<div class="community">
+				<h4 class="open">We are committed to giving back to our local community. We currently support the following charitable organizations.</h4>
+				<%=image_tag('vfw-logo.jpg', class: 'img-responsive charity') %>
+				<%=image_tag('mcdonald-house.jpg', class: 'img-responsive charity') %>
+				<%=image_tag('st-judes.jpg', class: 'img-responsive charity') %>
+				<%=image_tag('manna.jpg', class: 'img-responsive charity') %>
+			</div>
+		</div>
 	</div>
-
-	<div class="blue-sidebar">
-		<h4>What We Can Do For You?</h4>
-		<ul>
-			<li>Provide free telephone and office consultation</li>
-			<li>Accommodate evening and weekend appointments</li>
-			<li>Provide superior representation for all your legal concerns</li>
-			<li>Ensure first-class client service and personalized attention</li>
-			<li>Defend you against claims brought against you</li>
-			<li>Advance your expenses</li>
-			<li>Maximize your recovery</li>
-		</ul>
-		<%=image_tag('gavel.png', class: 'img-responsive icon') %>
-	</div>
-
-
-	<!-- 	<div class="consult">
-			<p>Contact Noel B. Leonard today to schedule a consultation.<br>
-			Give us a call: (251) 943-8638 or fill in our Case Evaluation Form and we will contact you as soon as possible.</p>
-		</div> -->
-
 </div>

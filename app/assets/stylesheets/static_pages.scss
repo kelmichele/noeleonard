@@ -142,25 +142,32 @@
 }
 
 .about {
-	.cst-header {background-image: url(image_path('courtroom.jpg')); background-position: center center; height:250px; position: relative; z-index: 0;
-		&::before {@include before(); background-color: rgba($navy, .7);}
+	.cst-header {background-image: url(image_path('courtroom.jpg')); background-position: center center; height:300px; position: relative; z-index: 0;
+		&::before {@include before(); background-color: rgba($navy, .8);}
 		h1, h4 {color: $white; @include tshadow($black); }
 	}
 
-	.leftside {width: 60%; float: left; display: inline-block;text-align: center;
-		h4{margin-bottom:5px; font-weight: bold; }
-		h5 {font-weight: bold; color: $blue; width:80%; @include center-block();}
-		.practice-claims{ width:90%; @include center-block(); padding: 5px 0 20px; }
-		.practice-box {display: inline-block; width: 35%; float: none; margin: 10px auto 5px; padding:10px; text-align: center; background-color: $navy; color: $white;}
-		.pbtext{color: $white; font-size: 16px; margin-bottom: 5px; }
-		.community {@include sec-default(); border: 1px solid $light; padding:15px 0 0; text-align: center;}
-		.charity{display: inline-block; width:23%; float: none;}
+	.s1 {padding:0 30px 50px;
+		text-align: center;
 	}
-	.blue-sidebar {width: 35%; float: right; margin-top:2%; display: inline-block; background-color: rgba($lt-blue, .8); padding: 20px 0 10px;
-		h4 {text-align: center; font-weight: bold; margin-bottom: 20px;color: darken($blue, 10%); }
-		ul{padding-left: 30px;}
+	.s2 {background-color: $white; @include sec-bgimage(); background-size: 50%; background-position: left center; background-image: url(image_path('bcch1.jpg'));}
+	.s3 { padding: 50px;}
+
+	.blue-sidebar {width: 45%; float: right;
+		h4 {font-weight: bold; margin-bottom: 10px;color: darken($blue, 10%); }
+		ul{padding-left: 10px;}
 		li {font-weight: bold; font-size: 15px; margin-top: 15px; }
 		.icon {width: 30%;@include center-block();}
+	}
+
+	.community {@include sec-default(); text-align: center;
+		h4 {color: $blue; font-weight: bold; width: 60%;@include center-block(); margin-bottom: 35px;}}
+	.charity{display: inline-block; width:20%; float: none;}
+
+	.practice-boxes-op {display: inline-block; width: 22%; float: none; padding:35px 30px 25px; text-align: center; color: $white; background-color: $dk-blue;
+		margin: 0 5px 0 10px; position: relative;
+		margin-top: -50px;
+		h4 {font-family: $open; color: $white;}
 	}
 }
 
@@ -189,7 +196,7 @@
 	 	h4, h1 {color: $white; @include tshadow($dark);}
 	}
 
-	.main-body {@include sec-default(); background-color: $light; }
+	.main-body {@include sec-default(); background-color: $light;}
 
 	.s1 {@include sec-default(); background-color: $white; position: relative; z-index: 0;
 		&::before {@include before(); width:58%; background-color: $navy;}
