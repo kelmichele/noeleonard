@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/trucker-accidents', to: 'static_pages#18wheeler-accidents'
   get '/espanol', to: 'static_pages#espanol'
   get '/about', to: 'static_pages#about'
-  get '/contact', to: 'static_pages#contact'
+  # get '/contact', to: 'static_pages#contact'
   get '/resources', to: 'static_pages#resources'
 
   get '/fb', to: 'links#fb'
@@ -15,4 +15,7 @@ Rails.application.routes.draw do
   get '/google', to: 'links#google'
   get '/linkedin', to: 'links#linkedin'
   get '/youtube', to: 'links#youtube'
+
+  get '/client', to: 'clients#new', as: 'contact'
+  post '/client', to: 'clients#create'
 end

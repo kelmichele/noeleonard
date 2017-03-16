@@ -4,6 +4,8 @@
 @import "mixins";
 @import "variables";
 
+.honey {position: absolute;left: -9999px;}
+
 .cst-header {
 	@include sec-default();
 	@include sec-bgimage();
@@ -18,10 +20,10 @@
 	}
 }
 
-.pa-header {@include sec-bgimage(); background-image: url(image_path('traffic-blur.jpg')); height: 120px;
-		h1 { color: $white; font-weight: bold; @include tshadow($black);}
-		.overlay {@include sec-default(); height: 100%; padding-top: 60px; padding-left: 60px; background-color: rgba($black, .6)}
-	}
+.pa-header {@include sec-default();  @include sec-bgimage(); background-image: url(image_path('traffic-blur.jpg')); height: 120px;
+	h1 { color: $white; font-weight: bold; @include tshadow($black);}
+	.overlay {@include sec-default(); height: 100%; padding-top: 60px; padding-left: 60px; background-color: rgba($black, .6)}
+}
 
 .main-content {
 	@include sec-default();
@@ -217,8 +219,6 @@
 }
 
 .truck-claims { @include sec-default();
-
-
 	.claim-info {
 	  width: 35%;
 	  background-color: $lt-blue;
@@ -255,6 +255,15 @@
 	}
 }
 
+.espanol {
+	.s2 {background-color: $white;}
+	.bradius{border-radius: 10px;}
+	h3 {color: $navy; font-weight: bold;}
+	p.pref{padding-left: 15px; color: $dk-blue;}
+	ul li { color: $blue; font-size: 16px; margin-bottom: 10px; font-weight: bold;}
+	ul.mix li {font-weight: normal; span{font-weight: bold;}}
+}
+
 .resources { background-color: $light;
 	.cst-header {
 		background-image: url(image_path('lawyer-ph'));
@@ -285,5 +294,5 @@
 	}
 }
 
-
+.contactpage { @include sec-default(); }
 

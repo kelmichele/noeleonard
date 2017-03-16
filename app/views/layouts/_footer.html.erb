@@ -1,40 +1,97 @@
 <footer class="footer">
-  <div class=""></div>
+ <!--  <div class="top-foot">
+    <h5>Serving Baldwin, Mobile, &amp; Escambia Counties in Alabama</h5>
+  </div> -->
 
+  <div class="full-foot">
+    <div class="fs1">
+      <h3>Noel B. Leonard <span><%=image_tag( 'scales2.png', alt: 'Noel Leonard Attorney - Logo', class: 'img-responsive icon')%></span> Attorney, LLC</h3>
       <ul class="social-links">
-          <li>
-            <%= link_to '/fb', target: '_blank' do %>
-              <i class="fa fa-facebook"></i>
-            <% end %>
-          </li>
+        <li>
+          <%= link_to '/fb', target: '_blank' do %>
+            <i class="fa fa-facebook"></i>
+          <% end %>
+        </li>
 
-          <li>
-            <%= link_to '/twitter', target: '_blank' do %>
-              <i class="fa fa-twitter"></i>
-            <% end %>
-          </li>
+        <li>
+          <%= link_to '/twitter', target: '_blank' do %>
+            <i class="fa fa-twitter"></i>
+          <% end %>
+        </li>
 
-          <li>
-            <%= link_to '/linkedin', target: '_blank' do %>
-              <i class="fa fa-linkedin"></i>
-            <% end %>
-          </li>
+        <li>
+          <%= link_to '/linkedin', target: '_blank' do %>
+            <i class="fa fa-linkedin"></i>
+          <% end %>
+        </li>
 
-          <li>
-            <%= link_to '/twitter', target: '_blank' do %>
-              <i class="fa fa-twitter"></i>
-            <% end %>
-          </li>
+        <li>
+          <%= link_to '/twitter', target: '_blank' do %>
+            <i class="fa fa-twitter"></i>
+          <% end %>
+        </li>
 
-          <li>
-            <%= link_to '/youtube', target: '_blank' do %>
-              <i class="fa fa-youtube"></i>
-            <% end %>
-          </li>
+        <li>
+          <%= link_to '/youtube', target: '_blank' do %>
+            <i class="fa fa-youtube"></i>
+          <% end %>
+        </li>
       </ul>
-      <h5>218 N. Alston Street | Foley, AL 36535</h5>
+    </div>
 
-    <!-- <div class="logo-footer"><%= link_to(image_tag( 'logo-nbl.png', alt: 'Noel Leonard Attorney - Logo', class: 'img-responsive ftlogo-img'), root_path ) %></div> -->
+    <div class="fs2">
+      <div class="block one">
+        <h5>Noel B. Leonard, Attorney LLC</h5>
+        <p>We are a law firm based in Foley, Alabama, who represents clients from the Alabama counties of Mobile, Baldwin, and Escambia.</p>
+      </div>
+
+      <!-- <div class="block two">
+        <h5>Contact Information</h5>
+        <div class="ft-title"></div>
+          <ul class="contact">
+            <li><span>Phone:</span> <%= number_to_phone(2519438638, delimiter: '-') %></li>
+            <li><span>Fax:</span> 866-648-8201</li>
+            <li class="address">
+            218 N. Alston Street, Foley, AL 36535</li>
+          </ul>
+      </div> -->
+
+      <div class="block two">
+        <h5>Practice Areas</h5>
+        <div class="ft-title"></div>
+        <ul class="foot-nav">
+          <li><span>Motorcyle Accident Injury Claims</span></li>
+          <li><span>Auto Accident Injury Claims</span></li>
+          <li><span>18-Wheeler Accident Victims</span></li>
+        </ul>
+      </div>
+
+      <div class="block three">
+        <h5>Contact Information</h5>
+        <div class="ft-title"></div>
+          <ul class="contact">
+            <li><span>Phone:</span> <%= number_to_phone(2519438638, delimiter: '-') %></li>
+            <li><span>Fax:</span> 866-648-8201</li>
+            <li class="address">
+            218 N. Alston Street, Foley, AL 36535</li>
+          </ul>
+      </div>
+
+      <div class="block four">
+        <h5>Menu</h5>
+        <div class="ft-title"></div>
+        <ul class="foot-nav">
+          <li class="menu-item"><%= link_to "Home", root_path %></li>
+          <li class="menu-item"><%= link_to "About", about_path %></li>
+          <li class="menu-item"><%= link_to "Contact Us", contact_path %></li>
+          <li class="menu-item"><%= link_to "Resources", resources_path %></li>
+        </ul>
+      </div>
+    </div>
+
+      <!-- <p class="copy">Copyright <%= Time.now.year %></p> -->
+      <span class="disclaimer">No representation is made that the quality of legal services to be performed is greater than the quality of legal services performed by other lawyers. </span>
+  </div>
 </footer>
 
 
@@ -58,7 +115,4 @@
         </div>
     </div>
 </div>
-  <!--
-Home Auto Accidents 18-Wheeler Accidents Personal Injury Claims About Us Blog Contact Us Useful Resources
-Noel B. Leonard Attorney LLC • 218 N. Alston Street • Foley, AL 36535 • Phone: 251-943-8638 • Fax: 866-648-8201
-No representation is made that the quality of legal services to be performed is greater than the quality of legal services performed by other lawyers. -->
+

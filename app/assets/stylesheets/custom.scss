@@ -87,7 +87,43 @@ h5 {font-size: 15px;}
   @include bp(sm) { right: 15px; }
 }
 
-footer { @include sec-default(); border-top: 4px solid $navy;
-  background: -webkit-linear-gradient(-180deg, rgba($navy, .95), rgba($black, .9));
-  background: linear-gradient(-180deg, rgba($navy, .95), rgba($black, .9));
+footer { @include sec-default(); background-color: $dk-blue; border-top: 2px solid $light;
+  .top-foot {@include sec-default(); background-color: $white; text-align:center; padding-top: 7px;}
+  .full-foot {@include sec-default(); padding: 30px;
+    p, h5, h4, h3 {color: $white;}
+  }
+  .fs1 { text-align: center;
+    h3 {font-size: 16px}
+  }
+  .icon {width:55px; display: inline-block; padding:5px; margin: 0 5px;}
+  ul.social-links { width: 25%; @include center-block(); border-top: 1px solid rgba($light, .3); border-bottom: 1px solid rgba($light, .3); padding: 8px 0 3px;
+    li {display: inline-block; margin-right: 20px;
+      &:last-child{ margin-right: 0;}
+    }
+  }
+
+  .fs2 { padding: 35px 0px;
+    width:85%; @include center-block();
+    .block {display: inline-block; float: left;
+      .ft-title{width: 75%; height:3px; background-color: rgba($lt-blue, .3); margin-bottom: 20px;}
+      p{color: $lt-blue; font-size: 15px;}
+      h5 {font-weight: bold;}
+      ul.foot-nav, ul.contact {padding-left: 0px;
+        li {margin-bottom:7px;color: $lt-blue; font-size: 15px;
+          // border-bottom: 1px dotted rgba($white, .3);
+          a {color: $lt-blue;font-size: 16px;}
+        }
+      }
+      ul.contact span {width: 24%; display: inline-block; float: left; font-size: 14px; font-weight: bold; }
+
+      &.one{ width: 30%; padding-right:40px; h5 {color: $lt-blue; font-weight: bold;}}
+      &.two, &.three { width:25%; }
+      &.four { width:15%; float: right; }
+      // &.three {width: 20%; }
+      // &.four {float: right; width:15%;}
+    }
+  }
+  .disclaimer {@include sec-default(); color: $lt-blue; font-style: italic; font-size: 13px; margin-top:30px;}
+  // background: -webkit-linear-gradient(-180deg, rgba($navy, .95), rgba($black, .9));
+  // background: linear-gradient(-180deg, rgba($navy, .95), rgba($black, .9));
 }
