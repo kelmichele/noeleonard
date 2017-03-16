@@ -1,61 +1,127 @@
 @import "variables";
 @import "mixins";
 
-header {@include sec-default();
+header.header {@include sec-default();
   background-color: $white;
-  // background-color: lighten($blue, 62%);
-}
+      // background-color: lighten($blue, 62%);
 
-#top-bar {  @include sec-default(); padding: 5px 70px 0;
-  // background-color: $blue;
-  background: -webkit-linear-gradient(-180deg, rgba($navy, .95), rgba($black, .9));
-  background: linear-gradient(-180deg, rgba($navy, .95), rgba($black, .9));
 
-  .block1, .block-2, .block3 {display: inline-block;padding-top: 5px; width: 40%;}
-  h4, h5 {color: $white; }
-  h5 {font-size: 14px; margin: 5px 0 0; line-height: 1em;}
-}
-.block-2 {float: right; h5 {float: right; color: $white;}}
+    #top-bar {  @include sec-default(); padding: 5px 70px 0;
+      // background-color: $blue;
+      background: -webkit-linear-gradient(-180deg, rgba($navy, .95), rgba($black, .9));
+      background: linear-gradient(-180deg, rgba($navy, .95), rgba($black, .9));
 
-.block3 {float: left; color: $white;}
-.block1 {float: none; text-align: center;}
-.social-links { float: right;
-  li { display: inline-block; margin-right:5px;
-    a { background-color: transparent; color: $white; font-size: 15px;
-      &:hover {color: white;}
+      .block1, .block-2, .block3 {display: inline-block;padding-top: 5px; width: 40%;}
+      h4, h5 {color: $white; }
+      h5 {font-size: 14px; margin: 5px 0 0; line-height: 1em;}
     }
-  }
-}
+    .block-2 {float: right; h5 {float: right; color: $white;}}
 
-.main-header {@include sec-default(); padding: 10px 75px 0;}
-.logo-block {display: inline-block; float: left; width: 15%;
-  .logo-img {height:80px; padding:5px; }
-}
-.main-block {display: inline-block; float: none; width: 80%; margin-left: 4%; text-align: center;
-  h4 {display: inline-block; margin-left: 7%; float: none; color: $dark; font-weight: bold;}
-  .esp-link {color: $dark; font-weight: bold;}
-    // background-color: lighten($blue, 50%); padding: 5px; border-radius: 5px; margin-top:5px;
-}
-.mega-tab {list-style:none; margin-top: 15px;
-  text-align: center; float: left;
-  li{display:inline-block; margin: 0 15px;
-      &:last-child{margin-right: 5px;}
-      &:first-child{margin-left: 0px;}
-      a{ font-size: 15px; color: $blue; text-transform: uppercase; padding-top:10px; }
-  }
-
-  .dropdown{width:auto;margin:0;margin-top:-1px;position:absolute;z-index:999;display:none;}
-  .has-child:hover >.dropdown{display:block;width:175px; }
-  .dropdown .dropdown-items{list-style:none;padding:0;margin:0;text-transform:uppercase;}
-  .dropdown .dropdown-inner{background: $navy;padding:0px;box-shadow:0 3px 5px 0 rgba($black,0.2); }
-
-  .dropdown li.menu-item{margin-left:0;display:block;padding:0;position:relative;width: 100%; border-top: none;border-bottom: 1px dotted rgba($light, .3);
-      &:last-child {border-bottom: none;}
-      a{width:100%;display:block;padding:10px;color:$white;cursor:pointer;font-size:14px; line-height: 2em;
-          &:hover{color:$hcolor}
+    .block3 {float: left; color: $white;}
+    .block1 {float: none; text-align: center;}
+    .social-links { float: right;
+      li { display: inline-block; margin-right:5px;
+        a { background-color: transparent; color: $white; font-size: 15px;
+          &:hover {color: white;}
+        }
       }
-  }
+    }
+
+    .main-header {@include sec-default(); padding: 10px 75px 0;}
+    .logo-block {display: inline-block; float: left; width: 15%;
+      .logo-img {height:80px; padding:5px; }
+    }
+    .main-block {display: inline-block; float: none; width: 80%; margin-left: 4%; text-align: center;
+      h4 {display: inline-block; margin-left: 7%; float: none; color: $dark; font-weight: bold;}
+      .esp-link {color: $dark; font-weight: bold;}
+        // background-color: lighten($blue, 50%); padding: 5px; border-radius: 5px; margin-top:5px;
+    }
+    .mega-tab {list-style:none; margin-top: 15px;
+      text-align: center; float: left;
+      li{display:inline-block; margin: 0 15px;
+          &:last-child{margin-right: 5px;}
+          &:first-child{margin-left: 0px;}
+          a{ font-size: 15px; color: $blue; text-transform: uppercase; padding-top:10px; }
+      }
+
+      .dropdown{width:auto;margin:0;margin-top:-1px;position:absolute;z-index:999;display:none;}
+      .has-child:hover >.dropdown{display:block;width:175px; }
+      .dropdown .dropdown-items{list-style:none;padding:0;margin:0;text-transform:uppercase;}
+      .dropdown .dropdown-inner{background: $navy;padding:0px;box-shadow:0 3px 5px 0 rgba($black,0.2); }
+
+      .dropdown li.menu-item{margin-left:0;display:block;padding:0;position:relative;width: 100%; border-top: none;border-bottom: 1px dotted rgba($light, .3);
+          &:last-child {border-bottom: none;}
+          a{width:100%;display:block;padding:10px;color:$white;cursor:pointer;font-size:14px; line-height: 2em;
+              &:hover{color:$hcolor}
+          }
+      }
+    }
 }
+
+
+header.header-alt {@include sec-default();
+  background-color: $white;
+
+    #top-bar {  @include sec-default(); padding: 5px 70px 0;
+      background-color: $dk-blue;
+
+      .tb-block {width:50%; float: right; margin-right: 20px;}
+      h5 {color: $white; display: inline-block; font-size: 14px; margin: 10px 0 0 10px; line-height: 1em; float: none;}
+      span {display: inline-block; color: $white; margin: 0 10px; font-size: 18px;}
+    }
+
+    .social-links { display: inline-block;
+      li { display: inline-block; margin-right:10px;
+        a { background-color: transparent; color: $white; font-size: 15px;
+          &:hover {color: white;}
+        }
+      }
+    }
+
+    .main-header {@include sec-default(); padding: 10px 75px 5px;}
+    .logo-block {display: inline-block; float: left; width: 50%;
+      .logo-img {height:80px; float: left; margin-right:6px;}
+      h3 {margin-top:25px; font-size: 22px;}
+    }
+    .main-block {display: inline-block; float: right; width: 45%; margin-top:5px;
+      h4 {display: inline-block; color: $dark; text-align: center;
+        span {font-weight: normal; font-size: 15px;}
+        &.address {margin: 0 35px;text-align: center;}
+       .call-link{color: $blue; font-size: 22px; font-weight: bold;}
+      }
+      .esp-link h4 { font-family: $open; margin-left: 70px; font-style: italic;background-color: $offwhite; padding: 10px;}
+    }
+    .mega-tab {@include sec-default(); background-color: $dk-blue; list-style:none;
+      text-align: center; float: left;
+      li{display:inline-block; margin: 10px 20px 0;
+          &:last-child{margin-right: 5px;}
+          &:first-child{margin-left: 0px;}
+          a{ font-size: 15px; line-height: 2em; color: $white; text-transform: uppercase; }
+      }
+
+      .dropdown{width:auto;margin:0;margin-top:-1px;position:absolute;z-index:999;display:none;}
+      .has-child:hover >.dropdown{display:block;width:175px; }
+      .dropdown .dropdown-items{list-style:none;padding:0;margin:0;text-transform:uppercase;}
+      .dropdown .dropdown-inner{background: $navy;padding:0px;box-shadow:0 3px 5px 0 rgba($black,0.2); }
+
+      .dropdown li.menu-item{margin-left:0;display:block;padding:0;position:relative;width: 100%; border-top: none;border-bottom: 1px dotted rgba($light, .3);
+          &:last-child {border-bottom: none;}
+          a{width:100%;display:block;padding:10px;color:$white;cursor:pointer;font-size:14px; line-height: 2em;
+              &:hover{color:$hcolor}
+          }
+      }
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 #offcanvas-toggler {
   width: 40px;
