@@ -110,7 +110,6 @@ footer { @include sec-default(); background-color: $dk-blue; border-top: 2px sol
       h5 {font-weight: bold;}
       ul.foot-nav, ul.contact {padding-left: 0px;
         li {margin-bottom:7px;color: $lt-blue; font-size: 15px;
-          // border-bottom: 1px dotted rgba($white, .3);
           a {color: $lt-blue;font-size: 16px;}
         }
       }
@@ -119,11 +118,46 @@ footer { @include sec-default(); background-color: $dk-blue; border-top: 2px sol
       &.one{ width: 30%; padding-right:40px; h5 {color: $lt-blue; font-weight: bold;}}
       &.two, &.three { width:25%; }
       &.four { width:15%; float: right; }
-      // &.three {width: 20%; }
-      // &.four {float: right; width:15%;}
     }
   }
   .disclaimer {@include sec-default(); color: $lt-blue; font-style: italic; font-size: 13px; margin-top:30px;}
-  // background: -webkit-linear-gradient(-180deg, rgba($navy, .95), rgba($black, .9));
-  // background: linear-gradient(-180deg, rgba($navy, .95), rgba($black, .9));
+
+  @include bp(tb) {
+    .fs2 {width:100%;
+      .block {
+        &.one{ padding-right:20px; }
+        &.two{ width:28%; }
+        &.three { width:30%; }
+        &.four { width:12%; }
+        .ft-title{ margin-top: 10px; margin-bottom: 12px;}
+        ul.contact span {width: auto; margin-right: 10px;}
+      }
+    }
+  }
+
+  @include bp(md) {
+    ul.social-links { width: 30%; }
+
+    .fs2 .block {
+      &.one, &.two, &.three, &.four { width: 45%; }
+      &.one, &.two {margin-bottom: 30px;}
+      &.two, &.four {float: right;}
+      .ft-title{ margin-top: 10px; margin-bottom: 12px;}
+      ul.contact span {width: auto; margin-right: 10px;}
+    }
+  }
+
+  @include bp(sm) {
+    ul.social-links { width: 75%; }
+
+    .fs2 .block {
+      &.one, &.two, &.three, &.four { width: 45%; margin-left:30px;}
+      &.one, &.two {margin-bottom: 30px;}
+      .ft-title{ margin-top: 10px; margin-bottom: 12px;}
+      ul.contact span {width: auto; margin-right: 10px;}
+    }
+  }
+
+
+
 }

@@ -45,17 +45,6 @@
         <p>We are a law firm based in Foley, Alabama, who represents clients from the Alabama counties of Mobile, Baldwin, and Escambia.</p>
       </div>
 
-      <!-- <div class="block two">
-        <h5>Contact Information</h5>
-        <div class="ft-title"></div>
-          <ul class="contact">
-            <li><span>Phone:</span> <%= number_to_phone(2519438638, delimiter: '-') %></li>
-            <li><span>Fax:</span> 866-648-8201</li>
-            <li class="address">
-            218 N. Alston Street, Foley, AL 36535</li>
-          </ul>
-      </div> -->
-
       <div class="block two">
         <h5>Practice Areas</h5>
         <div class="ft-title"></div>
@@ -104,12 +93,7 @@
 
             <div class="module-content">
               <ul class="nav menu">
-                <li><%= link_to "Home", root_path %></li>
-                <li class="deeper parent"><a href="#">Example <span class="toggle-icon fa fa-angle-down"></span></a>
-                  <ul style="display: none;" class="nav-child unstyled small">
-                    <li><%= link_to "Example", root_path %></li>
-                  </ul>
-                </li>
+                <%= render 'layouts/nav' %>
               </ul>
             </div>
         </div>

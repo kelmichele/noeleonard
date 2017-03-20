@@ -111,15 +111,25 @@ header.header-alt {@include sec-default();
           }
       }
     }
+
+    @include bp(tb) {
+      #top-bar {padding-right:0px;
+        .tb-block {width:75%; float: right; margin-right: 20px;}
+      }
+
+      .mega-tab { ul{padding-left:10px;} li{ margin: 10px 15px 0;}}
+    }
+
+    @include bp(md) {
+      #top-bar {
+        .tb-block {width:100%; float: none; margin: auto;}
+      }
+      .main-header {padding: 10px 30px 5px;}
+      .logo-block { width: 40%;}
+      .main-block {width: 55%; margin-top:5px;}
+      .mega-tab {display: none}
+    }
 }
-
-
-
-
-
-
-
-
 
 
 

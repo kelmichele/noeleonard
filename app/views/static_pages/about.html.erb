@@ -1,50 +1,55 @@
 <% @page_title = "About Us" %>
 <% @page_description = "New Subject" %>
 
-<div class="cst-header">
-	<h1>About Noel B. Leonard</h1>
-	<h4 class="open">Providing Excellent Legal Services in Southern Alabama</h4>
-	<h4 class="open">Noel B. Leonard, Attorney LLC is a law firm based in Foley, Alabama.</h4>
-	<h4 class="open"> We represent clients in Mobile, Baldwin, and Escambia counties for the following types of claims:</h5>
-</div>
+	<div class="cst-header">
+		<div class="inner">
+			<h1>About Noel B. Leonard</h1>
+			<h4 class="open">Providing Excellent Legal Services in Southern Alabama</h4>
+			<h4 class="open">Noel B. Leonard, Attorney LLC is a law firm based in Foley, Alabama.</h4>
+			<!-- <h4 class="open"> We represent clients in Mobile, Baldwin, and Escambia counties for the following types of claims:</h4> -->
 
-<div class="main-wrap">
-	<div class="body-content">
-		<div class="s1">
-				<!-- <div class="practice-claims"> -->
+		</div>
+	</div>
+
+	<!-- <div class="container"> -->
+		<div class="body">
+			<div class="s2">
+				<div class="practice-claims">
 					<%=link_to "/auto_accidents_path", class: 'practice-boxes-op bike' do %>
+						<i class="fa fa-motorcycle"></i>
 						<h4>Motorcyle Accident <br>Injury Claims</h4>
 					<% end %>
 
 					<%=link_to "/trucker_accidents_path", class: 'practice-boxes-op auto' do %>
+						<i class="fa fa-car"></i>
 						<h4>Auto Accident <br>Injury Claims</h4>
 					<% end %>
 
 					<%=link_to "/motorcycle_accidents_path", class: 'practice-boxes-op trucker' do %>
+						<i class="fa fa-truck"></i>
 						<h4>18-Wheeler <br>Accident Victims</h4>
 					<% end %>
+				</div>
 
-					<%=link_to "/root_path", class: 'practice-boxes-op personal' do %>
-						<h4>Personal Injury<br> Claims</h4>
-					<% end %>
-			<!-- </div> -->
-		</div>
-
-		<div class="s2">
-			<div class="blue-sidebar">
-				<h4 class="open">What We Can Do For You?</h4>
-				<ul>
-					<li>Provide free telephone and office consultation</li>
-					<li>Accommodate evening and weekend appointments</li>
-					<li>Provide superior representation for all your legal concerns</li>
-					<li>Ensure first-class client service and personalized attention</li>
-					<li>Defend you against claims brought against you</li>
-					<li>Advance your expenses</li>
-					<li>Maximize your recovery</li>
-				</ul>
+				<div class="blue-sidebar">
+					<p>Noel's firm will evaluate your case, help file your claim, and make every effort to see that you receive proper compensation for your injuries, and all other damages sustained during the accident.</p>
+					<%=image_tag('scales1.png', class: 'img-responsive icon') %>
+					<h4>What We Can Do For You?</h4>
+					<ul>
+						<li>Provide free telephone and office consultation</li>
+						<li>Accommodate evening and weekend appointments</li>
+						<li>Provide superior representation for all your legal concerns</li>
+						<li>Ensure first-class client service and personalized attention</li>
+						<li>Defend you against claims brought against you</li>
+						<li>Advance your expenses</li>
+						<li>Maximize your recovery</li>
+					</ul>
+				</div>
 			</div>
 		</div>
+	<!-- </div> -->
 
+	<div class="body2">
 		<div class="s3">
 			<div class="community">
 				<h4 class="open">We are committed to giving back to our local community. We currently support the following charitable organizations.</h4>
@@ -55,4 +60,3 @@
 			</div>
 		</div>
 	</div>
-</div>
