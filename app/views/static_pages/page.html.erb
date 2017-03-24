@@ -1,7 +1,6 @@
 <% @page_title = "About Us" %>
 <% @page_description = "New Subject" %>
-
-<div class="cst-header">
+<!-- <div class="cst-header">
 	<h1>About Noel B. Leonard</h1>
 	<h4 class="open">Providing Excellent Legal Services in Southern Alabama</h4>
 	<h4 class="open">Noel B. Leonard, Attorney LLC is a law firm based in Foley, Alabama.</h4>
@@ -11,7 +10,6 @@
 <div class="main-wrap">
 	<div class="body-content">
 		<div class="s1">
-				<!-- <div class="practice-claims"> -->
 					<%=link_to "/auto_accidents_path", class: 'practice-boxes-op bike' do %>
 						<h4>Motorcyle Accident <br>Injury Claims</h4>
 					<% end %>
@@ -27,7 +25,6 @@
 					<%=link_to "/root_path", class: 'practice-boxes-op personal' do %>
 						<h4>Personal Injury<br> Claims</h4>
 					<% end %>
-			<!-- </div> -->
 		</div>
 
 		<div class="s2">
@@ -55,4 +52,72 @@
 			</div>
 		</div>
 	</div>
+</div>-->
+
+
+
+
+<!--  # Create an empty array.
+lines = []
+    # Use foreach iterator to loop over lines in the file.
+    # ... Add chomped lines.
+    IO.foreach("list.txt") do |line|
+      lines.push(line.chomp())
+    end
+
+
+    lines.each do |v|
+end -->
+
+<!--  # Create an empty array.
+lines = []
+	# Use foreach iterator to loop over lines in the file.
+	# ... Add chomped lines.
+	IO.foreach("list.txt") do |line|
+	    lines.push(line.chomp())
+	end
+	lines.each do |v|
+end -->
+
+<div class="clearfix"></div><br><br>
+
+<div class="container">
+		<% @array.each do |n| %>
+		  <%= n %><br />
+		<% end %>
+
+		<br />
+
+		<% @nested_students.each do |student_array| %>
+			<%= puts @student_detail %>
+		<% end %>
+
+			<!-- #  -->
+
 </div>
+
+<!--
+  def hello
+    @array = [1,2,3,4,5]
+    @id = params['id']
+    @page = params[:page]
+    @image = params[:image]
+
+    render('hello')
+end
+
+# gallery = IO.readlines("list.txt")
+# puts gallery[0]
+# puts gallery[1]
+
+#  def initialize(w,h)
+#     @width, @height = w, h
+#  end
+
+#  def to_s
+#     "(w:#@width,h:#@height)"
+#  end
+
+# @box = Box.new(10, 20)
+# puts "String representation of box is : #{box}"
+ -->

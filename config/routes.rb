@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/trucker-accidents', to: 'static_pages#18wheeler-accidents'
   get '/espanol', to: 'static_pages#espanol'
   get '/about', to: 'static_pages#about'
-  # get '/contact', to: 'static_pages#contact'
+  get '/page', to: 'static_pages#page'
   get '/resources', to: 'static_pages#resources'
   get '/personal-injury', to: 'static_pages#personal-injury'
 

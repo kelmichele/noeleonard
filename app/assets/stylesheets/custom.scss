@@ -120,7 +120,7 @@ footer { @include sec-default(); background-color: $dk-blue; border-top: 2px sol
       &.four { width:15%; float: right; }
     }
   }
-  .disclaimer {@include sec-default(); color: $lt-blue; font-style: italic; font-size: 13px; margin-top:30px;}
+  .disclaimer {@include sec-default(); color: $lt-blue; font-style: italic; font-size: 13px; margin-top:30px; text-align: center;}
 
   @include bp(tb) {
     .fs2 {width:100%;
