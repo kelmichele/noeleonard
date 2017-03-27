@@ -1,123 +1,62 @@
-<% @page_title = "About Us" %>
+<% @page_title = "Motorcycle Accidents" %>
 <% @page_description = "New Subject" %>
-<!-- <div class="cst-header">
-	<h1>About Noel B. Leonard</h1>
-	<h4 class="open">Providing Excellent Legal Services in Southern Alabama</h4>
-	<h4 class="open">Noel B. Leonard, Attorney LLC is a law firm based in Foley, Alabama.</h4>
-	<h4 class="open"> We represent clients in Mobile, Baldwin, and Escambia counties for the following types of claims:</h5>
-</div>
 
-<div class="main-wrap">
-	<div class="body-content">
-		<div class="s1">
-					<%=link_to "/auto_accidents_path", class: 'practice-boxes-op bike' do %>
-						<h4>Motorcyle Accident <br>Injury Claims</h4>
-					<% end %>
 
-					<%=link_to "/trucker_accidents_path", class: 'practice-boxes-op auto' do %>
-						<h4>Auto Accident <br>Injury Claims</h4>
-					<% end %>
-
-					<%=link_to "/motorcycle_accidents_path", class: 'practice-boxes-op trucker' do %>
-						<h4>18-Wheeler <br>Accident Victims</h4>
-					<% end %>
-
-					<%=link_to "/root_path", class: 'practice-boxes-op personal' do %>
-						<h4>Personal Injury<br> Claims</h4>
-					<% end %>
-		</div>
-
-		<div class="s2">
-			<div class="blue-sidebar">
-				<h4 class="open">What We Can Do For You?</h4>
-				<ul>
-					<li>Provide free telephone and office consultation</li>
-					<li>Accommodate evening and weekend appointments</li>
-					<li>Provide superior representation for all your legal concerns</li>
-					<li>Ensure first-class client service and personalized attention</li>
-					<li>Defend you against claims brought against you</li>
-					<li>Advance your expenses</li>
-					<li>Maximize your recovery</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="s3">
-			<div class="community">
-				<h4 class="open">We are committed to giving back to our local community. We currently support the following charitable organizations.</h4>
-				<%=image_tag('vfw-logo.jpg', class: 'img-responsive charity') %>
-				<%=image_tag('mcdonald-house.jpg', class: 'img-responsive charity') %>
-				<%=image_tag('st-judes.jpg', class: 'img-responsive charity') %>
-				<%=image_tag('manna.jpg', class: 'img-responsive charity') %>
-			</div>
-		</div>
+<div class="header-wrap">
+	<div class="cst-header">
+		<h1><span>Motorcycle</span> Accident Claims</h1>
 	</div>
-</div>-->
+</div>
+<div class="clearfix"></div>
 
+<!-- <div class="banner"> -->
+<div class="topic-boxes">
+	<h3>Motorcycle Accident Claims &amp; Serious Injuries</h3>
+	<div class="b1">
+		<p>Motorcycles are the least protected vehicles on the road, which unfortunately leads to higher injury and death rates than those of traditional motorists. Motorcycle accidents typically result in high medical costs, and demand a successful litigation outcome in order to pay for medical expenses.</p>
+	</div>
 
+	<div class="b2">
+		<p>If you or a loved one has been in a motorcycle accident in Alabama, you need an accident attorney who understands your pain, and can deliver the legal results you need to recover. In the turbulent aftermath of a devastating motorcycle accident, you need an attorney you can trust to fight for you.</p>
+	</div>
 
-
-<!--  # Create an empty array.
-lines = []
-    # Use foreach iterator to loop over lines in the file.
-    # ... Add chomped lines.
-    IO.foreach("list.txt") do |line|
-      lines.push(line.chomp())
-    end
-
-
-    lines.each do |v|
-end -->
-
-<!--  # Create an empty array.
-lines = []
-	# Use foreach iterator to loop over lines in the file.
-	# ... Add chomped lines.
-	IO.foreach("list.txt") do |line|
-	    lines.push(line.chomp())
-	end
-	lines.each do |v|
-end -->
-
-<div class="clearfix"></div><br><br>
-
-<div class="container">
-		<% @array.each do |n| %>
-		  <%= n %><br />
-		<% end %>
-
-		<br />
-
-		<% @nested_students.each do |student_array| %>
-			<%= puts @student_detail %>
-		<% end %>
-
-			<!-- #  -->
-
+	<div class="b3">
+		<p>As an avid motorcycle enthusiast, Noel B. Leonard understands, and can accommodate this need. His attorney fees will not exceed the amount awarded from a successful lawsuit, thus ensuring that you have the funds needed to repair your body and your life.</p>
+	</div>
 </div>
 
-<!--
-  def hello
-    @array = [1,2,3,4,5]
-    @id = params['id']
-    @page = params[:page]
-    @image = params[:image]
+<section class="content">
+	<div class="text-box">
+		<p>We counsel all motorcyclists to wear a helmet and follow essential safety precautions on the road, as there are many dangerous and negligent drivers out there.</p>
+		<p>In the event that you are in an accident caused by a negligent driver, it is essential that you have as much protection as possible, to prevent life-threatening injuries.</p>
+		<p>While a helmet is no guarantee that a life will be saved, in many cases a helmet has been the difference between life and death.</p>
+	</div>
 
-    render('hello')
-end
 
-# gallery = IO.readlines("list.txt")
-# puts gallery[0]
-# puts gallery[1]
 
-#  def initialize(w,h)
-#     @width, @height = w, h
-#  end
+		<!-- <h5>Contact Alabama accident attorney, Noel B. Leonard to schedule a consultation, or call (251) 597-0695 if you live in the city of Foley or Baldwin, Mobile or Escambia Counties, and have been in a motorcycle accident.</h5> -->
+	</div>
 
-#  def to_s
-#     "(w:#@width,h:#@height)"
-#  end
+</section>
 
-# @box = Box.new(10, 20)
-# puts "String representation of box is : #{box}"
- -->
+
+
+.motorcycle-accidents {
+	.header-wrap {@include sec-default(); padding:0px; background-color: $navy;}
+	.cst-header { background-image: url(image_path('attorney-desk-slim.jpg')); height: 250px; padding-left: 5%; background-position: center center;}
+	h1 {text-align: left; color: $white; @include tshadow($black); width: 30%;
+		span {font-size: 1.5em;}}
+
+	.topic-boxes{
+		h3 {text-align: center; margin-bottom:30px;}
+	 .b1, .b2, .b3 { height: 200px;}
+	}
+
+	.content{@include sec-default(); background-color: $dark; padding: 40px; @include sec-bgimage();
+		background-image: url(image_path('motorcycle.jpg')); background-size: 70%; background-position: left center;
+
+		.text-box {width:27%; float: right; padding: 15px; color: #dfdfdf;
+		  p{line-height: 1.5em;}
+		}
+	}
+}

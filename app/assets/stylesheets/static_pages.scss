@@ -6,6 +6,19 @@
 
 .honey {position: absolute;left: -9999px;}
 
+hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relative;
+	&:after {content:''; position: absolute; left: 40%; width: 20%; height: 5px; background-color: $br-blue; }
+}
+
+.consult-box {width: 50%; display: inline-block; float: left; @include sec-bgimage;
+	.overlay {@include sec-default(); background-color: rgba($dk-blue, .9); padding: 30px 60px; text-align: center; }
+	a {color: $lt-blue; font-weight: bold; @include tshadow($dark);}
+
+	h3 {font-family: $open; font-weight: 600; color: $white;
+		span{font-weight: normal; font-size: 20px;}
+	}
+}
+
 .cst-header {
 	@include sec-default();
 	@include sec-bgimage();
@@ -20,8 +33,8 @@
 	}
 }
 
-.pa-header {@include sec-default();  @include sec-bgimage(); background-image: url(image_path('traffic-blur.jpg')); height: 120px;
-	h1 { color: $white; font-weight: bold; @include tshadow($black);}
+.pa-header {@include sec-default();  @include sec-bgimage(); background-image: url(image_path('attorney-desk-slim.jpg')); height: 120px;
+	h1 { color: $white; font-weight: bold; font-family: $open; @include tshadow($black); text-transform: uppercase;}
 	.overlay {@include sec-default(); height: 100%; padding-top: 60px; padding-left: 60px; background-color: rgba($black, .6)}
 }
 
@@ -39,48 +52,6 @@
 .body-content { @include sec-default(); background-color: $offwhite;
 	.s1, .s2, .s3 {@include sec-default(); background-color: $offwhite; padding: $content-padding;}
 }
-
-
-// .claim-info-scroll {
-//   width: 25%;
-//   display: none;
-//   position: fixed;
-//   bottom: 15%;
-//   top:20%;
-//   vertical-align: middle;
-//   right: 5%;
-//   background-color: $dark;
-//   color: $white;
-//   z-index: 100;
-//   padding: 40px 30px;
-//   box-shadow: 10px 15px 20px rgba($black, .4);
-
-//   &.noscroll {
-// 	  position: static;
-// 		float: right;
-// 	  width: 30%;
-//   }
-// }
-
-// .slant-section {
-// 	@include sec-default();
-// 	position: relative;
-// 	padding: 130px 0;
-// 	top: 0;
-// 	clear: both;
-
-// 	&:before {
-// 		width: 50%;
-// 		border-bottom: 0 solid $navy;
-// 		border-top: 600px solid $navy;
-// 		border-left: 0 solid transparent;
-// 		border-right: 100px solid transparent;
-// 		content: "";
-// 		height: 100%;
-// 		top: 0;
-// 		position: absolute;
-// 	}
-// }
 
 .pre-ft-link {
 	@include center-block(); width: 70%; padding:20px; text-align: center; border: 1px solid $blue;
@@ -185,8 +156,8 @@
 
 .motorcycle-accidents {
 	.header-wrap {@include sec-default(); padding:0px; background-color: $navy;}
-	.cst-header { background-image: url(image_path('biker.jpg')); height: 250px; padding-left: 5%; background-position: center center;}
-	h1 {text-align: left; color: $white; @include tshadow($black); width: 30%;
+	.cst-header { background-image: url(image_path('attorney-desk-slim.jpg')); height: 200px; padding-left: 5%; background-position: center center;}
+	h1 {text-align: left; color: $white; @include tshadow($black); width: 30%; font-family: $open; text-transform: uppercase;
 		span {font-size: 1.5em;}}
 
 	.topic-boxes{
@@ -201,6 +172,24 @@
 		  p{line-height: 1.5em;}
 		}
 	}
+
+	.ms1 {@include sec-default(); padding-bottom:50px;
+		p {margin-bottom: 25px; font-size: 17px;}
+	}
+	.left {padding: 65px 20px 20px;
+		h4 {font-weight: bold;}
+	}
+	.sidebar {@include sec-default(); background-color: $dk-blue; padding: 30px 35px; color: $white; margin-top:-50px;
+		h4 {color: $lt-blue; font-weight: 600;}
+		// hr {border-top: 1px solid rgba($offwhite, .3);}
+		hr.fancy {width: 80%; margin-bottom:30px;}
+	}
+
+	.ms2 {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('bike-claim.jpg'));
+	 background-position: center center;
+		.overlay {@include sec-default(); background-color: rgba($dk-blue, .6); padding: 65px 0; text-align: center;}
+		p {color: $white; font-weight: 600; font-size: 19px; width: 70%; @include center-block(); @include tshadowl($dark);}
+	}
 }
 
 .auto-accidents {
@@ -210,9 +199,13 @@
 		h3 {font-family: $open; color: $white; font-weight: 600; @include tshadow($dark);width: 60%; line-height: 1.4em;}
 	}
 
-	.main-body {@include sec-default();  padding: 50px 0; text-align: center;
+	.main-body {@include sec-default(); text-align: center;
+		@include sec-bgimage(); background-image: url(image_path('auto.jpg'));
+		background-position: center center;
+		// background-attachment: fixed;
+		.inner {@include sec-default(); padding: 50px 0; background-color: rgba($white, .96);}
 		.boxes {
-			tr {border-bottom: 1px solid #e1e1e1;}
+			tr {border-bottom: 1px solid #e1e1e1; }
 			td { padding: 30px; border-right: 1px solid #e1e1e1;
 				&:last-child{border-right: none;}
 			}
@@ -250,6 +243,13 @@
 }
 
 .truck-claims { @include sec-default();
+
+	.p-header{
+		@include sec-default(); @include sec-bgimage ();background-image: url(image_path('attorney-desk-slim.jpg')); background-position: center bottom; padding-bottom: 15px;
+		h1 {font-family: $open; color: $white; font-weight: bold; @include tshadow($dark);margin-top: 70px; text-transform: uppercase;}
+		h3 {font-family: $open; color: $white; font-weight: 600; @include tshadow($dark);width: 60%; line-height: 1.4em;}
+	}
+
 	.claim-info {
 	  width: 35%;
 	  background-color: $lt-blue;
@@ -259,30 +259,52 @@
 	  h4 {line-height: 1.5em; color: $dark; }
 	}
 
-	.topic-boxes { position: relative; z-index: 0;padding:30px 50px;
-		background-position: top right; background-size: 35%; background-repeat: no-repeat; background-image: url(image_path('semi-claim.jpg'));
-		&::before {@include after (); width: 35%; background-color: rgba($dark, .9);}
-		.b1, .b2, .b3 {background: transparent; border:none;}
-		.b1, .b2 {padding-left: 5px }
-		.b3.right {color: $white; float: right; font-size: 18px; padding-left: 10px; padding-right: 0px; span { color: $lt-blue;}}
-		p.bold {font-weight: bold; margin-bottom:25px;}
+	.boxes { @include sec-default(); padding: 50px 0px; margin-bottom:50px; background-color: $white;
+		.b1, .b3 {width: 48%; display: inline-block; float: left;}
+		.b1 { p{padding-left:5px;} }
+		.b3 {width: 45%; float: right;  @include sec-bgimage(); background-image: url(image_path('semi-claim.jpg')); background-position: center center;
+			.overlay {@include sec-default(); background-color: rgba($navy, .9); padding: 40px 50px; text-align: center;}
+			color: $white; font-size: 18px; span { color: $lt-blue;}
+			p{line-height: 1.5em; font-size: 17px;
+				span{color: $lt-blue; font-weight: 600; font-size: 18px; text-transform: uppercase;}
+			}
+			h3 { font-family: $open; font-size: 20px; color: $lt-blue; line-height: 1.3em; @include tshadow($blue); margin-top: 20px; font-weight: 600;}
+		}
+		h4 {font-family: $open; font-weight: bold; color: $blue;}
 	}
 
-	.banner {@include sec-default(); text-align: center; padding-bottom: 30px; h3 {color: $blue; font-weight: bold;}}
-	.s2 {
-		.block1, .block2 {width: 45%; display: inline-block; margin: auto; float: left;}
-		.block2 {background-color: $white; padding: 20px 30px ; float: none; margin-left: 15px;
+	.banner {@include sec-default(); text-align: center; padding-bottom: 20px;
+		h3 {color: $white; font-weight: bold; font-family: $open;}
+		p {font-family: $open;font-weight: 600; font-style: italic; color: $offwhite;}
+	}
+
+	.sec2 {@include sec-default(); padding: 20px 0; background-color: $offwhite; position: relative; z-index: 0; border-top: 1px solid $light;
+		background-image: url(image_path('highway.jpg')); background-size:50%; background-repeat: no-repeat; background-position: top left;
+		&::before {@include before(); width: 50%; background-color: rgba($navy, .9);}
+
+		h4 {font-family: $open; color: $white; text-align: center; line-height: 1.4em; padding: 0 30px 30px;}
+
+		.block1, .block2 { display: inline-block; margin: auto; float: left;}
+		.block2 {width:49%; padding: 20px 30px ; float: right;
+			p {color: $blue; font-weight: 600; width: 85%;}
 			ul {padding-left: 25px;}
-			li {color: $blue; font-size: 16px; margin-top: 10px;}
+			li {color: $dk-blue; font-size: 17px; margin-top: 15px;}
+			i {width:30px; height: 30px; background-color: $blue; color: $white; margin-right:4px; border-radius: 50%; text-align: center; padding-top: 6px; font-size: 15px;}
 		}
 
-		.block1 { p{font-size: 17px; color: $white;}
-			.a, .b {@include sec-default(); background-color: $lt-blue; padding: 35px 45px 25px; position: relative; z-index: 0;
-				@include sec-bgimage(); background-image: url(image_path('cargo.jpg')); background-position: center center;
-				&::before {@include before(); background-color: rgba($navy, .9); }
+		.block1 {width: 50%;padding: 20px;
+			p{font-size: 17px; color: $white;}
+			.a, .b {width: 49%; display: inline-block; float: right; padding: 20px; text-align: center; background-color: $offwhite;
+				p{color: $blue;}
 			}
-			.a{margin-bottom: 25px; background-image: url(image_path('semi-wreck.jpg'));}
+			.a{ float: left;}
 		}
+	}
+
+	.consult-box {width: 45%; float: right; background-image: url(image_path('semi-claim.jpg')); margin-top:30px;
+		.overlay {background-color: rgba($dk-blue, .9); padding: 40px; }
+		h4{ font-size: 17px;line-height: 1.5em; font-weight: normal; color: $lt-blue; margin-bottom: 25px; font-weight: 600;}
+		h3 {font-size: 22px; padding-top:15px;}
 	}
 }
 
@@ -296,14 +318,13 @@
 }
 
 .resources { background-color: $light;
+	background-image: url(image_path('lawyer-ph'));
+	@include sec-bgimage();
 	.cst-header {
-		background-image: url(image_path('lawyer-ph'));
-		background-position: center center;
 		height: 250px;
-		position: relative;z-index: 10;
 
-		h1 {color: $white; font-size: 45px; @include tshadow(rgba($dark, .6));}
-		h4 {font-weight: bold;}
+		h1 {color: $white; font-size: 45px; @include tshadow(rgba($dark, .6));font-family: $open; margin-top: 60px;}
+		h4 {font-weight: bold; color: $white; @include tshadow(rgba($dark, .8)); font-family: $open;}
 	}
 
 	.resource-list {
@@ -313,9 +334,11 @@
 		// padding: 20px 0;
 		position: relative; z-index: 11;
 		margin-top:-50px;
-		h3 {font-weight: bold; margin-top:25px; color: $blue; margin-bottom: 5px; font-size: 22px;
+		h3 {font-weight: bold; margin-top:35px; color: $blue; margin-bottom: 5px; font-size: 22px;
 			&.tmargin0 { margin-top: 0; }
 		}
+		hr.fancy {width:40%; border-top: 1px solid rgba($gray, .5); float: left;margin-top: 5px; margin-bottom: 20px; &:after {height:3px;}}
+
 		.list {padding-left:70px;
 			p {margin-bottom: 10px; padding-left: 20px; font-size: 15px;
 		}
@@ -325,7 +348,35 @@
 	}
 }
 
-.contactpage { @include sec-default(); }
+.contact {
+	.inside-sec {
+		@include sec-default(); @include sec-bgimage(); background-image: url(image_path('attorney-desk.jpg'));position: relative; z-index: 0;
+		&::before {@include before(); height: 70%; background-color: rgba($dark, .8);}
+	}
+	.cst-header {
+		width:80%; @include center-block(); padding: 60px;
+		.inner {@include sec-default();margin-bottom: 80px;border: 1px solid $silver; padding: 40px 60px;}
+		h1, h4,p, h3 {color: $white; @include tshadow($black); }
+		h1 {margin-bottom: 0px; }
+		.title-line {width: 60%; @include center-block(); height: 1px; background-color: rgba($silver, .4); margin-bottom: 10px;}
+		h3{ letter-spacing: 10px;}
+
+		.contact-info { @include sec-default(); margin-top:60px;
+			h4 {font-size: 20px; font-weight: bold; font-style: normal;}
+			ul.social-links {
+		    li {display: inline-block; font-size: 20px; margin-right: 20px;
+		    	i{color: $white;}
+		      &:last-child{ margin-right: 0;}
+		    }
+		  }
+		}
+		hr.fancy {margin-bottom: 45px; &:after {height:2px;}}
+	}
+	.banner { width: 60%; @include center-block(); background-color: $navy; padding: 30px 30px 25px; margin-top: -50px; color: $white; text-align: center; p {font-size: 17px;}}
+	.s2 {@include sec-default();background-color: $offwhite; padding: 10px 0 40px;}
+	.form {margin-top: 40px;}
+
+}
 
 .about {
 	.inside-sec {
