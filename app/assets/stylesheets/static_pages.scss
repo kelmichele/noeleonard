@@ -82,6 +82,12 @@
 // 	}
 // }
 
+.pre-ft-link {
+	@include center-block(); width: 70%; padding:20px; text-align: center; border: 1px solid $blue;
+	margin-top: 30px; font-weight: bold; font-size: 17px; color: $white; background-color: $blue; @include ease();
+	&:hover {background-color: $dk-blue; color: $white;}
+}
+
 .topic-boxes {@include sec-default(); padding: 40px 60px; background-color: $white;
 	.intro {width: 80%; @include center-block();text-align: center; margin-bottom:30px; }
 	.b1, .b2, .b3 {display: inline-block; width: 32%; font-size: 17px; float: left; padding: 25px 25px 15px; border: 1px solid #dfdfdf;
@@ -198,27 +204,48 @@
 }
 
 .auto-accidents {
-	.cst-header {background-image: url(image_path('auto-accident.jpg'));height:300px; background-position: center center;
-	 	h4, h1 {color: $white; @include tshadow($dark);}
+	.auto-s2{
+		@include sec-default(); @include sec-bgimage ();background-image: url(image_path('attorney-desk-slim.jpg')); background-position: center bottom; padding-bottom: 15px;
+		h1 {font-family: $open; color: $white; font-weight: bold; @include tshadow($dark);margin-top: 70px; text-transform: uppercase;}
+		h3 {font-family: $open; color: $white; font-weight: 600; @include tshadow($dark);width: 60%; line-height: 1.4em;}
 	}
 
-	.main-body {@include sec-default(); background-color: $light;}
-
-	.s1 {@include sec-default(); background-color: $white; position: relative; z-index: 0;
-		&::before {@include before(); width:58%; background-color: $navy;}
-		h3, h4 {color: $light; font-family: $open;}
-		h4 {font-size: 20px; margin-top:25px; color: $lt-blue; span{font-weight: bold;font-style: italic; }}
-		li { color: $blue; font-weight: bold; font-size: 17px; margin-bottom: 10px; }
-		.left {padding: 40px 55px; padding-bottom:0; text-align: center;}
-		.right {padding: 15px 40px;}
+	.main-body {@include sec-default();  padding: 50px 0; text-align: center;
+		.boxes {
+			tr {border-bottom: 1px solid #e1e1e1;}
+			td { padding: 30px; border-right: 1px solid #e1e1e1;
+				&:last-child{border-right: none;}
+			}
+		}
 	}
 
-	.topic-boxes .intro h3 {margin-bottom:5px; color: $blue; font-weight: bold;}
+	.main-body-2{
+		@include sec-default(); background-color: lighten($dk-blue, 10%); @include sec-bghlf (top left); background-size: 45%; background-image: url(image_path('shattered.jpg')); background-position: bottom left;
+		position: relative; z-index: 1;
+		&::before { @include before(); width: 45%; background-color: rgba($dark, .6);}
+		.over {padding: 80px 60px 60px; text-align: center; float: left; display: inline-block; width: 39%;
+			h2{font-family: $open; color: $white; font-weight: bold; @include tshadow($dark);text-transform: uppercase; font-size: 34px;
+				span{color: $lt-blue}}
+		}
+		.content {width:55%; float: right; padding: 40px 60px;
+			p {color: $white; width: 70%; font-weight: 600; font-size: 18px; margin-bottom: 20px;}
+			li {color: $light; font-family: $open; font-size: 17px; margin-bottom: 14px;
+				i {margin-right:3px; color: $white; font-size: 16px;}
+			}
+		}
+	}
 
-	.banner {margin-top: -80px; width: 90%; @include center-block(); padding: 30px;
-		background-color: $navy; color: $white;
-		h5 {color: $white; font-weight: bold; font-size: 17px; }
-		p {width: 67%; font-size: 17px; line-height: 1.5em}
+	.main-body-3{@include sec-default(); padding: 30px 0 40px;
+
+		.consult-box {width: 50%; display: inline-block; float: left; margin-top: 10px; @include sec-bgimage; background-image: url(image_path('auto.jpg'));
+			.overlay {@include sec-default(); background-color: rgba($dk-blue, .9); padding: 30px 60px; text-align: center; }
+			a {color: $lt-blue; font-weight: bold; @include tshadow($dark);}
+		}
+		h3 {font-family: $open; font-weight: 600; color: $white;
+			span{font-weight: normal; font-size: 20px;}
+		}
+
+		.pre-ft-link.first {margin-top: 60px;}
 	}
 }
 
@@ -348,6 +375,15 @@
 	.body2 { @include sec-default();@include sec-bgimage(); background-image: url(image_path('pillars.jpg')); position: relative; z-index: 0; padding: 40px 60px 55px;
 		&::before {@include before(); background-color: rgba($dk-blue, .85); }
 		.s3 { width:90%; @include center-block(); }
+	}
+
+	@include bp(tb) {
+		.inside-sec::before {height: 50%; background-color: rgba($dark, .8);}
+		.cst-header {width:95%;padding: 30px 50px;
+			.inner {margin-bottom: 30px;padding: 40px 0px;}
+		}
+		.body {@include sec-default(); padding: 0 45px;}
+		.practice-claims .practice-boxes-op {padding:20px;}
 	}
 }
 
