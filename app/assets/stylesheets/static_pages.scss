@@ -129,7 +129,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		&.auto {background-image: url(image_path('texting.jpg'));}
 		&.trucker {background-image: url(image_path('slide7.png'));background-size: 58%;}
 		hr.fancy{margin-top: 15px; margin-bottom: 40px;}
-		.text {@include sec-default(); background-color: $blue; padding: 20px 10px; h4{margin-top:25%;}}
+		.text {@include sec-default(); background-color: darken($blue, 15%); padding: 20px 10px; h4{margin-top:25%;}}
 		.content {@include sec-default();@include ease(); display: none; padding: 20px 15px;}
 
 		.pb-links { padding: 7px 10px; background-color: lighten($blue, 20%); margin-top: 20px; color: $white; font-weight: 600; font-family: $open; border-radius: 5px;}
@@ -166,8 +166,8 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		&.two {float: right; }
 	}
 
-		.cbox {@include sec-default();@include sec-bgimage; background-image: url(image_path('highway.jpg'));
-			.overlay {@include sec-default(); background-color: rgba($lt-blue, .9); padding: 30px 50px; text-align: center; }
+		.cbox {@include sec-default();@include sec-bgimage; background-image: url(image_path('traffic.jpg')); background-position: center center;
+			.overlay {@include sec-default(); background-color: rgba(lighten($lt-blue, 5%), .94); padding: 30px 50px; text-align: center; }
 			a {color: $blue; font-weight: bold; }
 
 			// h3 {font-family: $open; font-weight: 600; color: $blue;}
