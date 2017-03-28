@@ -4,10 +4,10 @@
 header.header-alt {@include sec-default();
   background-color: $white;
 
-    #top-bar {  @include sec-default(); padding: 5px 70px 0;
+    #top-bar {  @include sec-default(); padding: 5px 0px 0;
       background-color: $dk-blue;
 
-      .tb-block {width:40%; float: right; margin-right: 20px;}
+      .tb-block {width:45%; float: right;}
       h5 {color: $white; display: inline-block; font-size: 14px; margin: 10px 0 0 10px; line-height: 1em; float: none;}
       span {display: inline-block; color: $white; margin: 0 10px; font-size: 18px;}
       h5 a {color: $white;}
@@ -22,11 +22,12 @@ header.header-alt {@include sec-default();
     }
 
     .main-header {@include sec-default(); padding: 10px 75px 5px;}
-    .logo-block {display: inline-block; float: left; width: 50%;
-      .logo-img {height:80px; float: left; margin-right:6px;}
+    .logo-block {display: inline-block; float: left; width: 40%; padding: 10px 0; margin-left: 50px;
+      // margin-left: 10%;
+      .logo-img {height:85px; float: left; margin-right:6px;}
       h3 {margin-top:25px; font-size: 22px;}
     }
-    .main-block {display: inline-block; float: right; width: 45%; margin-top:5px;
+    .main-block {display: inline-block; float: right; width: 40%; margin-top:14px;
       h4 {display: inline-block; color: $dark; text-align: center;
         span {font-weight: normal; font-size: 15px;}
         &.address {margin: 0 35px;text-align: center;}

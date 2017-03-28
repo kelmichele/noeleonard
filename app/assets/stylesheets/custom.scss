@@ -118,7 +118,7 @@ footer { @include sec-default(); background-color: $dk-blue; border-top: 2px sol
       }
       ul.contact span {width: 24%; display: inline-block; float: left; font-size: 14px; font-weight: bold; }
 
-      &.one{ width: 30%; padding-right:40px; h5 {color: $lt-blue; font-weight: bold;}}
+      &.one{ width: 30%; padding-right:60px;}
       &.two, &.three { width:25%; }
       &.four { width:15%; float: right; }
     }
