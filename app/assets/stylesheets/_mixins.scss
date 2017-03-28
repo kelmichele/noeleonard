@@ -64,6 +64,12 @@
     transition: 0.5s;
 }
 
+@mixin ease2() {
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    transition: 0.2s;
+}
+
 // Breakpoints
 @mixin bp($point) {
     @if $point == tb {
