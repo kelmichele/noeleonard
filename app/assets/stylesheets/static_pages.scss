@@ -118,31 +118,6 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		.portrait-bg {content:''; width: 290px; height: 340px; position: absolute; margin-top:0px; right:15%; background-color: $navy; z-index: 1;}
 		p.intro { font-size: 18px; font-weight: bold; text-align: center; margin-bottom: 20px;}
 	}
-	.practice-box {display: inline-block; width: 32.5%; float: left; color: $white; text-align: center; height: 250px;
-		margin-left: 10px;
-		@include sec-bgimage();
-		background-position: top right;
-		background-size: 55%;
-		position: relative;z-index: 0;
-		background-image: url(image_path('speed-bike.jpg'));
-
-		&::before {@include before(); @include ease2();}
-		&.bike {margin-left: 6px;}
-		&.auto {background-image: url(image_path('texting.jpg'));}
-		&.trucker {background-image: url(image_path('slide7.png'));background-size: 58%;}
-		hr.fancy{margin-top: 15px; margin-bottom: 40px;}
-		.text {@include sec-default(); background-color: darken($blue, 15%); padding: 20px 10px; h4{margin-top:25%;}}
-		.content {@include sec-default();@include ease(); display: none; padding: 20px 15px;}
-
-		.pb-links { padding: 7px 10px; background-color: lighten($blue, 20%); margin-top: 20px; color: $white; font-weight: 600; font-family: $open; border-radius: 5px;}
-		.text {width: 50%; float: left;display: inline-block; height: 100%;}
-		.content {width: 50%; float: right; height: 100%; }
-
-		&:hover {
-			&::before {background-color: rgba($dk-blue,.9);}
-			.content {display: inline-block;}
-		}
-	}
 
 	.home-sec1 {
 		@include sec-default();
@@ -161,8 +136,70 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		}
 		.symbol {width: 60px; @include center-block(); }
 	}
-	.video-row { @include sec-default(); padding: 50px 40px; text-align: center; background-color: $white;}
+	.practice-box {display: inline-block; width: 32.5%; float: left; color: $white; text-align: center; height: 250px;
+		margin-left: 10px;
+		@include sec-bgimage();
+		background-position: top right;
+		background-size: 55%;
+		position: relative;z-index: 0;
+		background-image: url(image_path('speed-bike.jpg'));
 
+		&::before {@include before(); @include ease2();}
+		&.bike {margin-left: 6px;}
+		&.auto {background-image: url(image_path('texting.jpg'));}
+		&.trucker {background-image: url(image_path('cargo.jpg'));background-position: bottom right;}
+		hr.fancy{margin-top: 15px; margin-bottom: 40px;}
+		.text {width: 50%; float: left;display: inline-block; height: 100%; background-color: darken($blue, 15%); padding: 20px 10px; h4{margin-top:25%;}}
+		.content {width: 50%; float: right; height: 100%; @include ease(); display: none; padding: 20px 15px;}
+
+		.pb-links { padding: 7px 10px; background-color: lighten($blue, 20%); margin-top: 20px; color: $white; font-weight: 600; font-family: $open; border-radius: 5px;}
+
+		&:hover {
+			&::before {background-color: rgba($dk-blue,.9);}
+			.content {display: inline-block;}
+		}
+	}
+
+
+
+
+
+	.info-box-alt { @include sec-default();
+	 	background-color: $white; margin-top:25px; padding: 50px 20px ;
+		position: relative;z-index: 1;
+
+		.top {@include sec-default(); padding-bottom: 80px;
+			h4.pbi {font-weight: bold; font-family: $open; text-align: center; text-transform: uppercase;}
+			hr.fancy.dark.hlf {width:15%; margin-bottom: 55px;}
+		}
+		.symbol {width: 60px; @include center-block(); }
+
+		.practice-box {display: inline-block; width: 45%; float: left; color: $white; text-align: center; height: 250px;
+			margin-left: 10px; margin-bottom: 30px;
+			@include sec-bgimage();
+			background-position: bottom right;
+			background-size: 51%;
+			position: relative;z-index: 0;
+			background-image: url(image_path('speed-bike.jpg'));
+
+			&::before {@include before(); @include ease2();}
+			&.auto {background-image: url(image_path('texting.jpg'));}
+			&.trucker {background-image: url(image_path('cargo.jpg'));background-position: bottom right;}
+			hr.fancy{margin-top: 15px; margin-bottom: 40px;}
+			.text {width: 50%; float: left;display: inline-block; height: 100%; background-color: darken($blue, 15%); padding: 20px 10px; h4{margin-top:25%;}}
+			.content {width: 50%; float: right; height: 100%; @include ease(); display: none; padding: 20px 15px;}
+
+			.pb-links { padding: 7px 10px; background-color: lighten($blue, 20%); margin-top: 20px; color: $white; font-weight: 600; font-family: $open; border-radius: 5px;}
+
+			&:hover {
+				&::before {background-color: rgba($dk-blue,.9);}
+				.content {display: inline-block;}
+			}
+		}
+	}
+
+
+	.video-row { @include sec-default(); padding: 50px 40px; text-align: center; background-color: $white;}
 	iframe { display: inline-block; width: 45%; height: 250px; margin:auto;
 		&.one {float: left; }
 		&.two {float: right; }
@@ -175,8 +212,50 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		// h3 {font-family: $open; font-weight: 600; color: $blue;}
 		h4, h3{font-weight: bold; line-height: 1.5em}
 	}
-
 	.after{	@include sec-default(); background-color: $white; height: 350px; position: relative; z-index: 0}
+
+	@include bp(tb) {
+		.site-intro{
+			height:450px;
+			background-position: top center;
+
+			.overlay {padding: 60px 45px;}
+			.title-block{
+				width:75%; padding: 30px;background-color: rgba($white, .35);
+				border: 1px solid $gray;
+			}
+			.title-line {width: 65%; @include center-block(); height: 1px; background-color: rgba($dark, .4); margin-bottom: 10px;}
+			.text{width:95%; padding-top:20px;}
+			h1 {font-size: 3em;}
+			h2 {font-size: 2em;}
+			h4{ font-size: 19px;}
+		}
+
+		.practice-areas {
+			padding:40px 20px;
+			.pa-intro { width:95%; }
+			.pa-s1 { width: 55%; float: left;display: inline-block;}
+			.portrait-bg { display: none;}
+		}
+
+		.home-sec1 {
+			.overlay{padding: 40px 20px; }
+			.info-box {padding: 30px 10px;}
+			.top {@include sec-default(); padding-bottom: 50px;
+				hr.fancy.dark.hlf {width:15%; margin-bottom: 40px;}
+			}
+		}
+
+		.practice-box {display: block; width: 80%; @include center-block(); margin-bottom: 25px; height: 250px;
+			background-size: 55%;
+			&.bike {@include center-block();}
+		}
+
+		.text {width: 30%; float: left;display: inline-block; height: 100%;}
+		.content {width: 50%; float: right; height: 100%; }
+	}
+
+
 }
 
 .page {
