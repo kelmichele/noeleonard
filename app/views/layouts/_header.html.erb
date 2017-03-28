@@ -1,73 +1,3 @@
-<!-- <header class="header">
-  <div id="top-bar">
-      <div class="block3">
-      <h5>Serving Baldwin, Mobile, &amp; Escambia Counties in Alabama</h5></div>
-      <div class="block-2">
-        <ul class="social-links">
-          <li>
-            <%= link_to '/fb', target: '_blank' do %>
-              <i class="fa fa-facebook"></i>
-            <% end %>
-          </li>
-
-          <li>
-            <%= link_to '/twitter', target: '_blank' do %>
-              <i class="fa fa-twitter"></i>
-            <% end %>
-          </li>
-
-          <li>
-            <%= link_to '/linkedin', target: '_blank' do %>
-              <i class="fa fa-linkedin"></i>
-            <% end %>
-          </li>
-
-          <li>
-            <%= link_to '/twitter', target: '_blank' do %>
-              <i class="fa fa-twitter"></i>
-            <% end %>
-          </li>
-
-          <li>
-            <%= link_to '/youtube', target: '_blank' do %>
-              <i class="fa fa-youtube"></i>
-            <% end %>
-          </li>
-        </ul>
-      </div>
-  </div>
-
-  <div class="main-header">
-    <div class="logo-block">
-      <%= link_to(image_tag( 'logo-nbl.png', alt: 'Noel Leonard Attorney - Logo', class: 'img-responsive logo-img'), root_path ) %>
-    </div>
-
-    <div class="main-block">
-      <h4>Call Us Today:  <%= number_to_phone(2519438638, delimiter: '-', class: 'call-link') %></h4>
-      <h4><%= link_to('habla espanol? haga clic aqui', espanol_path, class: 'esp-link' ) %></h4>
-      <div class="mega-tab">
-        <ul class="megamenu-parent menu-zoom hidden-xs">
-          <li class="menu-item"><%= link_to "Home", root_path %></li>
-          <li class="menu-item"><%= link_to "Motorcycle Accidents", motorcycle_accidents_path %></li>
-          <li class="menu-item"><%= link_to "Auto Accidents", auto_accidents_path %></li>
-          <li class="menu-item"><%= link_to "18-Wheeler Accidents", trucker_accidents_path %></li>
-          <li class="menu-item"><%= link_to "About", about_path %></li>
-          <li class="menu-item"><%= link_to "Contact Us", contact_path %></li>
-          <li class="menu-item"><%= link_to "Resources", resources_path %></li>
-        </ul>
-      </div>
-
-      <div>
-        <a href="#" id="offcanvas-toggler">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
-      </div>
-    </div>
-  </div>
-</header> -->
-
 <header class="header-alt">
   <div id="top-bar">
     <div class="tb-block">
@@ -105,7 +35,8 @@
 
       <span>|</span>
 
-      <h5>Serving Baldwin, Mobile, &amp; Escambia Counties in Alabama</h5>
+      <h5><%= link_to('Fill Out Our Case Evaluation Form', contact_path ) %></h5>
+      <!-- <h5>Serving Baldwin, Mobile, &amp; Escambia Counties in Alabama</h5> -->
     </div>
   </div>
 
@@ -138,3 +69,4 @@
     </a>
   </div>
 </header>
+
