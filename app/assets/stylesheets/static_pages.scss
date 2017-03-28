@@ -8,6 +8,7 @@
 
 hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relative;
 	&:after {content:''; position: absolute; left: 40%; width: 20%; height: 5px; background-color: $br-blue; }
+	&.dark{border-top:1px solid rgba($dark, .3);}
 }
 
 .consult-box {width: 50%; display: inline-block; float: left; @include sec-bgimage;
@@ -72,56 +73,88 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 .home {
 	.site-intro{
 		@include sec-default();
-		height:550px;
+		height:600px;
 		@include sec-bgimage();
-		background-image: url(image_path('hs-mr2.jpg'));
+		background-image: url(image_path('home-header.jpg'));
+		// background-position: center center;
 		position: relative;z-index: 0;
 
 		.overlay {
 			@include sec-default(); height:100%;
-		  background: -webkit-linear-gradient(-120deg, rgba($white, .45), rgba($white, .6));
-		  background: linear-gradient(-120deg, rgba($white, .45), rgba($white, .6));
+		  // background: -webkit-linear-gradient(-120deg, rgba($white, .45), rgba($white, .6));
+		  // background: linear-gradient(-120deg, rgba($white, .45), rgba($white, .6));
+		  padding:80px;
 		}
 
 		.title-block{
-			margin-top: 10%;
 			text-align: center;
+			width:70%; @include center-block();
+			border: 1px solid $dark; padding: 60px;
 		}
+		.title-line {width: 65%; @include center-block(); height: 1px; background-color: rgba($dark, .4); margin-bottom: 10px;}
+		.text{@include center-block(); width:80%; padding-top:20px;}
 		h1, h2, h3 {font-weight: bold;}
 		h1 {font-size: 4em;margin-bottom: 0;}
-		h2 {font-size: 3em;}
+		h2 {font-size: 3em;letter-spacing: 10px;}
+		h4{font-weight: bold; font-family: $open; line-height: 1.4em}
 	}
 
 	.practice-areas {
 		@include sec-default();
-		padding: $fullsec-padding;
+		padding:90px 70px;
 
-		h3 { margin-bottom: 20px; color: $blue; text-align: center; width: 60%; @include center-block();
-			span{font-size: .8em}}
+		// @include center-block();width: 55%; padding: 0 20px 45px;
 
-		.practice-box {display: inline-block; width: 30%; margin: 0 15px; float: left; padding:25px 30px 15px; text-align: center; color: $white;
-			@include sec-bgimage(); position: relative;z-index: 0;
-			background-image: url(image_path('lawyer.jpg'));
-			&::before {@include before(); background-color: rgba($blue,.8);}
-			.title-line {width:55%; @include center-block(); height: 1px; background-color: rgba($white, .6); margin-bottom: 20px;}
-			// &.bike {padding: 30px;}
+		.pa-intro {@include center-block(); width:75%; }
+		.pa-s1 { width: 50%; float: left;display: inline-block;
+			// text-align: center;
+			h3 { margin-bottom: 10px; color: $blue; font-weight: bold; text-align: center;}
+			hr.fancy {width: 50%;}
+			p {line-height: 1.5em; margin-bottom: 15px;padding-left:30px;}
 		}
+		.portrait {width: 315px; display: inline-block; float: right; margin-right: 4%; margin-top: 25px; }
+		p.intro { font-size: 18px; font-weight: bold; text-align: center; margin-bottom: 20px;}
 	}
+	.practice-box {display: inline-block; width: 31%; float: left; color: $white; text-align: center; height: 235px;
+		margin-left: 20px; padding:25px 30px 15px;
+		@include sec-bgimage(); position: relative;z-index: 0;
+		background-image: url(image_path('lawyer.jpg'));
+		&::before {@include before(); background-color: rgba($navy,.8);}
+		// .title-line {width:55%; @include center-block(); height: 1px; background-color: rgba($white, .6); margin-bottom: 20px;}
+		&.bike {margin-left: 25px;}
+		hr.fancy{margin-top: 15px;}
+	}
+
+	.break {@include sec-default(); padding-bottom: 100px;}
 
 	.home-sec1 {
 		@include sec-default();
+		background-color: $offwhite;
 		@include sec-bgimage();
-		background-image: url(image_path('home-background.jpg'));
-		padding-top: 80px;
-		.text { @include sec-default(); padding: 40px;}
+		// height:600px;
+		background-image: url(image_path('cases.jpg'));
+		.overlay{@include sec-default(); padding: 80px 50px 0; background-color: rgba($navy, .9);}
+		// .text { @include sec-default(); padding: 40px;}
 		.info-top {width:75%; @include center-block(); h3, h4, p {color: $white; text-align: center;}}
-		.info-box {width:75%; @include center-block(); background-color: $white; padding: $sec-padding; margin-top:40px;}
-		.symbol {width: 100px; @include center-block(); }
-		.video-row { padding-top:30px; }
-		iframe { display: inline-block; width: 40%; height: 250px;
-			&.one {margin: 0 4%}
+		.info-box { @include sec-default();
+		 	background-color: $white; padding: $sec-padding; padding-top: 35px; margin-top:40px;
+			position: relative;z-index: 1;
 		}
+		.top {@include sec-default();
+			h4.pbi {font-weight: bold; font-family: $open; text-align: center; text-transform: uppercase;}
+			hr.fancy.dark.hlf {width:15%; margin-bottom: 55px;}
+		}
+		.symbol {width: 60px; @include center-block(); }
 	}
+		.video-row { @include sec-default(); padding: 20px 40px 50px; text-align: center; background-color: $white;}
+		iframe { display: inline-block; width: 45%; height: 250px; margin:auto;
+			&.one {float: left;}
+			&.two {float: right;}
+		}
+
+
+	.after{	@include sec-default(); background-color: $white; height: 350px; position: relative; z-index: 0}
+
 }
 
 .page {
@@ -372,7 +405,11 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		}
 		hr.fancy {margin-bottom: 45px; &:after {height:2px;}}
 	}
-	.banner { width: 60%; @include center-block(); background-color: $navy; padding: 30px 30px 25px; margin-top: -50px; color: $white; text-align: center; p {font-size: 17px;}}
+	.banner { width: 60%; @include center-block(); padding: 30px 30px 25px; margin-top: -50px; color: $white; text-align: center;
+		background: -webkit-linear-gradient(-180deg, rgba($dark, .98), rgba($navy, .99));
+    background: linear-gradient(-180deg, rgba($dark, .98), rgba($navy, .99));
+	 p {font-size: 17px;}
+	}
 	.s2 {@include sec-default();background-color: $offwhite; padding: 10px 0 40px;}
 	.form {margin-top: 40px;}
 
