@@ -80,7 +80,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 
 		.overlay {
 			@include sec-default(); height:100%;
-		  padding:80px;
+		  padding: 80px;
 		}
 
 		.title-block{
@@ -91,11 +91,11 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			float: right;
 		}
 		.title-line {width: 65%; @include center-block(); height: 1px; background-color: rgba($dark, .4); margin-bottom: 10px;}
-		.text{@include center-block(); width:90%; padding-top:20px;}
+		.text{@include center-block(); width:90%; padding-top:40px;}
 		h1, h2, h3 {font-weight: bold;}
 		h1 {font-size: 4em;margin-bottom: 0;}
 		h2 {font-size: 3em;letter-spacing: 10px;}
-		h4{font-weight: bold; font-family: $open; line-height: 1.5em; font-size: 19px;}
+		h4{font-weight: bold; font-family: $open; line-height: 1.5em; font-size: 20px;}
 	}
 
 	.fst-links { width:35%; text-align: center; display: inline-block; margin-left: 10%; float: none; padding: 7px 10px; @include ease();
@@ -113,7 +113,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			hr.fancy {width: 50%;}
 			p {line-height: 1.5em; margin-bottom: 15px;padding-left:30px;}
 		}
-		.portrait {width: 315px; display: inline-block; float: right; margin-right: 4%; margin-top: 25px; }
+		.portrait {width: 315px; display: inline-block; float: right; margin-right: 4%; margin-top: 45px; }
 		p.intro { font-size: 18px; font-weight: bold; text-align: center; margin-bottom: 20px;}
 	}
 	.practice-box {display: inline-block; width: 32.5%; float: left; color: $white; text-align: center; height: 250px;
