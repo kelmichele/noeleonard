@@ -1,62 +1,90 @@
-<% @page_title = "Motorcycle Accidents" %>
+<% @page_title = "Contact Us" %>
 <% @page_description = "New Subject" %>
-
 
 <div class="header-wrap">
 	<div class="cst-header">
-		<h1><span>Motorcycle</span> Accident Claims</h1>
+		<div class="title">
+		 	<h1>Contact Noel B. Leonard</h1>
+      <div class="title-line"></div>
+      <div class="clearfix"></div>
+      <h3>Attorney, LLC</h3>
+    </div>
 	</div>
 </div>
 <div class="clearfix"></div>
 
-<!-- <div class="banner"> -->
-<div class="topic-boxes">
-	<h3>Motorcycle Accident Claims &amp; Serious Injuries</h3>
-	<div class="b1">
-		<p>Motorcycles are the least protected vehicles on the road, which unfortunately leads to higher injury and death rates than those of traditional motorists. Motorcycle accidents typically result in high medical costs, and demand a successful litigation outcome in order to pay for medical expenses.</p>
-	</div>
+<div class="ms1">
+	<div class="container">
+		<div class="sidebar">
+				<div class="contact-info">
+				  <h4 class="call"><%= number_to_phone(2519438638, delimiter: '-') %></h4>
+				  <hr class="fancy">
 
-	<div class="b2">
-		<p>If you or a loved one has been in a motorcycle accident in Alabama, you need an accident attorney who understands your pain, and can deliver the legal results you need to recover. In the turbulent aftermath of a devastating motorcycle accident, you need an attorney you can trust to fight for you.</p>
-	</div>
+			    <h4 class="address">218 N. Alston Street<br> Foley, AL 36535</h4>
+			    <hr class="fancy">
 
-	<div class="b3">
-		<p>As an avid motorcycle enthusiast, Noel B. Leonard understands, and can accommodate this need. His attorney fees will not exceed the amount awarded from a successful lawsuit, thus ensuring that you have the funds needed to repair your body and your life.</p>
+			    <h4 class="email">noel<span>@</span>attorney-leonard.com</h4>
+			    <hr class="fancy">
+
+				    <ul class="social-links">
+				      <li>
+				        <%= link_to '/fb', target: '_blank' do %>
+				          <i class="fa fa-facebook"></i>
+				        <% end %>
+				      </li>
+
+				      <li>
+				        <%= link_to '/twitter', target: '_blank' do %>
+				          <i class="fa fa-twitter"></i>
+				        <% end %>
+				      </li>
+
+				      <li>
+				        <%= link_to '/linkedin', target: '_blank' do %>
+				          <i class="fa fa-linkedin"></i>
+				        <% end %>
+				      </li>
+
+				      <li>
+				        <%= link_to '/twitter', target: '_blank' do %>
+				          <i class="fa fa-twitter"></i>
+				        <% end %>
+				      </li>
+
+				      <li>
+				        <%= link_to '/youtube', target: '_blank' do %>
+				          <i class="fa fa-youtube"></i>
+				        <% end %>
+				      </li>
+				    </ul>
+				</div>
+		</div>
+
+		<div class="left">
+      <p>If you or a resident of <span>Mobile</span>, <span>Baldwin</span>, or <span>Escambia</span> county, and suffer
+      from a serious injury as a result of a motorcycle, automotive, or 18-wheeler accident, contact Noel B. Leonard today to discuss your options.</p>
+      <p> Fill out our Case Evaluation Form below, or call us now, to schedule a consultation.</p>
+		</div>
 	</div>
 </div>
 
-<section class="content">
-	<div class="text-box">
-		<p>We counsel all motorcyclists to wear a helmet and follow essential safety precautions on the road, as there are many dangerous and negligent drivers out there.</p>
-		<p>In the event that you are in an accident caused by a negligent driver, it is essential that you have as much protection as possible, to prevent life-threatening injuries.</p>
-		<p>While a helmet is no guarantee that a life will be saved, in many cases a helmet has been the difference between life and death.</p>
+<div class="sec-form">
+	<div class="container">
+	  <div class="col-md-8 col-md-offset-2 form">
+	    <div class="siteorigin-widget-tinymce textwidget">
+	      <div id="wufoo-zj0erzt178k0t4"><iframe id="wufooFormzj0erzt178k0t4" class="wufoo-form-container" height="821" allowtransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none" src="https://vincidesigns.wufoo.com/embed/zj0erzt178k0t4/def/embedKey=zj0erzt178k0t4277622&amp;entsource=wordpress&amp;referrer=http%3Awuslashwuslashwww.attorney-leonard.comwuslashabout-uswuslash&amp;header=hide"><a href="https://vincidesigns.wufoo.com/forms/zj0erzt178k0t4/" title="html form">Fill out my Wufoo form!</a></iframe></div></div>
+	  </div>
 	</div>
+</div>
 
-
-
-		<!-- <h5>Contact Alabama accident attorney, Noel B. Leonard to schedule a consultation, or call (251) 597-0695 if you live in the city of Foley or Baldwin, Mobile or Escambia Counties, and have been in a motorcycle accident.</h5> -->
+<div class="ms2">
+	<div class="overlay">
+		<div class="container">
+			<h2>Let Noel B. Leonard <span>fight for you.</span></h2>
+			<p>If you live in Baldwin, Mobile, or Escambia County, and you or a loved one has been injured in a motorcycle accident in Alabama, contact accident attorney, Noel B. Leonard today.</p>
+			<hr class="fancy">
+			<p>Learn more about your rights, and start moving forward.<br> Fill out our <%=link_to "case evaluation form", contact_path %>, or call now to schedule a consultation.<br>
+			<%= number_to_phone(2519438638, delimiter: '-', class: 'call-link') %></p>
+		</div>
 	</div>
-
-</section>
-
-
-
-.motorcycle-accidents {
-	.header-wrap {@include sec-default(); padding:0px; background-color: $navy;}
-	.cst-header { background-image: url(image_path('attorney-desk-slim.jpg')); height: 250px; padding-left: 5%; background-position: center center;}
-	h1 {text-align: left; color: $white; @include tshadow($black); width: 30%;
-		span {font-size: 1.5em;}}
-
-	.topic-boxes{
-		h3 {text-align: center; margin-bottom:30px;}
-	 .b1, .b2, .b3 { height: 200px;}
-	}
-
-	.content{@include sec-default(); background-color: $dark; padding: 40px; @include sec-bgimage();
-		background-image: url(image_path('motorcycle.jpg')); background-size: 70%; background-position: left center;
-
-		.text-box {width:27%; float: right; padding: 15px; color: #dfdfdf;
-		  p{line-height: 1.5em;}
-		}
-	}
-}
+</div>
