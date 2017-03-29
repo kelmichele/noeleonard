@@ -520,7 +520,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 .contact {
 	.inside-sec {
 		@include sec-default(); @include sec-bgimage(); background-image: url(image_path('blur.jpg'));position: relative; z-index: 0;
-		&::before {@include before(); height: 70%; background-color: rgba($dark, .6);}
+		&::before {@include before(); background-color: rgba($dark, .9);}
 	}
 	.cst-header {
 		width:80%; @include center-block(); padding: 60px;
