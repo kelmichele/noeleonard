@@ -5,7 +5,8 @@
 
   <div class="full-foot">
     <div class="fs1">
-      <h3>Noel B. Leonard <span><%=image_tag( 'scales2.png', alt: 'Noel Leonard Attorney - Logo', class: 'img-responsive icon')%></span> Attorney, LLC</h3>
+      <h3>Noel B. Leonard Attorney, LLC</h3>
+      <!-- <span><%=image_tag( 'scales2.png', alt: 'Noel Leonard Attorney - Logo', class: 'img-responsive icon')%></span>  -->
       <ul class="social-links">
         <li>
           <%= link_to '/fb', target: '_blank' do %>
@@ -50,9 +51,9 @@
         <h5>Practice Areas</h5>
         <div class="ft-title"></div>
         <ul class="foot-nav">
-          <li><span>Motorcyle Accident Injury Claims</span></li>
-          <li><span>Auto Accident Injury Claims</span></li>
-          <li><span>18-Wheeler Accident Victims</span></li>
+          <li><span><%= link_to "Motorcycle Accidents Injury Claims", motorcycle_accidents_path %></span></li>
+          <li><span><%= link_to "Auto Accidents Injury Claims", auto_accidents_path %></span></li>
+          <li><span><%= link_to "18-Wheeler Accidents Victims", trucker_accidents_path %></span></li>
         </ul>
       </div>
 

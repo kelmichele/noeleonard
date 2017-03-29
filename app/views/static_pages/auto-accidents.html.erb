@@ -2,9 +2,11 @@
 <% @page_description = "New Subject" %>
 
 <div class="auto-s2">
-	<div class="container">
-		<h1>Automotive Accident Claims</h1>
-		<h3>Attorney Leonard helps accident victims get the results they need to heal and move forward.</h3>
+	<div class="over">
+		<div class="title-box">
+			<h1>Automotive Accident Claims</h1>
+			<h3>Attorney Leonard helps accident victims get the results they need to heal and move forward.</h3>
+		</div>
 	</div>
 </div>
 
@@ -29,7 +31,7 @@
 
 				</tr>
 
-				<tr>
+				<tr class="no-border">
 					<td>
 						<p>Noel B. Leonard has successfully represented injured Alabama drivers, passengers, and accident victims for years, providing the crucial compensation needed to pay for accident-related expenses such as lost wages and medical bills.</p>
 					</td>
@@ -49,9 +51,15 @@
 </div>
 
 <div class="main-body-2">
-		<div class="over">
+	<div class="over">
+		<div class="overlay">
 			<h2>Noel B. Leonard will <span>fight for you.</span></h2>
+			<hr class="fancy">
+			<h4>If you are the victim of an auto accident in Baldwin, Mobile, or Escambia County, and wish to schedule a consultation:</h4>
+			<h3>Fill out our <%=link_to "case evaluation form", contact_path %>, <br> or call today to set up an appointment.</h3>
+			<h3 class="phone"><%= number_to_phone(2519438638, delimiter: '-') %></h3>
 		</div>
+	</div>
 
 		<div class="content">
 			<p>Attorney Leonard has successfully represented clients in a wide range of auto accident claims, including:</p>
@@ -61,12 +69,12 @@
 				<li><i class="fa fa-check-square-o"></i> Hit and Run Accident Claims</li>
 				<li><i class="fa fa-check-square-o"></i> Whiplash Injury Claims</li>
 				<li><i class="fa fa-check-square-o"></i> 18-Wheeler Accidents</li>
-				<li><b>And So Many More</b></li>
+				<li><b>And Many More</b></li>
 			</ul>
 		</div>
 </div>
 
-<div class="main-body-3">
+<!-- <div class="main-body-3">
 	<div class="container">
 			<div class="consult-box">
 				<div class="overlay">
@@ -82,7 +90,7 @@
 				<%=link_to "Motorcycle Accidents", motorcycle_accidents_path, class: 'pre-ft-link' %>
 			</div>
 	</div>
-</div>
+</div> -->
 
 
 

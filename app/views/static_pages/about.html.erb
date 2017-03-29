@@ -8,18 +8,17 @@
 			<div class="title-line"></div>
 			<div class="clearfix"></div>
 			<h3>Attorney, LLC</h3>
-			<div class="text">
-
+			<!-- 	<div class="text">
 				<h4 class="open">"Accidents happen...but finding the right attorney doesn't happen by accident."</h4>
 			 		<p>Noel B. Leonard, Attorney LLC is a law firm committed to providing excellent legal service within the state of Alabama.
-			 		We are located in Foley, and represent clients from <span>Mobile</span>, <span>Baldwin</span>, and <span>Escambia</span> counties.</p>
-			</div>
+			 		We are located in Foley, and represent clients from <span>Mobile</span>, <span>Baldwin</span>, and <span>Escambia</span> counties.</p> -->
+			<!-- </div> -->
 		</div>
 	</div>
 
 		<div class="body">
 			<div class="s2">
-				<div class="practice-claims">
+				<!-- <div class="practice-claims">
 					<%=link_to "/auto_accidents_path", class: 'practice-boxes-op bike' do %>
 						<i class="fa fa-motorcycle"></i>
 						<h4>Motorcyle Accident <br>Injury Claims</h4>
@@ -34,38 +33,62 @@
 						<i class="fa fa-truck"></i>
 						<h4>18-Wheeler <br>Accident Victims</h4>
 					<% end %>
-				</div>
+				</div> -->
 
-				<div class="blue-sidebar">
+				<div class="sidebar">
 					<div class="top">
-						<div class="col-md-5 l">
-						<p>Noel B. Leonard has years of experience representing clients with a wide range of litigation concerns and legal issues.
-						He understands the intricacies of Alabama law in a way that helps his clients recover rightful damages.</p>
-						</div>
-						<div class="col-md-5 r">
-						<p>Noel's firm will help you determine your legal options, help file your claim, and make every effort to see that you receive proper compensation for your injuries, and all other damages sustained during the accident.</p>
-						</div>
-						<%=image_tag('scales.png', class: 'img-responsive icon') %>
+						<p>Noel B. Leonard, Attorney LLC is a law firm committed to providing excellent legal service within the state of Alabama.</p>
+						<p>We are located in Foley, and represent clients from Mobile, Baldwin, and Escambia counties.</p>
+							<!-- <span>Our practice areas include:<br> Motorcyle Accident Injury Claims, Auto Accident Injury Claims, and 18-Wheeler Accident Victims.</span> -->
 					</div>
-					<div class="bottom"><div class="overlay">
-						<h4>What We Can Do For You?</h4>
-						<ul>
-							<li><i class="fa fa-chevron-circle-right"></i>Provide free telephone and office consultation</li>
-							<li><i class="fa fa-chevron-circle-right"></i>Accommodate evening and weekend appointments</li>
-							<li><i class="fa fa-chevron-circle-right"></i>Provide superior representation for your legal concerns</li>
-							<li><i class="fa fa-chevron-circle-right"></i>Ensure first-class client service and personalized attention</li>
-							<!-- <li><i class="fa fa-chevron-circle-right"></i>Defend you against claims brought against you</li> -->
-							<!-- <li><i class="fa fa-chevron-circle-right"></i>Advance your expenses</li> -->
-							<li><i class="fa fa-chevron-circle-right"></i>Maximize your recovery</li>
-						</ul>
-					</div></div>
+
+					<hr class="fancy dark">
+
+					<div class="bottom">
+						<div class="coll">
+							<h4><span>Noel Gets Results</span></h4>
+							<p>Noel B. Leonard has years of experience representing clients with a wide range of litigation concerns and legal issues.
+							He understands the intricacies of Alabama law in a way that helps his clients recover rightful damages.</p>
+
+							<p>Noel's firm will help you determine your legal options, help file your claim, and make every effort to see that you receive proper compensation for your injuries, and all other damages sustained during the accident.</p>
+						</div>
+
+						<div class="coll">
+							<h4>What We Can Do For You?</h4>
+							<ul>
+								<li><i class="fa fa-chevron-circle-right"></i>Provide free telephone and office consultation</li>
+								<li><i class="fa fa-chevron-circle-right"></i>Accommodate evening and weekend appointments</li>
+								<li><i class="fa fa-chevron-circle-right"></i>Provide superior representation for your legal concerns</li>
+								<li><i class="fa fa-chevron-circle-right"></i>Ensure first-class client service and personalized attention</li>
+								<li><i class="fa fa-chevron-circle-right"></i>Maximize your recovery</li>
+							</ul>
+						</div>
+					</div>
+
+					<h4 class="closer">Our Practice Areas Include:</h4>
+					<div class="practice-claims-full">
+						<%=link_to "/auto_accidents_path", class: 'practice-boxes-op bike' do %>
+							<i class="fa fa-motorcycle"></i>
+							<h4>Motorcyle Accident <br>Injury Claims</h4>
+						<% end %>
+
+						<%=link_to "/trucker_accidents_path", class: 'practice-boxes-op auto' do %>
+							<i class="fa fa-car"></i>
+							<h4>Auto Accident <br>Injury Claims</h4>
+						<% end %>
+
+						<%=link_to "/motorcycle_accidents_path", class: 'practice-boxes-op trucker' do %>
+							<i class="fa fa-truck"></i>
+							<h4>18-Wheeler <br>Accident Victims</h4>
+						<% end %>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="body2">
-		<div class="s3">
+		<div class="container">
 			<div class="community">
 				<h4 class="open">We are committed to giving back to our local community.<br> We currently support the following charitable organizations.</h4>
 				<%=image_tag('vfw-logo.jpg', class: 'img-responsive charity') %>
