@@ -71,17 +71,17 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 }
 
 .home {
-	header.header-new {background-color: transparent; position: absolute;
-		.mega-tab {display: none;}
-	}
+	// header.header-new {background-color: transparent; position: absolute;
+	// 	.mega-tab {display: none;}
+	// }
 
-	.mega-tab {@include sec-default(); text-align:center; border-bottom: 1px solid #dfdfdf;
-		li {display: inline-block; margin:15px 25px 10px;
-      &:last-child{margin-right: 5px;}
-      &:first-child{margin-left: 0px;}
-      a{ font-size: 15px; line-height: 2em; color: $dark; text-transform: uppercase; }
-    }
-  }
+	// .mega-tab {@include sec-default(); text-align:center; border-bottom: 1px solid #dfdfdf;
+	// 	li {display: inline-block; margin:15px 25px 10px;
+ //      &:last-child{margin-right: 5px;}
+ //      &:first-child{margin-left: 0px;}
+ //      a{ font-size: 15px; line-height: 2em; color: $dark; text-transform: uppercase; }
+ //    }
+ //  }
 
 	.site-intro{
 		@include sec-default();
@@ -112,7 +112,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		h4{font-family: $open; line-height: 1.5em; font-size: 20px; font-weight: 600;}
 	}
 
-	.fst-links { width:40%; text-align: center; display: inline-block; margin-left: 5%; float: none; padding: 10px; @include ease();
+	.fst-links { width:35%; text-align: center; display: inline-block; margin-left: 5%; float: none; padding: 10px; @include ease();
 		background-color: $dk-blue; margin-top: 15px; color: $white; font-weight: 600; font-family: $open; border-radius: 5px; font-size: 16px;
 		&.one{ margin-left: 7%;}
 		&:hover {background-color: $blue}
