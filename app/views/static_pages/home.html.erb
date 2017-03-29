@@ -9,31 +9,47 @@
 			<div class="clearfix"></div>
       <h2>Attorney, LLC</h2>
 			<div class="text">
-      	<h4>Committed to Providing Excellent Legal Service Within the State of Alabama, and devoted to serving Baldwin, Mobile, and Escambia Counties.</h4>
+      	<!-- <h4>Committed to Providing Excellent Legal Service Within the State of Alabama, and devoted to serving Baldwin, Mobile, and Escambia Counties.</h4> -->
+				<h3>"Accidents happen...but finding the right attorney doesn't happen by accident."</h3>
+				<!-- <h3>Committed to Providing Excellent Legal Service in the Alabama Counties of Baldwin, Mobile, and Escambia.</h3> -->
       </div>
-			<!-- <span>"Accidents happen...but finding the right attorney doesn't happen by accident."</span> -->
     </div>
 	</div>
 </section>
+ <div class="mega-tab">
+    <ul class="megamenu-parent menu-zoom hidden-xs">
+      <%= render 'layouts/nav' %>
+    </ul>
+  </div>
 
 <section class="practice-areas">
-		<div class="pa-intro">
-			<div class="pa-s1">
-				<h3>Noel B. Leonard is an Accident Attorney Based in Foley, Alabama</h3>
-				<hr class="fancy dark">
-				<div class="clearfix"></div>
+	<div class="pa-s1">
+		<h3><span>Noel B. Leonard</span> <br>is an Accident Attorney in Foley, Alabama.</h3>
+		<hr class="fancy dark">
+		<div class="clearfix"></div>
+		<p>Noel B. Leonard Attorney, LLC is committed to providing excellent legal service within the state of Alabama. Noel's firm offers their services to the residents of Baldwin, Mobile, and Escambia counties.</p>
+		<a href="#practice-areas" class="fst-links">Practice Areas</a>
+		<%= link_to "Contact Us", contact_path, class: 'fst-links' %>
+	</div>
 
-					<p>If you are suffering from a serious injury caused by a motorcycle, automotive, or 18-wheeler accident, and you live in Baldwin, Mobile, or Escambia County, Noel and his firm can help.</p>
-					<p>Noel B. Leonard Attorney, LLC has a knowledgeable staff, capable of addressing any legal concerns you may have.</p>
-					<p>Our firm will evaluate your case, help file your claim, and make every effort to see that you receive proper compensation for your injuries sustained during the accident.</p>
-					<!-- <h4>Every person who has suffered an injury deserves the time and dedication our law firm can provide.</h4> -->
+	<div class="pa-intro">
+		<div class="container">
+			<div class="pa-s2">
+				<h3>Noel Leonard <span>Delivers</span></h3>
+					<p class="first">Noel has devoted his career to pursuing justice for victims of accident injuries.
+					He and his firm are dedicated to each client, and fight to recover the compensation they deserve to ease their pain and suffering. </p>
+
+				<div class="break"></div>
+				<h4><span>Who do we represent?</span></h4>
+					<p class="second">If you are suffering from a serious injury caused by a motorcycle, automotive, or 18-wheeler accident, and a resident of Baldwin, Mobile, or Escambia County, Noel and his firm can help.</p>
+
+					<p>Noel B. Leonard Attorney, LLC employs a knowledgeable staff. Our team is capable of addressing your legal concerns, and helping you to understand your rights.</p>
+					<p>Our firm will evaluate your case, and help file your claim, and make every effort to see that you receive proper compensation for your injuries sustained during the accident.</p>
 					<%= link_to "More About Us", about_path, class: 'fst-links one' %>
-					<%= link_to "Contact Us", contact_path, class: 'fst-links' %>
 			</div>
-			<%=image_tag('noel-leonard.jpg', alt: 'Noel Leonard, Foley Attorney', class: 'img-responsive portrait') %>
-			<div class="portrait-bg"></div>
-			<!-- <div class="clearfix"></div> -->
+			<%=image_tag('noel5.jpg', alt: 'Noel Leonard, Foley Attorney', class: 'img-responsive portrait') %>
 		</div>
+	</div>
 </section>
 
 <section class="home-sec1">
@@ -42,58 +58,54 @@
 			<h3>Noel B. Leonard Attorney, LLC</h3>
 		</div>
 
-		<div class="info-box-alt">
+		<div id="practice-areas" class="info-box-alt">
 			<div class="top">
-				<h4 class="open text-center">"Accidents happen...but finding the right attorney doesn't happen by accident."</h4>
+				<!-- <h4 class="open text-center">"Accidents happen...but finding the right attorney doesn't happen by accident."</h4> -->
 				<h4 class="pbi">Our practice areas include:</h4>
 				<hr class="fancy dark hlf">
 
 				<div class="practice-box bike">
 					<div class="text">
-						<h4>Motorcyle Accident Injury Claims</h4>
+						<h4>Motorcyle Accident<br> Injury Claims</h4>
 						<hr class="fancy">
-						<%= link_to "Learn More", motorcycle_accidents_path, class: 'pb-links' %>
 					</div>
 					<div class="content">
-						<p>Noel B. Leonard is dedicated to fighting for motorcycle accident victims.</p><p> He will help you understand your rights, and secure the compensation you need for recovery.</p>
+						<p>Noel B. Leonard is dedicated to fighting for motorcycle accident victims.</p>
+						<p class="last"> He will help you understand your rights, and secure the compensation you need for recovery.</p>
+						<div class="clearfix"></div>
+						<%= link_to "Learn More", motorcycle_accidents_path, class: 'pb-links' %>
 					</div>
 				</div>
 
 				<div class="practice-box auto">
 					<div class="text">
-						<h4>Auto Accident Injury Claims</h4>
+						<h4>Auto Accident<br> Injury Claims</h4>
 						<hr class="fancy">
-						<%= link_to "Learn More", auto_accidents_path, class: 'pb-links' %>
 					</div>
 					<div class="content">
-					<p>Our firm ensures that auto accidents victims receive proper compensation for personal injuries sustained in the accident, post-medical needs, and rehabilitation, as well as property damages.</p>
+						<p class="last">Our firm ensures that auto accidents victims receive proper compensation for personal injuries sustained in the accident, post-medical needs, and rehabilitation, as well as property damages.</p>
+						<%= link_to "Learn More", auto_accidents_path, class: 'pb-links' %>
 					</div>
 				</div>
 
 				<div class="practice-box trucker">
 					<div class="text">
-						<h4>18-Wheeler Accident Victims</h4>
+						<h4>18-Wheeler<br> Accident Victims</h4>
 						<hr class="fancy">
-						<%= link_to "Learn More", trucker_accidents_path, class: 'pb-links' %>
 					</div>
 					<div class="content">
-						<p>Whether the cause of the accident is driver error, equipment failure, shifting cargo, or any other negligent action by the driver or carrier, we will help you and your family get through the trying times.</p>
+						<p class="last">Whether the cause of the accident is driver error, equipment failure, shifting cargo, or any other negligent action by the driver or carrier, we will help you and your family get through the trying times.</p>
+						<%= link_to "Learn More", trucker_accidents_path, class: 'pb-links' %>
 					</div>
 				</div>
 
 				<div class="practice-box cbox">
-					<div class="col-md-12">
-						<div class="call">
-							<div class="cbox">
-								<div class="overlay">
-									<div class="col-md-8 col-md-offset-2">
-										<h4>If you are an auto accident victim in Baldwin, Mobile or Escambia County, contact us today to schedule a consultation:</h4>
-											<hr class="fancy dark">
-										<h3>Fill out our case evaluation form <%=link_to "here", contact_path %>, <br> or
-										call <%= number_to_phone(2519438638, delimiter: '-', class: 'phone') %> to set up an appointment.</h3>
-									</div>
-								</div>
-							</div>
+					<div class="cbox">
+						<div class="overlay">
+								<h4>If you are an accident victim in Baldwin, Mobile or Escambia County, contact us today to schedule a consultation:</h4>
+									<hr class="fancy dark">
+								<h4>Fill out our <%=link_to "case evaluation form", contact_path %>, <br> or
+								call <span><%= number_to_phone(2519438638, delimiter: '-', class: 'phone') %></span> to set up an appointment.</h4>
 						</div>
 					</div>
 				</div>
