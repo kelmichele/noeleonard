@@ -1,4 +1,4 @@
-<header class="header-alt">
+<!-- <header class="header-alt">
   <div id="top-bar">
     <div class="container">
       <div class="tb-block">
@@ -45,7 +45,6 @@
     <div class="container">
       <div class="logo-block">
         <%= link_to(image_tag( 'logo.png', alt: 'Noel Leonard Attorney - Logo', class: 'img-responsive logo-img'), root_path ) %>
-        <!-- <h3>Noel B. Leonard Attorney, LLC</h3> -->
       </div>
 
       <div class="main-block">
@@ -70,13 +69,13 @@
         <span></span>
     </a>
   </div>
-</header>
+</header> -->
 
 
 
 <header class="header-new">
   <div class="main-header">
-    <div class="container">
+    <!-- <div class="container no-padding"> -->
       <div class="logo-block"><%= link_to(image_tag( 'logo-nbl.png', alt: 'Noel Leonard Attorney - Logo', class: 'img-responsive logo-img'), root_path ) %></div>
       <div class="main-block">
         <h4 class="call">Call Today:<br>  <div class="call-link"><%= number_to_phone(2519438638, delimiter: '-') %></div></h4>
@@ -84,53 +83,118 @@
         <%= link_to('/espanol', class: 'esp-link' ) do %>
           <h4>habla espanol? <br>haga clic aqui</h4>
         <% end %>
-      </div>
+        <ul class="social-links">
+          <li>
+            <%= link_to '/fb', target: '_blank' do %>
+              <i class="fa fa-facebook"></i>
+            <% end %>
+          </li>
+
+          <li>
+            <%= link_to '/twitter', target: '_blank' do %>
+              <i class="fa fa-twitter"></i>
+            <% end %>
+          </li>
+
+          <li>
+            <%= link_to '/linkedin', target: '_blank' do %>
+              <i class="fa fa-linkedin"></i>
+            <% end %>
+          </li>
+
+          <li>
+            <%= link_to '/twitter', target: '_blank' do %>
+              <i class="fa fa-twitter"></i>
+            <% end %>
+          </li>
+
+          <li>
+            <%= link_to '/youtube', target: '_blank' do %>
+              <i class="fa fa-youtube"></i>
+            <% end %>
+          </li>
+       </ul>
+      <!-- </div> -->
+    </div>
+
+    <div class="off-canvas">
+      <a href="#" id="offcanvas-toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
     </div>
   </div>
 
-  <div class="mega-tab">
-    <ul class="megamenu-parent menu-zoom hidden-xs">
-      <%= render 'layouts/nav' %>
-        <li><ul class="social-links">
-            <li>
-              <%= link_to '/fb', target: '_blank' do %>
-                <i class="fa fa-facebook"></i>
-              <% end %>
-            </li>
+    <div class="mega-tab">
+      <ul class="megamenu-parent menu-zoom hidden-xs">
+        <%= render 'layouts/nav' %>
+          <!-- <li class="social"><ul class="social-links">
+              <li>
+                <%= link_to '/fb', target: '_blank' do %>
+                  <i class="fa fa-facebook"></i>
+                <% end %>
+              </li>
 
-            <li>
-              <%= link_to '/twitter', target: '_blank' do %>
-                <i class="fa fa-twitter"></i>
-              <% end %>
-            </li>
+              <li>
+                <%= link_to '/twitter', target: '_blank' do %>
+                  <i class="fa fa-twitter"></i>
+                <% end %>
+              </li>
 
-            <li>
-              <%= link_to '/linkedin', target: '_blank' do %>
-                <i class="fa fa-linkedin"></i>
-              <% end %>
-            </li>
+              <li>
+                <%= link_to '/linkedin', target: '_blank' do %>
+                  <i class="fa fa-linkedin"></i>
+                <% end %>
+              </li>
 
-            <li>
-              <%= link_to '/twitter', target: '_blank' do %>
-                <i class="fa fa-twitter"></i>
-              <% end %>
-            </li>
+              <li>
+                <%= link_to '/twitter', target: '_blank' do %>
+                  <i class="fa fa-twitter"></i>
+                <% end %>
+              </li>
 
-            <li>
-              <%= link_to '/youtube', target: '_blank' do %>
-                <i class="fa fa-youtube"></i>
-              <% end %>
-            </li>
-          </ul>
+              <li>
+                <%= link_to '/youtube', target: '_blank' do %>
+                  <i class="fa fa-youtube"></i>
+                <% end %>
+              </li>
+            </ul>
+          </li> -->
+      </ul>
+    </div>
+   <!--  <ul class="social-links">
+        <li>
+          <%= link_to '/fb', target: '_blank' do %>
+            <i class="fa fa-facebook"></i>
+          <% end %>
         </li>
-    </ul>
-  </div>
 
-  <div>
-    <a href="#" id="offcanvas-toggler">
-      <span></span>
-      <span></span>
-      <span></span>
-    </a>
-  </div>
+        <li>
+          <%= link_to '/twitter', target: '_blank' do %>
+            <i class="fa fa-twitter"></i>
+          <% end %>
+        </li>
+
+        <li>
+          <%= link_to '/linkedin', target: '_blank' do %>
+            <i class="fa fa-linkedin"></i>
+          <% end %>
+        </li>
+
+        <li>
+          <%= link_to '/twitter', target: '_blank' do %>
+            <i class="fa fa-twitter"></i>
+          <% end %>
+        </li>
+
+        <li>
+          <%= link_to '/youtube', target: '_blank' do %>
+            <i class="fa fa-youtube"></i>
+          <% end %>
+        </li>
+    </ul> -->
+
+
+
 </header>

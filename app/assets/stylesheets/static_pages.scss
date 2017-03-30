@@ -722,7 +722,8 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		.banner h3 {font-size: 20px;}
 		.sec2 {
 			h4 {padding: 0 0px 30px;}
-			.block2 {
+			.block2 { width: 100%; padding: 0 15px 10px;
+				p{width: 100%;}
 				li, li:nth-child(2n+2){ width:100%; float: left;}
 			}
 		}
