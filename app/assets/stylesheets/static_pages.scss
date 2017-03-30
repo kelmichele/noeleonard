@@ -541,14 +541,14 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	.body{width:90%; @include center-block(); background-color: $white; width: 75%;}
 	.s2 {@include sec-default();background-color: $white; margin-bottom: 30px;}
 
-	.practice-claims { width:20%;display: inline-block;float: left;
-		.practice-boxes-op { width: 100%; float: left; padding:30px 30px 25px; text-align: center; color: $white; background-color: $blue; margin: 0;
-			h4 {font-family: $open; color: $white;}
-			&.bike {background-color: $dk-blue;}
-			&.auto {background-color: #00447c;}
-			i {font-size: 25px; padding: 13px 12px; border:1px solid $white; border-radius: 50%; margin-bottom: 10px;}
-		}
-	}
+	// .practice-claims { width:20%;display: inline-block;float: left;
+	// 	.practice-boxes-op { width: 100%; float: left; padding:30px 30px 25px; text-align: center; color: $white; background-color: $blue; margin: 0;
+	// 		h4 {font-family: $open; color: $white;}
+	// 		&.bike {background-color: $dk-blue;}
+	// 		&.auto {background-color: #00447c;}
+	// 		i {font-size: 25px; padding: 13px 12px; border:1px solid $white; border-radius: 50%; margin-bottom: 10px;}
+	// 	}
+	// }
 
 	.practice-claims-full { @include sec-default(); background-color: $blue;
 		.practice-boxes-op { width: 33.3%; float: left; display: inline-block; padding:30px 30px 25px; text-align: center; color: $white; background-color: $blue; margin: 0;
@@ -566,7 +566,6 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	}
 
 	.sidebar {
-		// width: 78%; float: none; display: inline-block;
 		@include sec-default();
 		background-color: $white;
 
@@ -607,10 +606,6 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		.practice-claims .practice-boxes-op {padding:20px;}
 	}
 }
-
-
-
-
 
 .contact {
 	.header-wrap {@include sec-default(); background-color: $dk-blue; @include sec-bgimage(); background-image: url(image_path('blur.jpg'));background-position: center right;
@@ -658,4 +653,78 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			span{color: $lt-blue}
 		}
 	}
+
+	@include bp(tb) {
+		.header-wrap {
+			.cst-header { height: 200px; padding-left: 20px; }
+			.title {width: 60%; }
+		}
+
+		.ms1 { padding-bottom:20px;
+			p {margin-bottom: 15px;}
+		}
+		.left {padding: 50px; width: 50%;}
+		.sidebar {
+			.contact-info { width: 40%; margin-right: 5%; margin-top: -40px; padding: 25px;
+				h4 {font-size: 19px;}
+			}
+		}
+		.sec-form {padding: 20px 0 10px}
+		.ms2 {
+			.overlay {background-color: rgba($dk-blue, .7); padding: 35px 0; }
+			p { font-size: 18px; width: 80%;}
+		}
+	}
+
+	@include bp(md) {
+		.header-wrap {
+			.cst-header { height: 200px; padding-left: 0px; }
+			.title {width: 100%; text-align: center;}
+		}
+
+		.left {padding: 30px 50px 0px; width: 100%;}
+		.sidebar {
+			.contact-info { @include center-block(); width:80%; padding: 20px 20px 10px; margin-top: 25px;}
+		}
+		.sec-form {padding: 20px 20px 10px}
+		.ms2 { background-image: url(image_path('bike-claim-mob.jpg'));
+			.overlay { padding: 30px 0 15px; }
+			p { font-size: 18px; width: 100%;}
+		}
+	}
+
+	@include bp(mb) {
+		.header-wrap .cst-header { height: 160px; }
+
+		.sidebar {
+			hr.fancy {margin-bottom:20px; margin-top:15px; width:50%; &:after{height:3px;}}
+			.contact-info { @include center-block(); width:80%; padding: 20px 0px 10px; margin-top: 25px;}
+		}
+		.sec-form {padding: 20px 20px 10px}
+		.ms2 { background-position: top left;
+			.overlay {background-color: rgba($dk-blue, .9); padding: 30px 30px 15px; }
+			p { font-size: 15px; }
+			h2{font-size: 23px;}
+		}
+	}
+
+	@include bp(xs) {
+		h1 {font-size: 27px;}
+		h3 {font-size: 20px; letter-spacing: 1px}
+
+		.left {padding: 20px 30px 0px; }
+		.sidebar {
+			hr.fancy {margin-bottom:15px; }
+			.contact-info { width:95%;margin-top: 15px;}
+		}
+		.sec-form {padding: 20px 20px 10px}
+		.ms2 {
+			.overlay {background-color: rgba($dk-blue, 1); padding: 30px 10px 15px; }
+			h2{font-size: 20px;}
+		}
+	}
 }
+
+
+
+
