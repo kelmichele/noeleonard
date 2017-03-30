@@ -277,10 +277,8 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		h4 {font-weight: 600; color: $blue; font-family: $open; font-size: 17px; line-height: 1.4em}
 	}
 	.sidebar {display: inline-block; float: none; width: 34%; margin-left: 10%; background-color: $dk-blue; margin-top: 50px;
-		// margin-top:-50px;
 		.inner {@include sec-default(); padding: 30px; color: $white;}
 		h4 {color: $lt-blue; font-weight: 600; text-align: center;}
-		// hr {border-top: 1px solid rgba($offwhite, .3);}
 		h3 {font-family: $open; font-size: 20px; text-align: center; background-color: $blue; padding: 5px; font-weight: 600; margin-bottom: 15px;}
 		hr.fancy {width: 80%; margin-bottom:30px;}
 		p {padding: 0 15px; text-align: center;}
@@ -289,7 +287,6 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			ul{padding:0;}
 			li {color: rgba($white, .6); display: inline-block; font-size: 18px; width: 40%; float: left;}
 		}
-
 	}
 
 	.ms2 {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('bike-claim.jpg'));
@@ -300,6 +297,92 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 
 		h2{font-family: $open; color: $white; font-weight: bold; @include tshadow($dark);text-transform: uppercase;
 			span{color: $lt-blue}
+		}
+	}
+
+	@include bp(tb) {
+		.header-wrap {
+			.cst-header { height: 250px; }
+			h1 {width: 50%; margin-top: 40px;}
+		}
+
+		.ms1 {padding-bottom: 25px;}
+		.left {padding: 35px 0px 0px; width: 52%;
+			p {margin-bottom: 15px; font-size: 16px;}
+		}
+		.sidebar {width: 40%; margin-left: 5%; margin-top: 30px;
+			.inner {@include sec-default(); padding: 30px; color: $white;}
+			h4 {color: $lt-blue; font-weight: 600; text-align: center;}
+			h3 {font-family: $open; font-size: 20px; text-align: center; background-color: $blue; padding: 5px; font-weight: 600; margin-bottom: 15px;}
+			hr.fancy {width: 75%; margin-bottom: 25px;}
+			p {padding: 0 5px;}
+		}
+		.ms2 {background-image: url(image_path('bike-pg-mob.jpg'));
+			.overlay {padding: 45px 0;}
+		}
+	}
+
+	@include bp(md) {
+		.header-wrap {
+			.cst-header { height: 200px; }
+			h1 { margin-top: 20px; font-size: 30px;}
+		}
+
+		.ms1 {padding-bottom: 25px;}
+		.left {padding: 35px 0px 0px; width: 90%; @include center-block();
+			p {margin-bottom: 15px; font-size: 16px;}
+		}
+		.sidebar {width: 90%; @include center-block(); margin-top: 30px;
+			.inner {padding: 20px 30px;  background-color: $dk-blue;}
+		}
+		.ms2 {background-image: url(image_path('bike-claim-mob.jpg'));
+			.overlay {padding: 25px 0;}
+			h2 {font-size: 28px; margin-bottom: 25px}
+			p { font-size: 18px; width: 80%;}
+		}
+	}
+
+	@include bp(ph) {
+		.header-wrap { text-align: center;
+			.cst-header {height:165px;}
+			h1 { width:60%;
+				span{font-size: 30px;}}
+		}
+
+		.ms1 {padding-bottom: 25px;}
+		.left {padding: 20px 0px 0px; width: 95%; text-align: center;
+				h4 {font-size: 16px;}
+				p {font-size: 15px; margin-bottom: 8px;}
+		}
+		hr {margin: 15px auto}
+
+		.sidebar {width: 95%; margin-top: 20px;
+			.inner {padding: 20px; padding-bottom: 10px; }
+			p {font-size: 15px;}
+			hr.fancy {width: 50%; margin:15px auto;}
+		}
+		.ms2 {background-image: url(image_path('bike-claim-mob.jpg'));
+			.overlay {padding: 25px 0;}
+			h2 {font-size: 24px; margin-bottom: 15px}
+			p { font-size: 16px; width: 95%;}
+		}
+	}
+
+	@include bp(xs) {
+		.header-wrap {
+			.cst-header {height:130px; padding-left: 15px;}
+			h1 { width:100%; margin-top: 0px;}
+			h1, h1	span{font-size: 25px;}
+		}
+
+		.ms1 {padding-bottom: 25px;}
+		.left { width: 98%;}
+
+		.sidebar {width: 98%; margin-top: 25px;}
+		.ms2 {background-image: url(image_path('speed-bike.jpg'));
+			.overlay {padding: 20px 0;background-color: rgba($dk-blue, .95);}
+			h2 {font-size: 20px; font-weight: 600; margin-bottom: 10px}
+			p { font-size: 15px; width: 100%;}
 		}
 	}
 }
@@ -314,7 +397,6 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	}
 
 	.main-body {@include sec-default(); text-align: center;
-		// @include sec-bgimage(); background-position: right bottom; background-size: 40%; background-image: url(image_path('crash.png'));
 		.inner {@include sec-default(); padding: 50px 0; background-color: rgba($white, .9);}
 		.boxes {
 			tr {border-bottom: 1px solid #e1e1e1; }
@@ -348,7 +430,6 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	}
 
 	.main-body-3{@include sec-default(); padding: 30px 0 40px;
-
 		.consult-box {width: 50%; display: inline-block; float: left; margin-top: 10px; @include sec-bgimage; background-image: url(image_path('auto.jpg'));
 			.overlay {@include sec-default(); background-color: rgba($dk-blue, .9); padding: 30px 60px; text-align: center; }
 			a {color: $lt-blue; font-weight: bold; @include tshadow($dark);}
@@ -358,6 +439,108 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		}
 
 		.pre-ft-link.first {margin-top: 60px;}
+	}
+
+
+	@include bp(tb) {
+		.auto-s2{background-position: center top;
+			.over {@include sec-default();padding: 30px 50px; }
+			.title-box{ width:65%; }
+		}
+
+		.main-body {
+			.inner {padding: 20px 0; }
+
+			.boxes {
+				td { padding: 20px; }
+			}
+		}
+
+		.main-body-2{background-size: 34%; background-image: url(image_path('crash.png'));
+			.over {width: 100%; margin-bottom:30px;
+				hr{width:45%;}
+				.overlay{padding: 30px 25px 25px;}
+				h4{font-size: 17px;width: 65%; @include center-block();}
+			}
+			.content {width:55%; float: left; margin-left: 15%;
+				p {width: 100%;margin-bottom: 15px;}
+			}
+		}
+	}
+
+	@include bp(md) {
+		.auto-s2{
+			.title-box{ width:85%; }
+			h1 {margin-top: 15px; font-size: 30px;}
+			h3 {font-size: 18px;}
+		}
+
+		.main-body {
+			.boxes {
+				tr.one {display: none}
+				td { padding: 0 0 15px; width: 80%; @include center-block(); border:none; }
+			}
+		}
+	}
+
+	@include bp(mb) {
+		.auto-s2{
+			.title-box{ width:90%; text-align: left; }
+			h3 {font-size: 16px;}
+		}
+
+		.main-body {
+			.inner {padding-bottom: 0;}
+			.boxes {
+				td { padding: 0 0 15px; width: 90%; }
+			}
+		}
+
+		.main-body-2{background-size: 45%; background-image: url(image_path('crash.png'));
+			.over {margin-bottom:10px;
+				h2{ font-size: 24px}
+				.overlay{padding: 30px 15px 25px;}
+				h4{font-size: 16px;width:95%;}
+				h3 {font-size: 20px;}
+				a, h3.phone {font-weight: 600; }
+			}
+			.content {width:85%; margin-left: 5%;}
+		}
+	}
+
+	@include bp(ph) {
+		.auto-s2{
+			.over {padding: 20px}
+			.title-box{ width:100%;}
+			h1{font-size: 27px;}
+		}
+
+		.main-body {
+			.inner {padding-bottom: 0;}
+			.boxes {
+				td { padding: 0 0 5px; width: 95%; }
+			}
+		}
+
+		.main-body-2{background-size: 40%;
+			.over {margin-bottom:0px;
+				.overlay{padding: 30px 15px 15px;}
+			}
+			.content {width:90%; }
+		}
+	}
+
+	@include bp(xs) {
+		.auto-s2{
+			h1{font-size: 25px; }
+		}
+
+		.main-body-2{background-size: 35%;
+			.over {
+				.overlay{padding: 20px 15px 15px;}
+			}
+			.content {margin-left: 0; padding-left:25px; }
+		}
 	}
 }
 
@@ -382,26 +565,18 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	.boxes { @include sec-default(); padding: 50px 0px;  background-color: $white;
 		.b1, .b3 {width: 48%; display: inline-block; float: left;}
 		.b1 { width: 40%; p{padding-left:5px;} }
-		.b3 {width: 45%; float: right;  @include sec-bgimage(); background-image: url(image_path('semi-claim.jpg')); background-position: center center;
-			.overlay {@include sec-default(); background-color: rgba($navy, .9); padding: 40px 50px; text-align: center;}
-			color: $white; font-size: 18px; span { color: $lt-blue;}
-			p{line-height: 1.5em; font-size: 17px;
-				span{color: $lt-blue; font-weight: 600; font-size: 18px; text-transform: uppercase;}
-			}
-			h3 { font-family: $open; font-size: 20px; color: $lt-blue; line-height: 1.3em; @include tshadow($blue); margin-top: 20px; font-weight: 600;}
-		}
 		h4 {font-family: $open; font-weight: bold; color: $blue;}
 	}
 
 	.blk1 {width: 54%;float: right; @include sec-bgimage(); background-image: url(image_path('highway.jpg'));
 		h4 {font-family: $open; color: $white; text-align: center; line-height: 1.4em; padding: 0 30px 30px; font-weight: normal;}
 		.over {@include sec-default(); padding: 20px; background-color: rgba($navy, .9);}
-			p{font-size: 17px; color: $white;}
-			.a, .b {width: 49%; display: inline-block; float: right; padding: 20px; text-align: center; background-color: $offwhite;
-				p{color: $blue;}
-			}
-			.a{ float: left;}
+		p{font-size: 17px; color: $white;}
+		.a, .b {width: 49%; display: inline-block; float: right; padding: 20px; text-align: center; background-color: $offwhite;
+			p{color: $blue;}
 		}
+		.a{ float: left;}
+	}
 
 	.banner {@include sec-default(); text-align: center; padding-bottom: 20px;
 		h3 {color: $white; font-weight: bold; font-family: $open;}
@@ -443,6 +618,120 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		h2{font-family: $open; color: $white; font-weight: bold; @include tshadow($dark);text-transform: uppercase; margin-bottom: 30px;
 				span{color: $lt-blue}
 			}
+	}
+
+	@include bp(tb) {
+		.p-header{
+			.overlay{height: 220px; background-color: rgba($dark, .7);}
+			h1 {margin-top: 80px; }
+		}
+
+		.boxes { padding: 10px 0px 25px;
+			.b1 {width: 90%; @include center-block();}
+		}
+		.blk1 {width: 90%; @include center-block(); margin-top: 40px;
+			h4 {padding: 0 60px 10px; font-size: 17px;}
+			hr{width: 40%; margin-bottom:5px;}
+			p{font-size: 15px; }
+			.a, .b {width: 49%; padding: 10px;}
+		}
+
+		.sec2 {padding: 0px 0; background-image: none;
+			&::before {display: none;}
+
+			h4 {font-family: $open; color: $white; text-align: center; line-height: 1.4em; padding: 0 30px 30px;}
+
+			.block2 {width:90%; @include center-block(); padding: 0;
+				ul {padding-left: 5px; }
+				li {width: 45%; display: inline-block; float: left; font-size: 16px; margin-top: 0; margin-bottom: 15px;
+				 &:nth-child(2n+2){float: right; width: 54%;}}
+				i {font-size: 15px;}
+			}
+		}
+
+		.consult-box { @include sec-default(); @include sec-bgimage(); background-image: url(image_path('semi-claim.jpg')); position: relative; z-index: 0;padding: 30px;
+			margin-bottom: 20px;
+			&::before {@include before(); background-color: rgba($dk-blue, .9);}
+			h4{ font-size: 17px; padding-bottom: 0; width:75%; @include center-block();
+				&.none {padding-bottom: 0px;}}
+				h3{font-size: 21px;}
+			h2{margin-bottom: 15px; font-size: 27px;}
+		}
+	}
+
+	@include bp(md) {
+		.p-header{
+			.overlay{height: 180px; }
+			h1 {margin-top: 50px; }
+		}
+		.boxes .b1 {width: 95%; }
+		.blk1 {width: 95%; margin-top: 20px;
+			h4 {padding: 0 40px 0px; font-size: 16px;}
+			.a, .b {width: 85%; padding: 10px 15px 5px; @include center-block(); margin-top: 10px}
+		}
+
+		.sec2 {
+			h4 {padding: 0 0px 30px;}
+
+			.block2 {
+				li, li:nth-child(2n+2){ width:100%; float: left;}
+			}
+		}
+
+		.consult-box { @include sec-default(); @include sec-bgimage(); background-image: url(image_path('semi-claim.jpg')); position: relative; z-index: 0;padding: 30px;
+			&::before {@include before(); background-color: rgba($dk-blue, .9);}
+			h4{ font-size: 17px; padding-bottom: 0; width:75%; @include center-block();
+				&.none {padding-bottom: 0px;}}
+				h3{font-size: 21px;}
+			h2{margin-bottom: 15px; font-size: 27px;}
+		}
+	}
+
+	@include bp(mb) {
+		.p-header{
+			.overlay{height: 150px; }
+			h1 { font-size: 30px }
+		}
+		.blk1 {
+			h4 {padding: 0 20px 10px; }
+			.a, .b {width: 95%; }
+		}
+		.sec2 {
+			h4 {padding: 0 0px 30px;}
+			.block2 {
+				li, li:nth-child(2n+2){ width:100%; float: left;}
+			}
+		}
+
+		.consult-box { padding: 30px;
+			h4{ font-size: 16px; width:90%; padding-bottom:10px}
+		}
+	}
+
+	@include bp(xs) {
+		.p-header{
+			.overlay{height: 120px; }
+			h1 { font-size: 25px; font-weight: 600; margin-top: 30px;}
+		}
+		.boxes {padding-top: 0px;}
+		.blk1 {
+			.over{padding: 15px 5px;}
+			h4 {padding: 0 10px 10px; }
+			.a, .b {width: 95%; }
+		}
+		.banner h3 {font-size: 20px;}
+		.sec2 {
+			h4 {padding: 0 0px 30px;}
+			.block2 {
+				li, li:nth-child(2n+2){ width:100%; float: left;}
+			}
+		}
+
+		.consult-box { padding: 20px 10px;
+			h2 {font-size: 21px; font-weight: 600}
+			h4{ font-size: 15px; width:90%; padding-bottom:10px}
+			h3 {font-size: 20px}
+		}
 	}
 }
 
@@ -523,12 +812,11 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	.inside-sec {
 		@include sec-default(); @include sec-bgimage(); position: relative; z-index: 0;
 		background-image: url(image_path('blur.jpg'));
-		&::before {@include before(); height: 56%; background-color: rgba($dark, .8);}
+		&::before {@include before(); height: 560px; background-color: rgba($dark, .8);}
 	}
 	.cst-header {
 		width:65%; @include center-block(); padding: 60px 80px;
 		.inner {@include sec-default();margin-bottom: 80px;padding: 60px 0 0;}
-		// border: 1px solid $silver;
 		h1, h4,p, h3 {color: $white; @include tshadow($black); }
 		h1 {margin-bottom: 0px; }
 		.title-line {width: 65%; @include center-block(); height: 1px; background-color: rgba($silver, .4); margin-bottom: 10px;}
@@ -538,18 +826,9 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		p {line-height: 1.6em; span {color: $br-blue; font-weight: bold;}}
 	}
 
+
 	.body{width:90%; @include center-block(); background-color: $white; width: 75%;}
-	.s2 {@include sec-default();background-color: $white; margin-bottom: 30px;}
-
-	// .practice-claims { width:20%;display: inline-block;float: left;
-	// 	.practice-boxes-op { width: 100%; float: left; padding:30px 30px 25px; text-align: center; color: $white; background-color: $blue; margin: 0;
-	// 		h4 {font-family: $open; color: $white;}
-	// 		&.bike {background-color: $dk-blue;}
-	// 		&.auto {background-color: #00447c;}
-	// 		i {font-size: 25px; padding: 13px 12px; border:1px solid $white; border-radius: 50%; margin-bottom: 10px;}
-	// 	}
-	// }
-
+	// .s2 {@include sec-default();background-color: $white; margin-bottom: 30px;}
 	.practice-claims-full { @include sec-default(); background-color: $blue;
 		.practice-boxes-op { width: 33.3%; float: left; display: inline-block; padding:30px 30px 25px; text-align: center; color: $white; background-color: $blue; margin: 0;
 			position: relative;z-index: 0;
@@ -566,8 +845,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	}
 
 	.sidebar {
-		@include sec-default();
-		background-color: $white;
+		@include sec-default();background-color: $white;margin-bottom: 55px;
 
 		.top {@include sec-default();text-align: center; margin-bottom: 10px;
 			padding: 40px 20px 25px;
@@ -598,12 +876,105 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 
 
 	@include bp(tb) {
-		.inside-sec::before {height: 50%; background-color: rgba($dark, .8);}
-		.cst-header {width:95%;padding: 30px 50px;
-			.inner {margin-bottom: 30px;padding: 40px 0px;}
+		.inside-sec{
+			&::before {@include before();height: 250px; }
 		}
-		.body {@include sec-default(); padding: 0 45px;}
-		.practice-claims .practice-boxes-op {padding:20px;}
+		.cst-header {width:100%;padding: 10px 0px;
+			.title-line{width:40%;}
+		}
+		.body {@include sec-default(); padding: 0 45px; }
+
+		.sidebar {margin-bottom: 0;
+			.top { padding: 40px 50px 25px;
+				p{width: 100%;}
+			}
+
+			.bottom {padding: 0 15px;
+				p{padding-left:10px; }
+				.coll {width: 80%; @include center-block();}
+				ul{margin-bottom: 30px;}
+		 	}
+		}
+
+		.practice-claims-full .practice-boxes-op { padding:20px 0px; background-position: center top;
+			i {font-size: 18px; padding: 10px 9px;}
+		}
+		.community {padding-top:45px;}
+	}
+
+	@include bp(md) {
+		.inside-sec{background-image: url(image_path('blur-mob.jpg'));
+			&::before {background-color: rgba($dark, .7);height: 170px; }
+		}
+		.cst-header {padding:0px; .inner{margin-bottom: 0; padding:40px 0 ;}}
+		.body {padding: 0 10px; }
+		.sidebar {
+			.top { padding: 25px ;
+				p{width: 85%;}
+			}
+			.bottom {
+				.coll {width: 90%;}
+				ul{margin-bottom: 20px;}
+		 	}
+		}
+		.community {padding-top:35px;}
+	}
+
+	@include bp(mb) {
+		.inside-sec::before {height: 150px; }
+		.sidebar {
+			.top { padding: 15px 25px ;
+				p{width: 90%;}
+			}
+		}
+		.community {padding-top:20px;}
+	}
+
+	@include bp(ph) {
+		.inside-sec{background-image: url(image_path('blur.jpg'));
+			&::before {height: 172px; }
+		}
+		.sidebar {
+			.bottom {
+				.coll {width: 95%;}
+		 	}
+		}
+
+		.practice-claims-full {
+			.practice-boxes-op {
+				&::before {@include before(); background-color: rgba($blue, .85);}
+
+				&.bike, &.auto, &.trucker { background-image: none; &::before {opacity: 1;}}
+			}
+		}
+		.community {padding-top:30px;}
+		.charity{width:24%;}
+	}
+
+	@include bp(xs) {
+		.inside-sec{
+			&::before {height: 170px; }
+		}
+		.cst-header {
+			h1 {font-size: 28px;}
+			h3 {font-size: 23px}
+		}
+
+		.sidebar {
+			.top p {width:100%;}
+			.bottom {padding: 0;
+			 .coll {width: 100%; }
+			 h4 {margin-top:5px;}
+			}
+		}
+
+		.practice-claims-full { background-color: transparent;
+			.practice-boxes-op { width:100%; @include center-block();
+				br{display: none;}
+			}
+		}
+		.community {padding-top:30px;}
+		.charity{width:40%; margin-bottom: 10px;}
 	}
 }
 
