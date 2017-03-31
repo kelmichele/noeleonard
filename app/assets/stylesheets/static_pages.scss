@@ -34,7 +34,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	}
 }
 
-.pa-header {@include sec-default();  @include sec-bgimage(); background-image: url(image_path('attorney-desk-slim.jpg')); height: 120px;
+.pa-header {@include sec-default();  @include sec-bgimage(); background-image: url(image_path('accident4.jpg')); height: 120px;
 	h1 { color: $white; font-weight: bold; font-family: $open; @include tshadow($black); text-transform: uppercase;}
 	.overlay {@include sec-default(); height: 100%; padding-top: 60px; padding-left: 60px; background-color: rgba($black, .6)}
 }
@@ -873,6 +873,22 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	p.pref{padding-left: 15px; color: $dk-blue;}
 	ul li { color: $blue; font-size: 16px; margin-bottom: 10px; font-weight: bold;}
 	ul.mix li {font-weight: normal; span{font-weight: bold;}}
+
+	@include bp(tb) {
+		.pa-header { height: auto;
+			.overlay {padding:40px 30px 20px}
+		}
+
+		.main-wrap {padding: 0px;}
+		.body-content {
+			.s1, .s2, .s3 {padding: 30px 20px}
+		}
+	}
+
+	@include bp(md) {
+		h1 {font-size: 30px}
+		.body-content .img-responsive {display: none;}
+	}
 }
 
 .resources { background-color: $light;

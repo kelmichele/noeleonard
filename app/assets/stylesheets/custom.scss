@@ -149,15 +149,8 @@ footer { @include sec-default(); background-color: $dk-blue; border-top: 2px sol
     }
   }
 
-  @include bp(sm) {
+  @include bp(mb) {
     ul.social-links { width: 75%; }
-
-    // .fs2 .block {
-    //   &.one, &.two, &.three, &.four { width: 45%; margin-left:30px;}
-    //   &.one, &.two {margin-bottom: 30px;}
-    //   .ft-title{ margin-top: 10px; margin-bottom: 12px;}
-    //   ul.contact span {width: auto; margin-right: 10px;}
-    // }
 
     .fs2 .block {
       &.one, &.two, &.three, &.four { width: 75%; @include center-block(); margin-bottom: 40px;}
