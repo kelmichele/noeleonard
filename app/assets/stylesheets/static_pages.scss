@@ -387,36 +387,23 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			span {font-size: 1.5em;}}
 	}
 
-	.topic-boxes{
-		h3 {text-align: center; margin-bottom:30px;}
-	 .b1, .b2, .b3 { height: 200px;}
-	}
-
-	.content{@include sec-default(); background-color: $dark; padding: 40px; @include sec-bgimage();
-		background-image: url(image_path('motorcycle.jpg')); background-size: 70%; background-position: left center;
-
-		.text-box {width:27%; float: right; padding: 15px; color: #dfdfdf;
-		  p{line-height: 1.5em;}
-		}
-	}
-
 	.ms1 {@include sec-default(); padding-bottom:50px;
-		p {margin-bottom: 25px; font-size: 17px;}
+		p {margin-bottom: 15px; font-size: 17px;}
 	}
-	.left {padding: 50px 10px 0px; width: 48%; display: inline-block; float: left;
+	.left {
+	 width: 57%; display: inline-block; float: left;
+		padding: 50px 10px 0px;
 		h4 {font-weight: 600; color: $blue; font-family: $open; font-size: 17px; line-height: 1.4em}
 	}
-	.sidebar {display: inline-block; float: none; width: 34%; margin-left: 10%; background-color: $dk-blue; margin-top: 50px;
-		.inner {@include sec-default(); padding: 30px; color: $white;}
+	.right {padding-top:35px;width: 33%; display: inline-block; float: none; margin-left: 8%;}
+	.portrait-m {display: none;}
+
+	.sidebar {@include sec-default(); margin-top: 20px;background-color: $dk-blue;
+		.inner {@include sec-default(); padding: 20px; color: $white;}
 		h4 {color: $lt-blue; font-weight: 600; text-align: center;}
 		h3 {font-family: $open; font-size: 20px; text-align: center; background-color: $blue; padding: 5px; font-weight: 600; margin-bottom: 15px;}
 		hr.fancy {width: 80%; margin-bottom:30px;}
 		p {padding: 0 15px; text-align: center;}
-		.bottom {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('temp-mc.jpg'));
-			.over {@include sec-default(); background-color: rgba($dk-blue, .6);  padding: 30px 10px;}
-			ul{padding:0;}
-			li {color: rgba($white, .6); display: inline-block; font-size: 18px; width: 40%; float: left;}
-		}
 	}
 
 	.ms2 {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('bike-claim.jpg'));
@@ -435,18 +422,20 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			.cst-header { height: 250px; }
 			h1 {width: 50%; margin-top: 40px;}
 		}
+		hr {margin: 15px auto;}
 
 		.ms1 {padding-bottom: 25px;}
-		.left {padding: 35px 0px 0px; width: 52%;
-			p {margin-bottom: 15px; font-size: 16px;}
+		.left {padding: 35px 0px 0px;
+			p {font-size: 16px;}
+			h4 {font-size: 16px;}
 		}
-		.sidebar {width: 40%; margin-left: 5%; margin-top: 30px;
-			.inner {@include sec-default(); padding: 30px; color: $white;}
-			h4 {color: $lt-blue; font-weight: 600; text-align: center;}
-			h3 {font-family: $open; font-size: 20px; text-align: center; background-color: $blue; padding: 5px; font-weight: 600; margin-bottom: 15px;}
-			hr.fancy {width: 75%; margin-bottom: 25px;}
+		.sidebar { margin-top: 10px;
+			.inner {padding: 15px 0;}
 			p {padding: 0 5px;}
+			hr.fancy {width: 75%; margin-bottom: 25px;}
 		}
+		.right { margin-left: 8%; margin-top: 20px;}
+
 		.ms2 {background-image: url(image_path('bike-pg-mob.jpg'));
 			.overlay {padding: 45px 0;}
 		}
@@ -459,16 +448,35 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		}
 
 		.ms1 {padding-bottom: 25px;}
-		.left {padding: 35px 0px 0px; width: 90%; @include center-block();
-			p {margin-bottom: 15px; font-size: 16px;}
+
+		.left {@include sec-default(); padding: 35px 20px 20px;
+			p {font-size: 15px;}
 		}
-		.sidebar {width: 90%; @include center-block(); margin-top: 30px;
-			.inner {padding: 20px 30px;  background-color: $dk-blue;}
+		.sidebar { margin-top: 10px;
+			.inner {width:90%; @include center-block(); padding: 15px 0;}
+			p {padding: 0 5px;}
+			hr.fancy {width: 75%; margin-bottom: 25px;}
 		}
+		.right {width: 55%; @include center-block(); padding:0;}
+		.portrait{display: none;}
+		.portrait-m {display: block;}
+
+		// .left {padding: 35px 0px 0px; width: 90%; @include center-block();
+		// 	p {margin-bottom: 15px; font-size: 16px;}
+		// }
+		// .sidebar {width: 90%; @include center-block(); margin-top: 30px;
+		// 	.inner {padding: 20px 30px;  background-color: $dk-blue;}
+		// }
 		.ms2 {background-image: url(image_path('bike-claim-mob.jpg'));
 			.overlay {padding: 25px 0;}
 			h2 {font-size: 28px; margin-bottom: 25px}
 			p { font-size: 18px; width: 80%;}
+		}
+	}
+
+	@include bp(mb) {
+		.ms2 {
+			.overlay {padding: 25px 0;}
 		}
 	}
 
@@ -480,19 +488,11 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		}
 
 		.ms1 {padding-bottom: 25px;}
-		.left {padding: 20px 0px 0px; width: 95%; text-align: center;
-				h4 {font-size: 16px;}
-				p {font-size: 15px; margin-bottom: 8px;}
-		}
 		hr {margin: 15px auto}
 
-		.sidebar {width: 95%; margin-top: 20px;
-			.inner {padding: 20px; padding-bottom: 10px; }
-			p {font-size: 15px;}
-			hr.fancy {width: 50%; margin:15px auto;}
-		}
+		.right {width: 65%;}
+
 		.ms2 {background-image: url(image_path('bike-claim-mob.jpg'));
-			.overlay {padding: 25px 0;}
 			h2 {font-size: 24px; margin-bottom: 15px}
 			p { font-size: 16px; width: 95%;}
 		}
@@ -506,9 +506,9 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		}
 
 		.ms1 {padding-bottom: 25px;}
-		.left { width: 98%;}
+		// .left { width: 98%;}
 
-		.sidebar {width: 98%; margin-top: 25px;}
+		// .sidebar {width: 98%; margin-top: 25px;}
 		.ms2 {background-image: url(image_path('speed-bike.jpg'));
 			.overlay {padding: 20px 0;background-color: rgba($dk-blue, .95);}
 			h2 {font-size: 20px; font-weight: 600; margin-bottom: 10px}
