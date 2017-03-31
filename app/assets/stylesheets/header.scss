@@ -183,6 +183,16 @@ header.header-new {
 
     .mega-tab {display: none;}
   }
+
+  @include bp(md) {
+    .off-canvas {width: 10%; float: right; }
+    .main-block {width: 88%;  margin: 12px 0 10px; margin-left: 0; padding-left:40px;
+      h4.call, h4.eval, .esp-link h4, ul.social-links {width:30%; float: left; margin:0; margin-left: 15px; }
+      h4.eval, .esp-link h4 {margin-top: 15px;}
+      ul.social-links {width:30%; margin-top: 5px; padding-left:5px; }
+      // ul.social-links {float: left; li{margin-top:15px;}}
+    }
+  }
 }
 
 
