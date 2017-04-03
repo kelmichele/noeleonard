@@ -224,6 +224,9 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			}
 			.portrait {margin-top: 60px;}
 		}
+
+		.video-row {padding: 30px 0 0; }
+		iframe.one, iframe.two { width: 80%; float: none; @include center-block(); margin-bottom: 15px;}
 	}
 
 	@include bp(md) {
@@ -269,6 +272,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 				}
 			}
 		}
+
 	}
 
 	@include bp(mb) {
