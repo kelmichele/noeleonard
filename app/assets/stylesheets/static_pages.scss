@@ -188,7 +188,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	}
 
 
-	.video-row { @include sec-default(); padding: 50px 40px; text-align: center; background-color: $white;}
+	.video-row { @include sec-default(); padding: 50px 40px; text-align: center; background-color: $offwhite;}
 	.video { display: inline-block; width: 48%; height: auto;
 		// margin:auto;
 		&.one {float: left; }
