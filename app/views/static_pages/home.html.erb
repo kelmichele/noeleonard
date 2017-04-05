@@ -118,7 +118,20 @@
 
 <div class="video-row">
 	<div class="container">
-			<iframe class="one" src="https://www.youtube.com/embed/7Ax8NAhosgo" frameborder="0" allowfullscreen></iframe>
-			<iframe class="two" src="https://www.youtube.com/embed/5at_QmbdWAQ" frameborder="0" allowfullscreen></iframe>
+			<!-- <iframe class="one" src="https://www.youtube.com/embed/7Ax8NAhosgo" frameborder="0" allowfullscreen></iframe> -->
+			<!-- <iframe class="two" src="https://www.youtube.com/embed/5at_QmbdWAQ" frameborder="0" allowfullscreen></iframe> -->
+		 	<%= video_tag("https://s3.amazonaws.com/noel-videos/noel-general.mp4", class: 'video one', :controls => true, :autobuffer => true) %>
+		 	<%= video_tag("https://s3.amazonaws.com/noel-videos/noel-motorcycle.mp4", class: 'video two', :controls => true, :autobuffer => true) %>
+			<!-- https://s3.amazonaws.com/noel-videos/noel-general.mp4 -->
+			<!-- https://s3.amazonaws.com/noel-videos/noel-motorcycle.mp4 -->
 	</div>
 </div>
+<!-- , :size => "16x10", :poster => "screenshot.png" -->
+
+
+
+
+
+
+
+

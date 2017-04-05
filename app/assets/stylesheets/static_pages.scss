@@ -189,7 +189,8 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 
 
 	.video-row { @include sec-default(); padding: 50px 40px; text-align: center; background-color: $white;}
-	iframe { display: inline-block; width: 45%; height: 250px; margin:auto;
+	.video { display: inline-block; width: 48%; height: auto;
+		// margin:auto;
 		&.one {float: left; }
 		&.two {float: right; }
 	}
@@ -225,8 +226,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			.portrait {margin-top: 60px;}
 		}
 
-		.video-row {padding: 30px 0 0; }
-		iframe.one, iframe.two { width: 80%; float: none; @include center-block(); margin-bottom: 15px;}
+		.video-row {padding: 30px 0; }
 	}
 
 	@include bp(md) {
@@ -273,6 +273,10 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			}
 		}
 
+		.video.one, .video.two { width: 80%; height:auto; float: none; @include center-block();
+			&.one {padding-bottom: 25px;}
+		}
+
 	}
 
 	@include bp(mb) {
@@ -302,9 +306,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 
 			.practice-box { width: 100%; margin-bottom: 30px; height: 235px;
 				.pb-links { padding: 5px 7px;}
-				// &.trucker {margin-bottom: 10px;}
 				&.cbox {height: 180px;
-					// padding: 20px; background-image: none;
 					h4 {font-size: 17px;}
 				}
 			}
@@ -340,13 +342,12 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 
 			.practice-box { width: 100%; margin-bottom: 30px; height: 235px;
 				.pb-links { padding: 5px 7px;}
-				// &.trucker {margin-bottom: 10px;}
 				&.cbox {height: 180px;
-					// padding: 20px; background-image: none;
 					h4 {font-size: 17px;}
 				}
 			}
 		}
+		.video.one, .video.two { width: 95%; }
 	}
 
 	@include bp(xs) {
