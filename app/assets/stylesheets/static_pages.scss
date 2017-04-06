@@ -1244,8 +1244,6 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		.sec-form {
 			.form-group { display: block; width: 80%; @include center-block(); float: none;
 				&.last-name, &.address, &.case_type {float: none;}
-				// &.message {width: 80%;}
-				// &.submit {width: 30%; }
 			}
 		}
 	}
@@ -1257,11 +1255,21 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			hr.fancy {margin-bottom:20px; margin-top:15px; width:50%; &:after{height:3px;}}
 			.contact-info { @include center-block(); width:80%; padding: 20px 0px 10px; margin-top: 25px;}
 		}
-		.sec-form {padding: 20px 20px 10px}
 		.ms2 { background-position: top left;
 			.overlay {background-color: rgba($dk-blue, .9); padding: 30px 30px 15px; }
 			p { font-size: 15px; }
 			h2{font-size: 23px;}
+		}
+	}
+
+	@include bp(ph) {
+		form{@include sec-default();}
+		.sec-form {
+			.form { padding:10px }
+			.form-group { @include sec-default();
+				&.last-name, &.address, &.case_type {float: left;}
+				&.message {width: 100%;}
+			}
 		}
 	}
 
@@ -1274,7 +1282,6 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			hr.fancy {margin-bottom:15px; }
 			.contact-info { width:95%;margin-top: 15px;}
 		}
-		.sec-form {padding: 20px 20px 10px}
 		.ms2 {
 			.overlay {background-color: rgba($dk-blue, 1); padding: 30px 10px 15px; }
 			h2{font-size: 20px;}
