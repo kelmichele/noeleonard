@@ -276,7 +276,6 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		.video.one, .video.two { width: 80%; height:auto; float: none; @include center-block();
 			&.one {padding-bottom: 25px;}
 		}
-
 	}
 
 	@include bp(mb) {
@@ -1164,7 +1163,26 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		}
 	}
 
-	.sec-form {@include sec-default(); background-color: $offwhite; padding: 40px 0}
+	.sec-form {@include sec-default(); background-color: $offwhite; padding: 40px 0;
+		.form {@include sec-default(); background-color: $white; padding: 20px;
+			p span {font-weight: bold; font-style: italic;}
+		}
+		.notice {color: red;}
+		form{width: 60%;@include center-block(); margin-top:40px;}
+		.form-group {display: inline-block; float: left; width: 45%;
+			// &:nth-child(2n+2) {float: right;}
+			&.last-name, &.address, &.case_type {float: right;}
+			&.case_type {
+				input, label{display: inline-block; width:auto; float: none;}
+				input{float: left; margin-right: 7px;}
+			}
+			&.message {width: 60%; @include center-block();}
+			&.submit {width: 25%; @include center-block(); .send-message {background-color: $blue; color: $white; padding: 5px; font-weight: bold; @include tshadowl($dark);}}
+
+			input,textarea {width:100%; background-color: $offwhite; padding: 2px 5px}
+			textarea {height: 90px;}
+		}
+	}
 
 	.ms2 {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('bike-claim.jpg'));
 	 background-position: center center;
@@ -1192,10 +1210,18 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 				h4 {font-size: 19px;}
 			}
 		}
-		.sec-form {padding: 20px 0 10px}
+
 		.ms2 {
 			.overlay {background-color: rgba($dk-blue, .7); padding: 35px 0; }
 			p { font-size: 18px; width: 80%;}
+		}
+
+		.sec-form {padding: 20px 0;
+			form{width: 90%; margin-top:25px;}
+			.form-group {
+				&.message {width: 80%;}
+				&.submit {width: 30%; }
+			}
 		}
 	}
 
@@ -1209,10 +1235,18 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		.sidebar {
 			.contact-info { @include center-block(); width:80%; padding: 20px 20px 10px; margin-top: 25px;}
 		}
-		.sec-form {padding: 20px 20px 10px}
+
 		.ms2 { background-image: url(image_path('bike-claim-mob.jpg'));
 			.overlay { padding: 30px 0 15px; }
 			p { font-size: 18px; width: 100%;}
+		}
+
+		.sec-form {
+			.form-group { display: block; width: 80%; @include center-block(); float: none;
+				&.last-name, &.address, &.case_type {float: none;}
+				// &.message {width: 80%;}
+				// &.submit {width: 30%; }
+			}
 		}
 	}
 
@@ -1248,6 +1282,26 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	}
 }
 
+.thank-you {
+	.pa-header {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('blur.jpg')); height:auto; text-align: center;
+		.overlay{padding: 25px 0 15px;}
+		h1, h2 {color: $white; @include tshadow($black); font-weight: bold; }
+		h1 {margin-bottom: 0px; }
+	}
 
+	.ty-body {@include sec-default();  background-color: $offwhite;}
+	.video-row { @include sec-default(); padding: 40px 0; text-align: center;}
+	.video.one, .video.two { @include sec-default(); height: auto; padding: 10px 0;}
+
+
+	@include bp(tb) { .video-row {padding: 30px 0; } }
+	// @include bp(md) {
+	// 	.video.one, .video.two { width: 80%; height:auto; float: none; @include center-block();
+	// 		&.one {padding-bottom: 25px;}
+	// 	}
+	// }
+
+	// @include bp(ph) {.video.one, .video.two { width: 95%; }}
+}
 
 

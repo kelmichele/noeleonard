@@ -1,5 +1,4 @@
 class ClientsController < ApplicationController
-
 	def new
     @client = Client.new
   end
@@ -9,7 +8,7 @@ class ClientsController < ApplicationController
 
     if @client.valid?
       ClientMailer.new_client(@client).deliver unless client_params[:honey].present?
-      redirect_to client_path, notice: "Your message has been sent."
+      redirect_to thank_you_path, notice: "Your message has been sent."
     else
       flash[:alert] = "An error occurred while delivering this message. All fields are required."
       render :new
@@ -19,6 +18,6 @@ class ClientsController < ApplicationController
   private
 
     def client_params
-      params.require(:client).permit(:first_name, :last_name, :phone, :email, :grapevine, :content, :honey)
+      params.require(:client).permit(:first_name, :last_name, :phone, :address, :email, :case_type, :content, :honey)
     end
 end

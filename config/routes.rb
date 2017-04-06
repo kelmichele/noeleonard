@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/page', to: 'static_pages#page'
   get '/resources', to: 'static_pages#resources'
   get '/personal-injury', to: 'static_pages#personal-injury'
-  get '/contact', to: 'static_pages#contact'
+  # get '/contact', to: 'static_pages#contact'
 
   get '/fb', to: 'links#fb'
   get '/twitter', to: 'links#twitter'
@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/linkedin', to: 'links#linkedin'
   get '/youtube', to: 'links#youtube'
 
-  # get '/client', to: 'clients#new', as: 'contact'
-  # post '/client', to: 'clients#create'
+  get '/contact', to: 'clients#new', as: 'contact'
+  post '/contact', to: 'clients#create'
+  get '/thank-you', to: 'clients#thank-you', as: 'thank-you'
 end

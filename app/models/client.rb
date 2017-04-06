@@ -1,20 +1,23 @@
-class Client < ApplicationRecord
+class Client
+  include ActiveModel::Model
+  include ActiveModel::Conversion
+  include ActiveModel::Validations
 
-	attr_accessor :first_name, :last_name, :phone, :email, :content, :honey
+  TYPES = ['Auto', 'Motorcycle', '18-Wheeler', 'Other']
 
-  validates_presence_of :first_name
-  validates_presence_of :last_name
+	attr_accessor :first_name, :last_name, :phone, :address, :email, :case_type, :content, :honey
+  validates_presence_of :name
+  # validates_presence_of :last_name
   validates_presence_of :phone
+  validates_presence_of :address
   validates_presence_of :email
-  validates_presence_of :grapevine
-
+  validates_presence_of :case_type
+  # validates_inclusion_of :case_type, in: => TYPES
   validates_presence_of :content
-  validates_presence_of :honey
 
 
-  # def name
-    # "#{first_name} #{last_name}"
-    # Or: first_name + ' ' + last_name
-    # Or: [first_name, last_name].join(' ')
-  # end
+  def name
+    first_name + ' ' + last_name
+  end
+
 end
