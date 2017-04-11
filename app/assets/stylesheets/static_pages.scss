@@ -385,7 +385,11 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			}
 		}
 
-		.video.one, .video.two { width: 95%;}
+		.video.one, .video.two { width: 95%;
+			&.one {height: 180px}
+			&.two {height: 160px;}
+		}
+
 	}
 }
 
