@@ -189,8 +189,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 
 
 	.video-row { @include sec-default(); padding: 50px 40px; text-align: center; background-color: $offwhite;}
-	.video { display: inline-block; width: 48%; height: auto;
-		// margin:auto;
+	.video { display: inline-block; width: 48%; height: 300px;
 		&.one {float: left; }
 		&.two {float: right; }
 	}
@@ -227,6 +226,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		}
 
 		.video-row {padding: 30px 0; }
+		.video { height: 250px;}
 	}
 
 	@include bp(md) {
@@ -273,8 +273,9 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			}
 		}
 
-		.video.one, .video.two { width: 80%; height:auto; float: none; @include center-block();
+		.video.one, .video.two { width: 70%; float: none; @include center-block();
 			&.one {padding-bottom: 25px;}
+			&.two {height: 200px;}
 		}
 	}
 
@@ -348,7 +349,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 				}
 			}
 		}
-		.video.one, .video.two { width: 95%; }
+		.video.one, .video.two { width: 85%; }
 	}
 
 	@include bp(xs) {
@@ -383,6 +384,8 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 				p {font-size: 15px;}
 			}
 		}
+
+		.video.one, .video.two { width: 95%;}
 	}
 }
 

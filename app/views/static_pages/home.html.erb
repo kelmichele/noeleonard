@@ -118,10 +118,11 @@
 
 <div class="video-row">
 	<div class="container">
-		 	<%= video_tag("https://s3.amazonaws.com/noel-videos/noel-general.mp4", class: 'video one', :controls => true, :autobuffer => true, :poster => "video1-shot.png") %>
-		 	<%= video_tag("https://s3.amazonaws.com/noel-videos/noel-motorcycle.mp4", class: 'video two', :controls => true, :autobuffer => true, :poster => "video2-shot.png") %>
-			<!-- https://s3.amazonaws.com/noel-videos/noel-general.mp4 -->
-			<!-- https://s3.amazonaws.com/noel-videos/noel-motorcycle.mp4 -->
+		 	<!-- <%= video_tag("https://s3.amazonaws.com/noel-videos/noel-general.mp4", class: 'video one', :controls => true, :autobuffer => true, :poster => "video1-shot.png") %> -->
+		 	<!-- <%= video_tag("https://s3.amazonaws.com/noel-videos/noel-motorcycle.mp4", class: 'video two', :controls => true, :autobuffer => true, :poster => "video2-shot.png") %> -->
+		 	<iframe src="https://www.youtube.com/embed/5I0uZd4yIgE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen class="video one"></iframe>
+			<iframe src="https://www.youtube.com/embed/-FSuHqi94_o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen class="video two"></iframe>
+
 	</div>
 </div>
 <!-- , :size => "16x10", :poster => "screenshot.png" -->
