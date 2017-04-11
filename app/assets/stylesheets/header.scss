@@ -131,6 +131,12 @@ header.header-new {
     }
   }
 
+  @include bp(mb) {
+    .topbar {
+      h5 {font-size: 15px;}
+    }
+  }
+
   @include bp(sm) {
     .off-canvas { float: none; margin-top:10px;}
     .main-block {width: 80%;
