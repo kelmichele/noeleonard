@@ -1,5 +1,5 @@
 <% @page_title = "Contact Us" %>
-<% @page_description = "New Subject" %>
+<% @page_description = "If you suffer from a serious injury resulting from a motorcycle, automobile, or 18-wheeler accident inMobile, Baldwin, or Escambia county, contact Noel B. Leonard today to discuss your options." %>
 
 <div class="contact">
         <div class="header-wrap">
@@ -62,10 +62,7 @@
             </div>
 
             <div class="left">
-             <!--  <p>If you or a resident of <span>Mobile</span>, <span>Baldwin</span>, or <span>Escambia</span> county, and suffer
-              from a serious injury as a result of a motorcycle, automotive, or 18-wheeler accident, contact Noel B. Leonard today to discuss your options.</p> -->
-
-               <p>If you suffer from a serious injury resulting from a motorcycle, automotive, or 18-wheeler accident in <span>Mobile</span>, <span>Baldwin</span>, or <span>Escambia</span> county, contact Noel B. Leonard today to discuss your options.</p>
+               <p>If you suffer from a serious injury resulting from a motorcycle, automobile, or 18-wheeler accident in <span>Mobile</span>, <span>Baldwin</span>, or <span>Escambia</span> county, contact Noel B. Leonard today to discuss your options.</p>
 
               <p> Fill out our Case Evaluation Form below, or call us now, to schedule a consultation.</p>
             </div>
@@ -114,7 +111,6 @@
 
                         <div class="form-group case_type">
                             <p>I Need Help With: </p>
-                           <!--  <%= select_tag(:case_type, options_for_select([["Injury from an Auto Accident", "Auto Injury"], ["Injury from an Motorcycle Accident", "Motorcycle Injury"], ["Injury from an 18-Wheeler Accident", "18-Wheeler Injury"], ["Other Legal Concerns (Provide details below)", "Other"]]), {:prompt => 'Select Option'}) %>-->
 
                                 <p><%= client.radio_button(:case_type, "Auto Injury", class: 'inline') %>
                                 <%= label_tag(:case_type_auto, "Injury from an Auto Accident", class: 'inline') %></p>
@@ -164,37 +160,3 @@
           </div>
         </div>
 </div>
-
-        <!--
-        I need help with: (checkbox)
-            1. Injury from an Auto Accident
-            2. Injury from an 18-Wheeler Accident
-            3. Personal Injury
-            4. Criminal Defense
-            5. DUI Arrests &amp; Traffic Offenses
-            6. Estate Planning
-            7. Business Law
-            8. Collections
-
-        How did you find us? (dropdown)
-            Google Search
-            Referral
-            Social Media
-            Online Directory
-            Other
-
-            Additional Details About Your Case or Services Needed
-
-        ===============
-        1. Date of incident, location (full address)
-        2. Date of incident, location (full address)
-        3. Date of incident, type of injury (checkbox)
-                Spinal Cord Injury
-                Wrongful Death
-                Slip and Fall
-                Medical Malpractice
-                Dog Bite
-                Assault and/or Battery
-
-        5. Date of incident, location (full address)
-         -->
