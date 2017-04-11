@@ -4,6 +4,13 @@
 header.header-new {
   @include sec-default(); background-color: $navy;
 
+  .topbar{@include sec-default(); background-color: darken($navy, 3%); padding: 5px 20px;
+      h5 {color: $lt-blue; width: 60%; float: right; font-family: $cinzel; font-weight: bold;@include tshadow($dk-blue); margin-top:10px; font-size: 16px;
+        span {color: $white;}
+      }
+
+  }
+
     .main-header {@include sec-default(); padding: 10px 90px 5px;}
       .logo-img {height:95px; float: left;}
 
@@ -12,7 +19,9 @@ header.header-new {
         span {font-weight: normal; font-size: 15px;}
       }
       h4.eval { a {color: $white;}}
-     .call-link{color: $blue; font-size: 22px; font-weight: bold;}
+
+      h4.call {@include tshadow($black);}
+     .call-link{color: $blue; font-size: 22px; font-weight: bold; text-align: center; }
 
       ul.social-links { margin:15px 10 0 0;
         li { display: inline-block; float: left; margin-right: 10px;
@@ -92,6 +101,11 @@ h3.module-title{color: $white;}
 
 header.header-new {
   @include bp(tb) {
+    .topbar {
+      h5 {@include sec-default(); text-align: center;}
+    }
+
+
     #offcanvas-toggler { display:inline-block; }
     .main-header {padding: 0;}
     .logo-block { @include sec-default(); background-color: $white; padding: 5px;}
@@ -104,8 +118,6 @@ header.header-new {
       h4.call, h4.eval, .esp-link h4, ul.social-links {width:22%; float: left; margin:0 2% 0 1%; }
       ul.social-links {margin-top:10px;  width:20%;}
     }
-
-
     .mega-tab {display: none;}
   }
 
