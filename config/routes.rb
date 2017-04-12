@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/google', to: 'links#google'
   get '/linkedin', to: 'links#linkedin'
   get '/youtube', to: 'links#youtube'
+  get '/hsdh', to: 'links#hsdh'
 
   get '/contact', to: 'clients#new', as: 'contact'
   post '/contact', to: 'clients#create'

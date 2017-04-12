@@ -19,6 +19,10 @@ class LinksController < ApplicationController
 	def youtube
 		redirect_to('https://www.youtube.com/c/+Attorney-leonard')
 	end
+
+	def hsdh
+		redirect_to('https://hsdesignhouse.com')
+	end
 end
 
 
