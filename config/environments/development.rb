@@ -58,7 +58,7 @@ Rails.application.configure do
     port:                 587,
     domain:               'hsdesignhouse.com',
     user_name:            'kelproduction.enviro@gmail.com',
-    password:             '?}LW8fkVr7(2R7jV',
+    password:             '&URoa)q47TY^eHkD{D8njvKybjj.k',
     authentication:       'plain',
     enable_starttls_auto: true  }
 
