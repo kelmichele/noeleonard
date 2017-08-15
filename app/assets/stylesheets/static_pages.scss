@@ -1311,13 +1311,42 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 
 
 	@include bp(tb) { .video-row {padding: 30px 0; } }
-	// @include bp(md) {
-	// 	.video.one, .video.two { width: 80%; height:auto; float: none; @include center-block();
-	// 		&.one {padding-bottom: 25px;}
-	// 	}
-	// }
-
-	// @include bp(ph) {.video.one, .video.two { width: 95%; }}
 }
+
+.mobile-al-injury-attorney {
+	.header-new{
+		// display: none;
+		.topbar, .logo-block, .main-block{display: none; }
+		.main-header{padding:0;}
+	}
+	.mobile-landing {
+		@include sec-default();
+		h1, h2, h3, h4, h5, p {font-family: $open; line-height: 1.4em}
+		.sec1 {@include sec-default(); background-color: #fff; height: 400px;
+			@include sec-bgimage(); background-size: 30%; background-image: url(image_path('crash-mobileal.png')); background-position: bottom right;
+			.txt {width: 80%; text-align: center;padding-top:50px;@include center-block();}
+				h3{font-size: 18px;}
+				h1 {font-weight: 600;
+					b {font-weight: 800; }
+				}
+				h3.phone {color: $white; letter-spacing: 1px; font-size: 25px; width: 25%; padding: 5px; font-weight: bold; background-color: $dk-blue; @include center-block();}
+		}
+		.sec2 {@include sec-default();padding: 60px;
+			background-color: $lt-blue;
+			// @include sec-bgimage();background-image: url(image_path('home-header.jpg'));background-position: center center;
+		}
+
+		.form {width: 99%; height: 200px; background-color: $white; border: 1px solid #dfdfdf;}
+
+	}
+}
+
+
+
+
+
+
+
+
 
 

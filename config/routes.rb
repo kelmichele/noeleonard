@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/page', to: 'static_pages#page'
   get '/resources', to: 'static_pages#resources'
   get '/personal-injury', to: 'static_pages#personal-injury'
-  # get '/contact', to: 'static_pages#contact'
+  get '/mobile-al-injury-attorney', to: 'static_pages#mobile-al-injury-attorney'
 
   get '/fb', to: 'links#fb'
   get '/twitter', to: 'links#twitter'
