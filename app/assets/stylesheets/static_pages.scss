@@ -1418,6 +1418,47 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			}
 		}
 	}
+
+	@include bp(ph) {
+		.title-line {margin-bottom: 10px;}
+		.sec1 {
+			height: auto; background-image: none;
+			.txt {padding: 20px 0;}
+			h1 {font-size: 27px;}
+			h3, h4{font-size: 16px;}
+			h3.phone{font-size: 20px;}
+		}
+
+		.form { width: 75%; @include center-block();}
+		.form-group{width: 48%;}
+		.sec2::before{display: none;}
+
+		.text-sec {
+			@include sec-default(); padding: 0;
+			p {font-size: 16px;}
+			.top {background-color: $navy; padding: 20px 10px; margin-top: 20px;
+				img {width: 75px;}
+			}
+			.bot {margin-top: 0px; padding-top: 15px;
+				h3.phone {font-size: 18px;}
+				h4 {font-size: 14px; margin: 5px 0 0; }
+			}
+		}
+	}
+
+	@include bp(xs) {
+		.sec1 {
+			.container-fluid {padding:0;}
+			h1 {font-size: 24px}
+			h3, h4 {font-size: 15px; }
+			h3.phone {font-size: 18px; width: 85%;}
+		}
+		.form {width:99%;}
+	}
+
+	@include bp(xx) {
+		.form-group {width: 100%;}
+	}
 }
 
 

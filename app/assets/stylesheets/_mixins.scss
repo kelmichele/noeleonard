@@ -96,6 +96,10 @@
         @media (max-width: 420px)  { @content ; }
     }
 
+     @else if $point == xx {
+        @media (max-width: 321px)  { @content ; }
+    }
+
     @else if $point == xl {
         @media (min-width: 1025px) { @content ; }
     }
