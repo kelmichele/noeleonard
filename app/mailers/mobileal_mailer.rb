@@ -6,6 +6,7 @@ class MobilealMailer < ApplicationMailer
     @mobileal = mobileal
 
     mail subject: "Mobile Case Evaluation Form From Website"
-    mail to: "kelli@hsdesignhouse.com"
+    # mail to: "kelli@hsdesignhouse.com"
+    mail to: "noel@attorney-leonard.com"
   end
 end
