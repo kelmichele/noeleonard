@@ -1298,7 +1298,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	}
 }
 
-.thank-you {
+.thank-you, .thanks {
 	.pa-header {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('blur.jpg')); height:auto; text-align: center;
 		.overlay{padding: 25px 0 15px;}
 		h1, h2 {color: $white; @include tshadow($black); font-weight: bold; }
@@ -1313,34 +1313,64 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	@include bp(tb) { .video-row {padding: 30px 0; } }
 }
 
-.mobile-al-injury-attorney {
-	.header-new{
-		// display: none;
+.mobileals.new {
+	.header-new{margin-top: -17px;
 		.topbar, .logo-block, .main-block{display: none; }
-		.main-header{padding:0;}
+		.main-header{padding:0; }
 	}
-	.mobile-landing {
-		@include sec-default();
-		h1, h2, h3, h4, h5, p {font-family: $open; line-height: 1.4em}
-		.sec1 {@include sec-default(); background-color: #fff; height: 400px;
-			@include sec-bgimage(); background-size: 30%; background-image: url(image_path('crash-mobileal.png')); background-position: bottom right;
-			.txt {width: 80%; text-align: center;padding-top:50px;@include center-block();}
-				h3{font-size: 18px;}
-				h1 {font-weight: 600;
-					b {font-weight: 800; }
-				}
-				h3.phone {color: $white; letter-spacing: 1px; font-size: 25px; width: 25%; padding: 5px; font-weight: bold; background-color: $dk-blue; @include center-block();}
-		}
-		.sec2 {@include sec-default();padding: 60px;
-			background-color: $lt-blue;
-			// @include sec-bgimage();background-image: url(image_path('home-header.jpg'));background-position: center center;
-		}
+	.mobile-landing {@include sec-default();}
+	.title-line{width:50px; height: 1px; background-color: rgba($dark, .3); @include center-block(); margin-bottom: 20px;}
+	h1, h2, h3, h4, h5, p {font-family: $open; line-height: 1.4em}
+	.sec1 {@include sec-default(); background-color: $white; height: 500px;
+		@include sec-bgimage(); background-size: 30%; background-image: url(image_path('crash-mobileal.png')); background-position: bottom right;
+		.txt {width: 80%; text-align: center;padding-top:50px;@include center-block();}
+			h3{font-size: 18px;}
+			h1 {font-weight: 600;
+				b {font-weight: 800; }
+			}
+			h4{font-size: 20px;}
+			h3.phone {color: $white; letter-spacing: 1px; font-size: 25px; width: 25%; padding: 5px; font-weight: bold; background-color: $dk-blue; @include center-block();}
+	}
 
-		.form {width: 99%; height: 200px; background-color: $white; border: 1px solid #dfdfdf;}
+	.sec2 {@include sec-default(); background-color: lighten($blue, 20%);
+		position: relative;z-index: 0;
+		&::before {@include before(); height: 210px; background-color: $navy;}
+	}
 
+	.form {display:inline-block; width: 35%; margin-left: 5%;float: left; padding: 10px 30px;  background-color: $blue; margin-top: -5%;
+		p span {font-style: italic; color: $white; font-size: 14px;}
+	}
+	.notice {color: red;}
+	form{@include sec-default(); padding-top:10px;
+		h4{font-weight: bold; color: $light; text-align: center; text-transform: uppercase; font-size: 22px; margin-bottom: 15px; @include tshadowl($dark);}
+	}
+	.form-group {display: inline-block; float: left; width: 48%;
+		&.last-name, &.email {float: right;}
+		&.address  {@include sec-default();}
+		&.case_type { float: left; width: 30%; display: none;
+			input, label{display: inline-block; width:auto; float: none;}
+			input{float: left; margin-right: 7px; }
+		}
+		&.message {width: 100%; @include center-block();}
+		&.submit {width: 100%; @include center-block(); font-size: 16px; .send-message {background-color: $dark; color: $white; padding: 10px 5px; text-transform: uppercase; @include tshadowl($dark);}}
+
+		p {font-size: 14px; margin-bottom: 4px; color: $light;}
+		p.types { margin-bottom:4px; font-size: 15px; label{font-weight: 600;}}
+		input,textarea {width:100%; background-color: $offwhite; padding: 5px; border: none; }
+		textarea {height: 90px;}
+	}
+
+	.text-sec {display: inline-block;float: right; width: 58%; padding: 25px 30px 0px 10px; text-align: center;
+		p {font-size: 19px; line-height: 1.6em; font-weight:600; font-family: $lato; color:white;}
+		.top{@include sec-default(); padding: 20px 0;
+			p {width: 78%; float: left; display: inline-block;}
+			img {width:18%; display: inline-block; margin-top: 20px;}
+		}
+		.bot{@include sec-default(); margin:25px 0; padding-top: 20px;}
+		h4 {font-weight: bold; text-align: center; color: $navy; text-transform: uppercase; margin-top: 15px;}
+		h3.phone {color: $white; letter-spacing: 1px; font-size: 25px; width: 30%; padding: 5px; font-weight: bold; background-color: $dk-blue; @include center-block();}
 	}
 }
-
 
 
 

@@ -1,0 +1,2 @@
+module MobilealsHelper
+end

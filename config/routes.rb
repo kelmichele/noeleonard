@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get '/page', to: 'static_pages#page'
   get '/resources', to: 'static_pages#resources'
   get '/personal-injury', to: 'static_pages#personal-injury'
-  get '/mobile-al-injury-attorney', to: 'static_pages#mobile-al-injury-attorney'
 
   get '/fb', to: 'links#fb'
   get '/twitter', to: 'links#twitter'
@@ -22,4 +21,8 @@ Rails.application.routes.draw do
   get '/contact', to: 'clients#new', as: 'contact'
   post '/contact', to: 'clients#create'
   get '/thank-you', to: 'clients#thank-you', as: 'thank-you'
+
+  get '/mobile-accident-attorney', to: 'mobileals#new', as: 'mobile-accident-attorney'
+  post '/mobile-accident-attorney', to: 'mobileals#create'
+  get '/thanks', to: 'mobileals#thanks', as: 'thanks'
 end

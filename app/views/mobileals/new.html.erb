@@ -1,0 +1,99 @@
+<% @page_title = "Mobile, Al Attorney" %>
+<% @page_description = "If you've been injured while driving in Mobile, Alabama, and need a real injury attorney that has worked cases in the Mobile area, call Noel B. Leonard for a free consultation." %>
+
+<div class="mobile-accident-attorney">
+  <div class="mobile-landing">
+    <div class="sec1">
+      <div class="container-fluid">
+          <div class="txt">
+            <h1>Mobile, Alabama Injury Attorney<br> <b>Noel Leonard</b></h1>
+            <div class="title-line"></div>
+            <div class="clearfix"></div>
+
+            <h3>Are you injured from an accident in Mobile, Alabama?<br> Contact Injury Attorney Noel B. Leonard today, to discuss your options.</h3>
+            <h4><b>Give Noel a call, or fill out the form below to get started.</b></h4>
+            <h3 class="phone"><%= number_to_phone(2519438638, delimiter: '-') %></h3>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="sec2">
+      <div class="container-fluid">
+        <div class="form">
+          <%= form_for @mobileal, url: mobile_accident_attorney_path do |mobileal| %>
+            <h4>Free Case Evaluation</h4>
+            <fieldset>
+              <% if flash[:notice] %>
+                <div class="notice"><%= flash[:notice] %></div>
+              <% end %>
+
+              <% if flash[:alert] %>
+                <div class="notice"><%= flash[:alert] %></div>
+              <% end %>
+
+              <div class="form-group name">
+                <p>*First Name:</p>
+                <%= mobileal.text_field :first_name %>
+              </div>
+
+              <div class="form-group last-name">
+                <p>*Last Name: </p>
+                <%= mobileal.text_field :last_name %>
+              </div>
+
+              <div class="form-group phone">
+                <p>*Phone Number: </p>
+                <%= mobileal.text_field :phone %>
+              </div>
+
+              <div class="form-group email">
+                <p>*Email address: </p>
+                <%= mobileal.email_field :email %>
+              </div>
+
+              <div class="form-group address">
+                <p>*Address: </p>
+                <%= mobileal.text_field :address %>
+              </div>
+
+              <div class="form-group message">
+                <p>*Tell us about your case: </p>
+                <%= mobileal.text_area :content %>
+              </div>
+
+              <div class="form-group honey">
+                <%= label_tag :honey %>
+                <%= mobileal.text_field :honey %>
+                <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
+              </div>
+
+              <div class="form-group submit">
+                <%= mobileal.submit "Submit", :class=> "send-message" %>
+              </div>
+            </fieldset>
+          <% end %>
+          <p><span>*All fields are required.</span></p>
+        </div>
+
+        <div class="text-sec">
+          <div class="top">
+            <%= image_tag('logo-nbl.png', class: 'img-responsive center-block') %>
+            <p>
+              As an acting injury attorney,​ Noel B. Leonard has successfully represented injured Mobile, Alabama drivers, passengers, and accident victims for years, providing the crucial compensation needed to pay for accident-related expenses such as lost wages and medical bills​.
+            </p>
+          </div>
+          <div class="bot">
+            <p>If you've been injured while driving in Mobile, Alabama - don't hesitate to call Noel!<br>
+            Get a free consultation with a real injury attorney that has worked cases in the Mobile Area.</p>
+
+            <h3 class="phone"><%= number_to_phone(2519438638, delimiter: '-') %></h3>
+            <h4>No fees unless you collect! We don't get paid if you don't get paid!</h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+          <!-- <%= video_tag("https://s3.amazonaws.com/noel-videos/noel-general.mp4", class: 'video img-responsive', :controls => true, :autobuffer => true) %> -->
