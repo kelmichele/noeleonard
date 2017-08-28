@@ -1173,7 +1173,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	}
 
 	.sec-form {@include sec-default(); background-color: $offwhite; padding: 40px 0;
-		.form {@include sec-default(); background-color: $white; padding: 20px;
+		.form {@include sec-default(); background-color: $blue; padding: 20px; color: white;
 			p span {font-weight: bold; font-style: italic;}
 		}
 		.notice {color: red;}
@@ -1185,8 +1185,8 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 				input, label{display: inline-block; width:auto; float: none;}
 				input{float: left; margin-right: 7px;}
 			}
-			&.message {width: 60%; @include center-block();}
-			&.submit {width: 25%; @include center-block(); .send-message {background-color: $blue; color: $white; padding: 5px; font-weight: bold; @include tshadowl($dark);}}
+			&.message {width: 80%; @include center-block();}
+			&.submit {width: 80%; @include center-block(); .send-message {background-color: $dark; color: $white; padding: 5px; font-weight: bold; @include tshadowl($dark);}}
 
 			input,textarea {width:100%; background-color: $offwhite; padding: 2px 5px}
 			textarea {height: 90px;}
