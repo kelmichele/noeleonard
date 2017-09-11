@@ -29,5 +29,5 @@ Rails.application.routes.draw do
 
   get '/wills-trusts-estate', to: 'estates#new', as: 'wills-trusts-estate'
   post '/wills-trusts-estate', to: 'estates#create'
-  get '/thanks-for-submitting', to: 'estates#thanks', as: 'thanks-for-submitting'
+  get '/thanks-for-submitting', to: 'estates#thanks-for-submitting', as: 'thanks-for-submitting'
 end
