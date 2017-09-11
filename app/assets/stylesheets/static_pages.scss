@@ -1535,10 +1535,11 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	}
 
 	.wte-s2 { @include sec-default(); padding: 30px 60px ; background-color: #f7f7f7;
+		@include sec-bgimage(); background-image: url('grand-walk-full.jpg'); background-size: 24%;
 		.cbp-item {width:100%; }
 		p {color: black; font-size: 15px;}
 
-		#accordeon, #solo {display: inline-block; float: left; width:39%; padding-right: 10px; margin-top: 30px;}
+		#accordeon, #solo {display: inline-block; float: left; width:39%; padding-right: 10px;}
 		.cbp-l-caption-body, .cbp-caption-defaultWrap {padding-left: 15px;}
 		.cbp-caption-defaultWrap {text-align: center;}
 		.image {width:20%; float: left; margin-right: 2%;}
@@ -1577,7 +1578,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			.left p {font-size: 16px; display: inline-block; float: left; width: 50%; padding:15px 15px 5px;}
 		}
 		.wte-s2 {
-			#accordeon, #solo {display: inline-block; float: left; width:39%; padding-right: 10px; margin-top: 30px;}
+			// #accordeon, #solo {display: inline-block; float: left; width:39%; padding-right: 10px; margin-top: 30px;}
 			#solo {float: right; padding-right: 0;}
 		}
 		.form {margin-top: -60%;}
@@ -1599,7 +1600,8 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			.left {padding: 20px 0px 0;}
 		}
 
-		.wte-s2 { padding: 30px 60px;
+		.wte-s2 { padding: 30px 60px 15px;
+			background-image: url('grand-walk.jpg'); background-size: 33%;
 			#accordeon, #solo {display:inline-block; width:67%; float: right; padding-right: 0; margin-top: 0px;}
 			.cbp-caption-defaultWrap {text-align: left; margin-left: 2%;}
 			.image {width:30%; float: left; margin-right: 0;}
@@ -1643,6 +1645,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		}
 
 		.wte-s2 { padding: 30px 40px;
+			background-image: none;
 			.image{display: none;}
 			#accordeon, #solo { @include sec-default();}
 			.cbp-caption-defaultWrap {margin-left: 0; padding-bottom: 0;}
