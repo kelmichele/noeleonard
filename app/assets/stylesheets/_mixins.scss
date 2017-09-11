@@ -80,6 +80,10 @@
         @media (max-width: 768px)  { @content ; }
     }
 
+    @else if $point == pl {
+        @media (max-width: 738px)  { @content ; }
+    }
+
     @else if $point == mb {
         @media (max-width: 670px)  { @content ; }
     }

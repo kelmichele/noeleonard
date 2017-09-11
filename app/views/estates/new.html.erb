@@ -7,8 +7,6 @@
 		<hr>
 		<div class="container">
 			<div class="content">
-				<!-- <p>Because estate planning in Alabama is extremely complex, it is most successfully done with the help of an attorney who has a comprehensive understanding of the process, and significant experience with estate litigation.<br> <b>Alabama Attorney, Noel B. Leonard has both.</b></p> -->
-
 				<p>For years, Alabama Attorney, Noel B. Leonard has been assisting clients throughout Mobile, Baldwin, and Escambia counties with estate planning cases. Estate planning in Alabama is extremely complex, but Attorney Leonard has a comprehensive understanding of the process, and significant experience with estate litigation.
 				He has the valuable knowledge it takes to make even the most complex and emotional cases concerning wills, trusts, and estate planning go smoothly.</p>
 			</div>
@@ -25,69 +23,69 @@
 
 	<div class="wte-s1">
 		<div class="container-fluid">
+      <div class="right">
+        <div class="form">
+          <%= form_for @estate, url: wills_trusts_estate_path do |estate| %>
+            <h4>Free Case Evaluation</h4>
+            <fieldset>
+              <% if flash[:notice] %>
+                <div class="notice"><%= flash[:notice] %></div>
+              <% end %>
+
+              <% if flash[:alert] %>
+                <div class="notice"><%= flash[:alert] %></div>
+              <% end %>
+
+              <div class="form-group name">
+                <p>*First Name:</p>
+                <%= estate.text_field :first_name %>
+              </div>
+
+              <div class="form-group last-name">
+                <p>*Last Name: </p>
+                <%= estate.text_field :last_name %>
+              </div>
+
+              <div class="form-group phone">
+                <p>*Phone Number: </p>
+                <%= estate.text_field :phone %>
+              </div>
+
+              <div class="form-group email">
+                <p>*Email address: </p>
+                <%= estate.email_field :email %>
+              </div>
+
+              <div class="form-group address">
+                <p>*Address: </p>
+                <%= estate.text_field :address %>
+              </div>
+
+              <div class="form-group message">
+                <p>*Tell us about your case: </p>
+                <%= estate.text_area :content %>
+              </div>
+
+              <div class="form-group honey">
+                <%= label_tag :honey %>
+                <%= estate.text_field :honey %>
+                <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
+              </div>
+
+              <div class="form-group submit">
+                <%= estate.submit "Submit", :class=> "send-message" %>
+              </div>
+            </fieldset>
+          <% end %>
+          <p><span>*All fields are required.</span></p>
+        </div>
+      </div>
+
 			<div class="left">
 				<p class="top">When a person in the state of Alabama passes away without a will or an estate plan, the state executes its own process for dividing that person's assets among their successors -- with no say from relatives, loved ones, or even the personal feelings of the deceased. Preparing either a will or an estate plan, however, allows you to give clear, detailed instructions on how/to whom your assets will be distributed.</p>
 
 				<p class="bold">Alabama attorney, Noel B. Leonard is a leader in the area of estate litigation. He is dedicated to providing his clients with reliable information on the different estate planning services he offers, such as drafting wills and trusts, and the legal requirements of each. He organizes strategies that help to avoid or settle any conflicts over the distribution of assets.</p>
 			</div>
-
-			<div class="right">
-	      <div class="form">
-  		        <%= form_for @estate, url: wills_trusts_estate_path do |estate| %>
-  		          <h4>Free Case Evaluation</h4>
-  		          <fieldset>
-  		            <% if flash[:notice] %>
-  		              <div class="notice"><%= flash[:notice] %></div>
-  		            <% end %>
-
-  		            <% if flash[:alert] %>
-  		              <div class="notice"><%= flash[:alert] %></div>
-  		            <% end %>
-
-  		            <div class="form-group name">
-  		              <p>*First Name:</p>
-  		              <%= estate.text_field :first_name %>
-  		            </div>
-
-  		            <div class="form-group last-name">
-  		              <p>*Last Name: </p>
-  		              <%= estate.text_field :last_name %>
-  		            </div>
-
-  		            <div class="form-group phone">
-  		              <p>*Phone Number: </p>
-  		              <%= estate.text_field :phone %>
-  		            </div>
-
-  		            <div class="form-group email">
-  		              <p>*Email address: </p>
-  		              <%= estate.email_field :email %>
-  		            </div>
-
-  		            <div class="form-group address">
-  		              <p>*Address: </p>
-  		              <%= estate.text_field :address %>
-  		            </div>
-
-  		            <div class="form-group message">
-  		              <p>*Tell us about your case: </p>
-  		              <%= estate.text_area :content %>
-  		            </div>
-
-  		            <div class="form-group honey">
-  		              <%= label_tag :honey %>
-  		              <%= estate.text_field :honey %>
-  		              <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
-  		            </div>
-
-  		            <div class="form-group submit">
-  		              <%= estate.submit "Submit", :class=> "send-message" %>
-  		            </div>
-  		          </fieldset>
-  		        <% end %>
-  		        <p><span>*All fields are required.</span></p>
-	      </div>
-	    </div>
 		</div>
 	</div>
 

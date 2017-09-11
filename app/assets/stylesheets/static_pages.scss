@@ -1512,26 +1512,25 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		&.left {float: left;}
 	}
 
-	.wte-h1 {@include sec-default(); padding: 30px 0px 70px;
+	.wte-h1 {@include sec-default(); padding: 30px 0px;
 		.content {width: 85%; @include center-block(); text-align: center;}
 		// .content { display: inline-block; width: 50%; float: left; }
 		hr {margin-bottom: 25px;}
 	}
 
 	.offer { @include sec-default(); padding:30px 0px;background-color: $blue;text-align: center; color: $white;
-		.inner {width: 70%; float: left; padding-right: 15px; margin-left: 2%;}
+		.inner {width: 70%; @include center-block();}
 		h4 {font-size: 17px; font-weight: 600; @include tshadowl(rgba($dark, .5));
 			span {font-weight: 800;}
 		}
 		h3.phone {color: $white; letter-spacing: 1px; font-size: 25px; width: 30%; padding: 5px; font-weight: bold; background-color: $dk-blue; @include center-block();}
 	}
-	.wte-s1 {@include sec-default(); padding: 0 75px 40px;
-		// position: relative;z-index: 0; &::before {@include before(); height: 165px; background-color: $blue;}
 
+	.wte-s1 {@include sec-default(); padding: 0 30px 40px;
 		.left, .right {display: inline-block;}
 		.left {width: 69%; float: left; padding: 20px 0px;}
 		.right {width: 30%; float: right; color: white; padding-left:15px;}
-		.left p {font-size: 16px; display: inline-block; float: left; width: 50%; padding:15px 15px 5px;}
+		.left p {font-size: 16px;  padding:15px 15px 5px;}
 		p.bold{font-weight: 700;}
 	}
 
@@ -1540,7 +1539,6 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		p {color: black; font-size: 15px;}
 
 		#accordeon, #solo {display: inline-block; float: left; width:39%; padding-right: 10px; margin-top: 30px;}
-		#solo {float: right; padding-right: 0;}
 		.cbp-l-caption-body, .cbp-caption-defaultWrap {padding-left: 15px;}
 		.cbp-caption-defaultWrap {text-align: center;}
 		.image {width:20%; float: left; margin-right: 2%;}
@@ -1549,7 +1547,6 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 
 	.form {
 		padding: 5px 15px 1px; background-color: $dk-blue;
-	 	margin-top: -60%;
 		p span {font-style: italic; color: $white; font-size: 14px;}
 	}
 	.notice {color: red;}
@@ -1569,6 +1566,107 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		p {font-size: 13px; margin-bottom: 4px; color: $light;}
 		input,textarea {width:100%; background-color: $offwhite; padding: 5px; border: none; color: black; }
 		textarea {height: 70px;}
+	}
+
+	@media (min-width: 1280px) {
+		.wte-h1 {@include sec-default(); padding: 30px 0px 70px;}
+		.offer {
+			.inner {width: 70%; float: left; padding-right: 15px; margin-left: 2%;}
+		}
+		.wte-s1 { padding: 0 75px 40px;
+			.left p {font-size: 16px; display: inline-block; float: left; width: 50%; padding:15px 15px 5px;}
+		}
+		.wte-s2 {
+			#accordeon, #solo {display: inline-block; float: left; width:39%; padding-right: 10px; margin-top: 30px;}
+			#solo {float: right; padding-right: 0;}
+		}
+		.form {margin-top: -60%;}
+	}
+
+	@include bp(tb) {
+		.wte-h1 {@include sec-default(); padding: 20px 0px;
+			h1 {font-size: 25px;}
+			.content {width: 100%; }
+			hr {margin-bottom: 15px;}
+		}
+		.offer { padding:20px 0px;
+			.inner {width:95%;}
+			h3.phone {font-size: 20px; width: 30%; }
+		}
+
+		.wte-s1 {padding: 0 30px 0px;
+			.left, .right {width:50%;}
+			.left {padding: 20px 0px 0;}
+		}
+
+		.wte-s2 { padding: 30px 60px;
+			#accordeon, #solo {display:inline-block; width:67%; float: right; padding-right: 0; margin-top: 0px;}
+			.cbp-caption-defaultWrap {text-align: left; margin-left: 2%;}
+			.image {width:30%; float: left; margin-right: 0;}
+			h3 {font-size: 20px;}
+		}
+	}
+
+	@include bp(md) {
+		.wte-h1 { padding: 25px 0 15px;
+			h1 {font-size: 22px;}
+			hr {margin: 10px auto 15px;}
+			p {font-size: 15px;}
+		}
+
+		.offer { padding: 25px 0 15px;
+			h3.phone {font-size: 20px; width: 30%; }
+		}
+
+		.wte-s1 {padding: 0 15px 0px;
+			.right {width:45%;}
+			.left {width:55%; padding: 10px 0px 0;
+				p {margin-bottom: 0; font-size: 15px;}
+			}
+		}
+
+		.wte-s2 { padding: 30px 40px;
+			#accordeon, #solo { width:68%; }
+			.cbp-caption-defaultWrap {margin-left: 0; padding-bottom: 0;}
+		}
+	}
+
+	@include bp(pl) {
+		.offer { padding: 15px 0 10px;
+			h4 {font-size: 16px}
+			h3.phone {font-size: 19px; width: 30%; }
+		}
+
+		.wte-s1 {padding: 0 10px 0px;
+			.right {padding-left: 10px;}
+			.left p {padding: 10px 15px 5px 0;}
+		}
+
+		.wte-s2 { padding: 30px 40px;
+			.image{display: none;}
+			#accordeon, #solo { @include sec-default();}
+			.cbp-caption-defaultWrap {margin-left: 0; padding-bottom: 0;}
+		}
+	}
+
+	@include bp(ph) {
+		.wte-h1 { padding: 15px 10px 5px;
+			h1{font-size: 20px;}
+			p {font-size: 14px;}
+		}
+
+		.offer h3.phone {width:45%;}
+
+		.wte-s1 {padding-top:15px;
+			.left,.right {width: 98%; @include center-block();}
+			.right {padding: 0;}
+		}
+	}
+
+	@include bp(xs) {
+		.offer h3.phone {width:55%; font-weight: 600;}
+
+		.wte-s1 { padding: 15px 5px 10px;}
 	}
 }
 
