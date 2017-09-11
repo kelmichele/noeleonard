@@ -8,7 +8,7 @@ class EstatesController < ApplicationController
 
     if @estate.valid?
       EstateMailer.new_estate(@estate).deliver unless estate_params[:honey].present?
-      redirect_to thanks_path, notice: "Your message has been sent."
+      redirect_to thanks_for_submitting_path, notice: "Your message has been sent."
     else
       flash[:alert] = "An error occurred while delivering this message. All fields are required."
       render :new
