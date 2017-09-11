@@ -1340,7 +1340,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	}
 }
 
-.thank-you, .thanks {
+.thank-you, .thanks, .thanks-for-submitting {
 	.pa-header {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('blur.jpg')); height:auto; text-align: center;
 		.overlay{padding: 25px 0 15px;}
 		h1, h2 {color: $white; @include tshadow($black); font-weight: bold; }
