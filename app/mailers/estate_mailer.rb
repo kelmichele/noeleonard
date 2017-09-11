@@ -6,7 +6,7 @@ class EstateMailer < ApplicationMailer
     @estate = estate
 
     mail subject: "Wills, Trusts, Estates Case Evaluation Form From Website"
-    mail to: "kelli@hsdesignhouse.com"
-    # mail to: "noel@attorney-leonard.com"
+    # mail to: "kelli@hsdesignhouse.com"
+    mail to: "noel@attorney-leonard.com"
   end
 end
