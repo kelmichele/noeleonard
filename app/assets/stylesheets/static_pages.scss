@@ -177,8 +177,15 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 				.content {display: inline-block;}
 			}
 
+			&.extra {background-image: none; background-color:rgba($dk-blue,.9);
+				&::before {display: none;}
+				.top, .btm {@include sec-default();padding:10px 0;}
+				.top {background-color: $blue; padding: 15px 20px; margin-bottom: 15px;}
+			}
+
 			&.cbox {background-image: url(image_path('traffic.jpg')); background-size: 100%;
-				.overlay {@include sec-default(); background-color: rgba(lighten($lt-blue, 5%), .94); padding: 30px 0px 20px;  }
+				width:94%; height:auto; @include center-block();
+				.overlay {@include sec-default(); background-color: rgba(lighten($lt-blue, 5%), .94); padding: 30px 0px 20px; }
 				h4{font-weight: bold; line-height: 1.5em; color: $dark;
 					a, span {color: $blue; font-weight: bold; }
 				}
@@ -223,6 +230,13 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 				&::before {height: 200px;}
 			}
 			.portrait {margin-top: 60px;}
+		}
+
+		.info-box-alt .practice-box.extra {
+			.top {padding: 10px 10px 15px;}
+				p{font-size:14px; }
+
+			.btm {padding-top:8px;}
 		}
 
 		.video-row {padding: 30px 0; }
@@ -347,6 +361,8 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 				&.cbox {height: 180px;
 					h4 {font-size: 17px;}
 				}
+
+				&.extra {.top, .btm {padding: 10px 15px;}}
 			}
 		}
 		.video.one, .video.two { width: 85%; }
