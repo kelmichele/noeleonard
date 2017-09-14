@@ -1571,7 +1571,15 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		textarea {height: 70px;}
 	}
 
-	@media (min-width: 1280px) {
+	@include bp(lg) {
+		.wte-s1 {
+			.container-fluid {width:80%; @include center-block();}
+			.left {width:60%;}
+		}
+		.form {margin-top: -15%;}
+	}
+
+	@media (min-width: 1280px) and (max-width: 1499px) {
 		.wte-h1 {@include sec-default(); padding: 30px 0px 70px;}
 		.offer {
 			.inner {width: 70%; float: left; padding-right: 15px; margin-left: 2%;}
