@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixins";
 
-header.header-new { margin-top: -18px; @include sec-default(); background-color: $navy;
+header.header-new { margin-top: -20px; @include sec-default(); background-color: $navy;
 
     .topbar{@include sec-default(); background-color: darken($navy, 3%); padding: 15px 20px 0;
       h5 {color: $lt-blue;  float: right; font-family: $lato; font-weight: bold;@include tshadow($dk-blue); margin-top:10px; font-size: 16px;
