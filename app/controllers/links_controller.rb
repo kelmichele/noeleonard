@@ -17,8 +17,8 @@ class LinksController < ApplicationController
 	end
 
 	def youtube
-		# redirect_to('https://www.youtube.com/c/+Attorney-leonard')
-		redirect_to('https://www.youtube.com/channel/UCAVsZXeG48PAg__-lxnthkA')
+		# redirect_to('https://www.youtube.com/channel/UCAVsZXeG48PAg__-lxnthkA')
+		redirect_to('https://www.youtube.com/channel/UC22T77L9ofKsZPmFhj90jXg')
 	end
 
 	def hsdh
