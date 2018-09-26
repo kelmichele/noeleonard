@@ -6,7 +6,7 @@ class ClientMailer < ApplicationMailer
     @client = client
 
     mail subject: "Case Evaluation Form From Website"
-    mail to: "noel@attorney-leonard.com, noel.leonard.urgent@gmail.com, cyndi@attorney-leonard.com"
+    mail to: "noel@attorney-leonard.com, noel.leonard.urgent@gmail.com, cyndi@attorney-leonard.com, cyndi.office.urgent@gmail.com"
     # mail to: "noel.leonard.urgent@gmail.com, kelli@hsdesignhouse.com, daniel@hsdesignhouse.com"
   end
 
