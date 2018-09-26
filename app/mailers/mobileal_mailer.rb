@@ -7,6 +7,6 @@ class MobilealMailer < ApplicationMailer
 
     mail subject: "Mobile Case Evaluation Form From Website"
     # mail to: "kelli@hsdesignhouse.com"
-    mail to: "noel@attorney-leonard.com"
+    mail to: "noel@attorney-leonard.com, noel.leonard.urgent@gmail.com, cyndi@attorney-leonard.com"
   end
 end

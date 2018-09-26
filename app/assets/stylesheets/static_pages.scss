@@ -1257,7 +1257,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			&.message {width: 80%; @include center-block();}
 			&.submit {width: 80%; @include center-block(); .send-message {background-color: $dark; color: $white; padding: 5px; font-weight: bold; @include tshadowl($dark);}}
 
-			input,textarea {width:100%; background-color: $offwhite; padding: 2px 5px}
+			input,textarea {width:100%; background-color: $offwhite; padding: 2px 5px;color: #000;}
 			textarea {height: 90px;}
 		}
 	}
@@ -1425,7 +1425,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 
 		p {font-size: 14px; margin-bottom: 4px; color: $light;}
 		p.types { margin-bottom:4px; font-size: 15px; label{font-weight: 600;}}
-		input,textarea {width:100%; background-color: $offwhite; padding: 5px; border: none; }
+		input,textarea {width:100%; background-color: $offwhite; padding: 5px; border: none; color: #000;}
 		textarea {height: 90px;}
 	}
 
@@ -1594,7 +1594,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		&.submit {width: 100%; @include center-block(); font-size: 15px; .send-message {background-color: $blue; color: $white; padding: 5px; text-transform: uppercase; @include tshadowl($dark);}}
 
 		p {font-size: 13px; margin-bottom: 4px; color: $light;}
-		input,textarea {width:100%; background-color: $offwhite; padding: 5px; border: none; color: black; }
+		input,textarea {width:100%; background-color: $offwhite; padding: 5px; border: none; color: #000; }
 		textarea {height: 70px;}
 	}
 
