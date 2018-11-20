@@ -1776,12 +1776,49 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		}
 	}
 
+	@include bp(tb) {
+		h1{font-size: 25px;}
+
+		.inside {width:90%;
+			&.mid {width:85%;}
+			&.mid2 {width:80%;}
+			&.narrow {width:70%;}
+		}
+
+		.sec1 {padding: 35px 0;
+			h2{font-size: 20px;}
+			h4{font-size: 17px;}
+		}
+
+		.sec-bg {padding:35px 0 20px;
+			p{font-size: 16px;}
+			h2{font-size: 18px;}
+			p.cta{font-size: 18px;}
+		}
+
+		.sec3 {padding:35px 0;
+			.left p, .right p{font-size: 16px;}
+		}
+	}
+
+	@include bp(tn) {
+		h1{font-size: 22px;}
+		.sec1, .sec-bg, .sec3{padding:20px 0 10px;
+			p{font-size: 15px;}
+			h2{font-size: 17px;}
+			h4{font-size: 16px;}
+			p.cta {font-size: 17px;}
+
+			.left, .right {width:100%; display: block; float:left;
+				p {font-size: 15px;}
+			}
+		}
+	}
 }
 
 .orange-beach-injury-lawyer .pa-body {
 	p{font-size: 17px;}
 	.sec1 {
-		.inside {width:65%;}
 		.title-line{margin-bottom: 35px;}
 		.left{width:40%;}
 		.right {width:57%;}
@@ -1794,6 +1831,50 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		.right{width:40%; text-align: left;}
 		p.cta{color: $blue; font-weight: 600; font-size: 18px;
 			a{color:$br-blue; font-weight: bold;}
+		}
+	}
+
+	@include bp(tb) {
+		p{font-size: 16px;}
+		.sec1 {
+			.left{width:35%;}
+			.right {width:62%;}
+		}
+
+		// .sec-bg{padding-bottom: 0px;}
+
+		.sec3 {
+			.left {width:50%; text-align: left;}
+			.right{width:48%; }
+			p.cta{font-size: 16.5px;}
+		}
+	}
+
+	@include bp(tn) {
+		.sec1, .sec3 {
+			.inside.mid2 {width:85%;}
+			h2{font-size: 17px;}
+			p{font-size: 15px;}
+			.title-line {margin-bottom:15px;}
+			.left, .right {@include sec-default();}
+		}
+
+		.sec-bg{padding-top: 25px;}
+	}
+}
+
+.foley-injury-lawyer .pa-body {
+	@include bp(tn) {
+		.sec1{
+			.btm{@include sec-default();}
+			p.one{margin-bottom: 10px;}
+		}
+
+		.sec3 {
+			.title-line {margin-bottom:12px;}
+			.right {text-align: left; margin-top: 15px;
+				.title-line {float: left;}
+			}
 		}
 	}
 }
@@ -1814,10 +1895,40 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 
 	.sec3 {
 		.title-line{float: left;}
-		h2{font-size: 24px; font-weight: 600;}
+		h2{font-size: 24px; font-weight: bold;}
 		p{font-size: 17px;
 			span {color: $br-blue;}
 		}
+	}
+
+	@include bp(tb) {
+		.sec1 {
+			.left {width:42%; margin-left: 0; }
+			.right {width:55%;}
+		}
+
+		.sec-bg {padding:30px 0 0;
+			.inside {width:90%;}
+			p{font-size: 16px;}
+			p.cta {font-size: 18px;}
+		}
+
+		.sec3 {
+			h2{font-size: 19px;}
+			p{font-size: 16px;}
+		}
+	}
+
+	@include bp(tn) {
+		.sec1, .sec3 {
+			.inside.mid2 {width:85%;}
+			h2{font-size: 17px;}
+			p{font-size: 15px;}
+			.title-line {margin-bottom:15px;}
+			.left, .right {@include sec-default();}
+		}
+
+		.sec1 .right h4{margin-bottom: 5px; margin-top: 10px;}
 	}
 }
 
