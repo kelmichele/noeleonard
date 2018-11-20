@@ -1714,7 +1714,112 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 }
 
 
+// PRACTICE AREAS
+.practice_areas .pa-body{
+	h1, h2, h3, h4, h5, p {font-family: $open; line-height: 1.5em;}
+	h1{font-size: 32px; font-weight: 600;
+		span{font-weight: bold;}
+	}
+	.title-line{width:100px; height: 1px; background-color: rgba($dark, .3); @include center-block(); margin-bottom: 20px;
+		&.left {float: left; }
+	}
 
+	.inside {width:85%; @include center-block();
+		&.lg {width:90%;}
+		&.mid {width:75%;}
+		&.mid2 {width:65%;}
+		&.narrow {width:55%;}
+	}
+
+	.sec1 {@include sec-default(); background-color: $white; padding:50px 0 65px;
+		h1 {text-align: center;}
+		h2{font-size: 25px; color: $br-blue; font-weight: 600;}
+		h4{font-weight: 600; color: $br-blue; }
+		p span {font-weight: 600; color: $blue;}
+
+		.btm{width:85%; @include center-block(); }
+		p.one{text-align: center; margin-bottom: 35px;}
+		.left, .right {display: inline-block; float: left; width:47%;}
+		.right {float: right;}
+	}
+
+	.sec-bg {@include sec-default(); position: relative;z-index: 0; padding:55px 0 40px; text-align: center;
+		@include sec-bgimage();background-image: url(image_path('pa-bg.jpg')); background-position: center center;
+
+		&::before{@include before(); background-color: rgba($br-blue,.9);}
+		h2,h3,h4,p{color:white; text-shadow: 0px 1px 2px rgba(black,.2);}
+		h2{font-weight: 600; font-size: 24px;}
+		p {font-size: 18px; font-weight: 600;}
+		p.cta{font-size: 20px;}
+		a {color:lighten($lt-blue, 10%);}
+
+		.box, .text {display: inline-block; float: right; width:60%;}
+
+		.box {width:35%; float: left; padding:30px; background-color: $br-blue;
+			margin-top: -60px;
+			h4{color: $white;}
+		}
+
+		.text {padding:40px 0;}
+	}
+
+	.sec3 {@include sec-default(); padding: 50px 0 60px;
+		h4{font-weight: 600; color:$blue;}
+		p span {font-weight: 600;}
+		p.last{ color:$br-blue;}
+		.left, .right {display: inline-block; float: left; width:63%;
+		.title-line {width:60px;}
+		}
+		.right {float: right; width: 32%; text-align: center;
+			p {font-size: 17px; }
+			a {font-weight: 600;}
+		}
+	}
+
+}
+
+.orange-beach-injury-lawyer .pa-body {
+	p{font-size: 17px;}
+	.sec1 {
+		.inside {width:65%;}
+		.title-line{margin-bottom: 35px;}
+		.left{width:40%;}
+		.right {width:57%;}
+	}
+
+	.sec-bg{padding-bottom: 20px;}
+
+	.sec3 {
+		.left {width:55%; text-align: center;}
+		.right{width:40%; text-align: left;}
+		p.cta{color: $blue; font-weight: 600; font-size: 18px;
+			a{color:$br-blue; font-weight: bold;}
+		}
+	}
+}
+
+.gulf-shores-injury-lawyer .pa-body {
+	.sec1 {
+		.title-line {margin-bottom:35px;}
+		.left {width:38%; margin-left: 4%; }
+		.right {width:55%;}
+	}
+
+	.sec-bg {padding:50px 0 20px;
+		&::before{ background-color: rgba($br-blue,.95);}
+		.inside {width:80%;}
+		p{font-size: 20px; margin-bottom: 5px;}
+		p.cta{font-size: 22px;}
+	}
+
+	.sec3 {
+		.title-line{float: left;}
+		h2{font-size: 24px; font-weight: 600;}
+		p{font-size: 17px;
+			span {color: $br-blue;}
+		}
+	}
+}
 
 
 

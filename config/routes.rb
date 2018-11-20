@@ -12,6 +12,11 @@ Rails.application.routes.draw do
   get '/personal-injury', to: 'static_pages#personal-injury'
   get '/deeds-titles', to: 'static_pages#deeds-titles'
 
+  get 'foley-injury-lawyer', to: 'practice_areas#foley-injury-lawyer', path: '/practice-areas/foley-injury-lawyer'
+  get 'gulf-shores-injury-lawyer', to: 'practice_areas#gulf-shores-injury-lawyer', path: '/practice-areas/gulf-shores-injury-lawyer'
+  get 'orange-beach-injury-lawyer', to: 'practice_areas#orange-beach-injury-lawyer', path: '/practice-areas/orange-beach-injury-lawyer'
+
+
   get '/fb', to: 'links#fb'
   get '/twitter', to: 'links#twitter'
   get '/google', to: 'links#google'
