@@ -1753,6 +1753,14 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 		p.cta{font-size: 20px;}
 		a {color:lighten($lt-blue, 10%);}
 
+		.cta-btn {background-color: $white; color: $dk-blue; padding:10px;text-transform: capitalize;
+			font-size: 18px;text-shadow: none;
+			display: inline-block; float: none; width:35%; margin: 10px 2%;
+			text-shadow: none; color:$dk-blue; font-weight: bold;  font-family: $open;
+			letter-spacing: .2px;
+			&:hover {color:$blue;}
+		}
+
 		.box, .text {display: inline-block; float: right; width:60%;}
 
 		.box {width:35%; float: left; padding:30px; background-color: $br-blue;
@@ -1811,6 +1819,11 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 
 			.left, .right {width:100%; display: block; float:left;
 				p {font-size: 15px;}
+			}
+
+			.cta-btn {
+				font-size: 16px;
+				 width:auto; @include center-block(); margin-top:20px;
 			}
 		}
 	}

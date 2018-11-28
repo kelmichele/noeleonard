@@ -3,59 +3,64 @@
 
 header.header-new { margin-top: -20px; @include sec-default(); background-color: $navy;
 
-    .topbar{@include sec-default(); background-color: darken($navy, 3%); padding: 15px 20px 0;
-      h5 {color: $lt-blue;  float: right; font-family: $lato; font-weight: bold;@include tshadow($dk-blue); margin-top:10px; font-size: 16px;
-        text-align: right; padding-right: 7%;
-        span {color: $white;}
+  .topbar{@include sec-default(); background-color: darken($navy, 3%); padding: 15px 20px 0;
+    h5 {color: $lt-blue;  float: right; font-family: $lato; font-weight: bold;@include tshadow($dk-blue); margin-top:10px; font-size: 16px;
+      text-align: right; padding-right: 7%;
+      span {color: $white;}
+    }
+  }
+
+  .main-header {@include sec-default(); padding: 10px 90px 5px;}
+  .logo-img {height:95px; float: left;}
+
+  .main-block {display: inline-block; float: right; margin-top:25px;
+    h4.call, h4.eval, .esp-link h4, ul.social-links {display: inline-block; color: $white; float: left; margin: 0 25px 0 15px;
+      span {font-weight: normal; font-size: 15px;}
+    }
+    h4.eval { a {color: $white;}}
+
+    h4.call {@include tshadow($black);}
+   .call-link{color: $blue; font-size: 22px; font-weight: bold; text-align: center; }
+
+    ul.social-links { margin:15px 10 0 0;
+      li { display: inline-block; float: left; margin-right: 10px;
+        &:last-child{margin-right: 0}
+        a {font-size: 16px;color: $white;}
       }
     }
+  }
 
-    .main-header {@include sec-default(); padding: 10px 90px 5px;}
-    .logo-img {height:95px; float: left;}
+  .mega-tab {
+    @include sec-default();list-style:none; background-color: $offwhite; text-align: center;
+    li{display:inline-block; float: none;
+      // margin: 10px 20px 0;
+      // &:first-child{margin-left: 0px;}
+      // &:last-child{margin-right: 0px;}
 
-    .main-block {display: inline-block; float: right; margin-top:25px;
-      h4.call, h4.eval, .esp-link h4, ul.social-links {display: inline-block; color: $white; float: left; margin: 0 25px 0 15px;
-        span {font-weight: normal; font-size: 15px;}
+      margin: 10px 15px 0;
+
+
+      &.mob-menu {display: none;}
+      a{ font-size: 15px; line-height: 2em; color: $dark; text-transform: uppercase; @include ease2();
+        &:hover {color: $lt-blue; }
       }
-      h4.eval { a {color: $white;}}
 
-      h4.call {@include tshadow($black);}
-     .call-link{color: $blue; font-size: 22px; font-weight: bold; text-align: center; }
+      &.has-child a.mom:hover {color: $dark;}
+    }
+    /*************9/11********************************/
+    .navbar-nav li .dropdown-menu {padding:12px 0;display:none;}
+    .has-child:hover .dropdown{display:block;width:auto; text-align: left;}
+    .navbar-nav>li:hover > ul.dropdown-menu{display: block;@include ease();}
 
-      ul.social-links { margin:15px 10 0 0;
-        li { display: inline-block; float: left; margin-right: 10px;
-          &:last-child{margin-right: 0}
-          a {font-size: 16px;color: $white;}
-        }
+    .megamenu-parent {
+      .dropdown{margin:0; margin-top:-1px; position:absolute; z-index:999; display:none; width: 100%;}
+      .dropdown .dropdown-inner{ width: 100%; background:$white; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2); padding:10px 3px 10px 8px; border-radius: 5px;}
+      .dropdown .dropdown-items{ width:100%; list-style:none; padding:0; margin:0; text-transform:none;
+        li {margin-left: 0px; display:block; padding:0 10px; position:relative; font-size:15px;}
       }
     }
-
-    .mega-tab {
-      @include sec-default();list-style:none;background-color: $offwhite;text-align: center;
-      li{display:inline-block; margin: 10px 20px 0;
-        &:first-child{margin-left: 0px;}
-        &:last-child{margin-right: 0px;}
-        &.mob-menu {display: none;}
-        a{ font-size: 15px; line-height: 2em; color: $dark; text-transform: uppercase; @include ease2();
-          &:hover {color: $lt-blue; }
-        }
-
-        &.has-child a.mom:hover {color: $dark;}
-      }
-      /*************9/11********************************/
-      .navbar-nav li .dropdown-menu {padding:12px 0;display:none;}
-      .has-child:hover .dropdown{display:block;width:auto; text-align: left;}
-      .navbar-nav>li:hover > ul.dropdown-menu{display: block;@include ease();}
-
-      .megamenu-parent {
-        .dropdown{margin:0; margin-top:-1px; position:absolute; z-index:999; display:none; width: 100%;}
-        .dropdown .dropdown-inner{ width: 100%; background:$white; box-shadow:0 3px 5px 0 rgba(0,0,0,0.2); padding:10px 3px 10px 8px; border-radius: 5px;}
-        .dropdown .dropdown-items{ width:100%; list-style:none; padding:0; margin:0; text-transform:none;
-          li {margin-left: 0px; display:block; padding:0 10px; position:relative; font-size:15px;}
-        }
-      }
-      /*************9/11********************************/
-    }
+    /*************9/11********************************/
+  }
 }
 
 
@@ -172,14 +177,6 @@ header.header-new {
       ul.social-links {text-align: center; li{float: none; &:last-child{margin-right: 15px;}}}
     }
   }
-
-  // @include bp(ph) {
-  //   .off-canvas {width: 5%; float: left; margin-top:30px;}
-  //   .main-block { width:85%; margin: 0; text-align: center; padding: 10px 0 10px 30px;
-  //     h4.call, h4.eval, .esp-link h4, ul.social-links {width:45%; margin: 10px 0; float: left;}
-  //     ul.social-links {float: right; }
-  //   }
-  // }
 }
 
 

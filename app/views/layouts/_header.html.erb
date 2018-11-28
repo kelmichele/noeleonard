@@ -3,47 +3,46 @@
     <!-- <div class="info consult">Free Consultations</div> -->
     <h5>No fees unless you collect! &nbsp;<span> We don't get paid if you don't get paid!</span></h5>
   </div>
+
   <div class="main-header">
-    <!-- <div class="container no-padding"> -->
-      <div class="logo-block"><%= link_to(image_tag( 'logo-nbl.png', alt: 'Noel Leonard Attorney - Logo', class: 'img-responsive logo-img'), root_path ) %></div>
-      <div class="main-block">
-        <h4 class="call"><b>Free Consultations:</b><br>  <div class="call-link"><%= number_to_phone(2519438638, delimiter: '-') %></div></h4>
-        <h4 class="eval">Fill Out Our<br><%= link_to('Contact Form', contact_path ) %></h4>
-        <%= link_to('/espanol', class: 'esp-link' ) do %>
-          <h4>habla espanol? <br>haga clic aqui</h4>
-        <% end %>
-        <ul class="social-links">
-          <li>
-            <%= link_to '/fb', target: '_blank' do %>
-              <i class="fa fa-facebook"></i>
-            <% end %>
-          </li>
+    <div class="logo-block"><%= link_to(image_tag( 'logo-nbl.png', alt: 'Noel Leonard Attorney - Logo', class: 'img-responsive logo-img'), root_path ) %></div>
+    <div class="main-block">
+      <h4 class="call"><b>Free Consultations:</b><br>  <div class="call-link"><%= number_to_phone(2519438638, delimiter: '-') %></div></h4>
+      <h4 class="eval">Fill Out Our<br><%= link_to('Contact Form', contact_path ) %></h4>
+      <%= link_to('/espanol', class: 'esp-link' ) do %>
+        <h4>habla espanol? <br>haga clic aqui</h4>
+      <% end %>
+      <ul class="social-links">
+        <li>
+          <%= link_to '/fb', target: '_blank' do %>
+            <i class="fa fa-facebook"></i>
+          <% end %>
+        </li>
 
-          <li>
-            <%= link_to '/twitter', target: '_blank' do %>
-              <i class="fa fa-twitter"></i>
-            <% end %>
-          </li>
+        <li>
+          <%= link_to '/twitter', target: '_blank' do %>
+            <i class="fa fa-twitter"></i>
+          <% end %>
+        </li>
 
-          <li>
-            <%= link_to '/linkedin', target: '_blank' do %>
-              <i class="fa fa-linkedin"></i>
-            <% end %>
-          </li>
+        <li>
+          <%= link_to '/linkedin', target: '_blank' do %>
+            <i class="fa fa-linkedin"></i>
+          <% end %>
+        </li>
 
-          <li>
-            <%= link_to '/twitter', target: '_blank' do %>
-              <i class="fa fa-twitter"></i>
-            <% end %>
-          </li>
+        <li>
+          <%= link_to '/twitter', target: '_blank' do %>
+            <i class="fa fa-twitter"></i>
+          <% end %>
+        </li>
 
-          <li>
-            <%= link_to '/youtube', target: '_blank' do %>
-              <i class="fa fa-youtube"></i>
-            <% end %>
-          </li>
-       </ul>
-      <!-- </div> -->
+        <li>
+          <%= link_to '/youtube', target: '_blank' do %>
+            <i class="fa fa-youtube"></i>
+          <% end %>
+        </li>
+      </ul>
     </div>
 
     <div class="off-canvas">
