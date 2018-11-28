@@ -34,7 +34,7 @@ header.header-new { margin-top: -20px; @include sec-default(); background-color:
     @include sec-default();list-style:none; background-color: $offwhite; text-align: center;
     li{display:inline-block; float: none;
       // margin: 10px 20px 0;
-      // &:first-child{margin-left: 0px;}
+      &:first-child{margin-left: 0px;}
       // &:last-child{margin-right: 0px;}
 
       margin: 10px 15px 0;
