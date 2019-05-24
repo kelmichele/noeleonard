@@ -38,32 +38,32 @@
 
               <div class="form-group name">
                 <p>*First Name:</p>
-                <%= estate.text_field :first_name %>
+                <%= estate.text_field :first_name, onpaste: "return false" %>
               </div>
 
               <div class="form-group last-name">
                 <p>*Last Name: </p>
-                <%= estate.text_field :last_name %>
+                <%= estate.text_field :last_name, onpaste: "return false" %>
               </div>
 
               <div class="form-group phone">
                 <p>*Phone Number: </p>
-                <%= estate.text_field :phone %>
+                <%= estate.text_field :phone, onpaste: "return false" %>
               </div>
 
               <div class="form-group email">
                 <p>*Email address: </p>
-                <%= estate.email_field :email %>
+                <%= estate.email_field :email, onpaste: "return false" %>
               </div>
 
               <div class="form-group address">
                 <p>*Address: </p>
-                <%= estate.text_field :address %>
+                <%= estate.text_field :address, onpaste: "return false" %>
               </div>
 
               <div class="form-group message">
                 <p>*Tell us about your case: </p>
-                <%= estate.text_area :content %>
+                <%= estate.text_area :content, onpaste: "return false" %>
               </div>
 
               <div class="form-group honey">

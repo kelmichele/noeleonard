@@ -86,27 +86,27 @@
 
                         <div class="form-group name">
                             <p>First Name:</p>
-                            <%= client.text_field :first_name %>
+                            <%= client.text_field :first_name, onpaste: "return false" %>
                         </div>
 
                         <div class="form-group last-name">
                             <p>Last Name: </p>
-                            <%= client.text_field :last_name %>
+                            <%= client.text_field :last_name, onpaste: "return false" %>
                         </div>
 
                         <div class="form-group phone">
                             <p>Phone Number: </p>
-                            <%= client.text_field :phone %>
+                            <%= client.text_field :phone, onpaste: "return false" %>
                         </div>
 
                         <div class="form-group address">
                             <p>Address: </p>
-                            <%= client.text_field :address %>
+                            <%= client.text_field :address, onpaste: "return false" %>
                         </div>
 
                         <div class="form-group email">
                             <p>Email address: </p>
-                            <%= client.email_field :email %>
+                            <%= client.email_field :email, onpaste: "return false" %>
                         </div>
 
                         <div class="form-group case_type">
@@ -130,7 +130,7 @@
 
                         <div class="form-group message">
                             <p>Additional details about your case, or services needed: </p>
-                            <%= client.text_area :content %>
+                            <%= client.text_area :content, onpaste: "return false" %>
                         </div>
 
                         <div class="form-group honey">
