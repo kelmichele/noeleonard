@@ -22,6 +22,9 @@ gem 'rack-rewrite', '~> 1.5.0'
 
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 
+# gem 'dotenv-rails', groups: [:development, :test]
+gem "recaptcha", require: "recaptcha/rails"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
