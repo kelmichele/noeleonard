@@ -6,7 +6,7 @@ class ClientsController < ApplicationController
   def create
     @client = Client.new(client_params)
 
-    if @client.valid?
+    if verify_recaptcha(model: @client) && @client.valid?
       ClientMailer.new_client(@client).deliver unless client_params[:honey].present?
       redirect_to thank_you_path, notice: "Your message has been sent."
     else
