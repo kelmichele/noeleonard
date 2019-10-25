@@ -1256,7 +1256,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 			}
 			&.message {width: 80%; @include center-block();}
 			&.submit {width: 80%; @include center-block(); .send-message {background-color: $dark; color: $white; padding: 5px; font-weight: bold; @include tshadowl($dark);}}
-			&.recap .g-recaptcha {@include center-block();}
+			&.recap {@include center-block();}
 
 			input,textarea {width:100%; background-color: $offwhite; padding: 2px 5px;color: #000;}
 			textarea {height: 90px;}
