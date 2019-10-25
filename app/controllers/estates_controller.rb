@@ -6,7 +6,7 @@ class EstatesController < ApplicationController
   def create
     @estate = Estate.new(estate_params)
 
-    if @estate.valid?
+    if verify_recaptcha(model: @estate) && @estate.valid?
       EstateMailer.new_estate(@estate).deliver unless estate_params[:honey].present?
       redirect_to thanks_for_submitting_path, notice: "Your message has been sent."
     else

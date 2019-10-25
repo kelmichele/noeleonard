@@ -6,7 +6,7 @@ class MobilealsController < ApplicationController
   def create
     @mobileal = Mobileal.new(mobileal_params)
 
-    if @mobileal.valid?
+    if verify_recaptcha(model: @mobileal) && @mobileal.valid?
       MobilealMailer.new_mobileal(@mobileal).deliver unless mobileal_params[:honey].present?
       redirect_to thanks_path, notice: "Your message has been sent."
     else
