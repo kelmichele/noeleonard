@@ -192,7 +192,9 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 				}
 			}
 
-			&.cbox {background-image: url(image_path('traffic.jpg')); background-size: 100%;
+			&.cbox {
+				// background-image: url(image_path('traffic.jpg')); background-size: 100%;
+				background-image: none;
 				width:94%; height:auto; @include center-block();
 				// width: 45%;
 				.overlay {@include sec-default(); background-color: rgba(lighten($lt-blue, 5%), .94); padding: 30px 0px 20px; }
