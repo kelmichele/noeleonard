@@ -182,7 +182,21 @@ header.header-new {
 
 
 
+.covid-bar{@include sec-default(); background-color: $red; padding:20px 0 22px; text-align: center;
+  .inside{width:90%; @include center-block();}
+  p {margin:0;color: $white; text-shadow: 0px 1px 2px rgba($black,.5); font-weight: bold; font-size: 19px; letter-spacing: .3px; line-height: 1.5em;
+    span{text-decoration: underline;}
+  }
 
+  @include bp(tb) {
+    p{font-size: 17px;}
+  }
+
+  @include bp(tn) {
+    p{font-size: 16px;}
+    br{display: none;}
+  }
+}
 
 
 
