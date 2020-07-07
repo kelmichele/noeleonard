@@ -6,8 +6,8 @@ class ClaimMailer < ApplicationMailer
     @claim = claim
 
     mail subject: "Elmiron Case Evaluation Form From Website"
-    # mail to: "noel@attorney-leonard.com, noel.leonard.urgent@gmail.com, cyndi@attorney-leonard.com, cyndi.office.urgent@gmail.com"
-    mail to: "kelli@hsdesignhouse.com"
+    mail to: "noel@attorney-leonard.com, noel.leonard.urgent@gmail.com, cyndi@attorney-leonard.com, cyndi.office.urgent@gmail.com"
+    # mail to: "kelli@hsdesignhouse.com"
   end
 
 end

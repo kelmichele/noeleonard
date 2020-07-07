@@ -11,14 +11,4 @@ class Claim
   validates_presence_of :email
   validates_presence_of :drug
   validates_presence_of :content
-
-
-
-  def armd
-		if problems_armd = "0"
-			'eh'
-		else 
-			'Age-Related Macular Degeneration'
-		end
-  end 
 end

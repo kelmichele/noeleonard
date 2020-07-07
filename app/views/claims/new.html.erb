@@ -1,5 +1,5 @@
 <% @page_title = "Elmiron Class Action Form" %>
-<% @page_description = "If you've been injured while driving in Mobile, Alabama, and need a real injury attorney that has worked cases in the Mobile area, call Noel B. Leonard for a free consultation." %>
+<% @page_description = "If you have experienced vision problems after taking the drug Elmiron, you might be entitled to compensation! Fill out our free case evaluation form to find out." %>
 
 <div class="elmiron">
   <div class="sec1">
@@ -9,10 +9,6 @@
         <h2>Fill out the form below for a free case evaluation.</h2>
         <div class="title-line"></div>
         <div class="clearfix"></div>
-
-        <!-- <h3>Are you injured from an accident in Mobile, Alabama?<br> Contact Injury Attorney Noel B. Leonard today, to discuss your options.</h3> -->
-        <!-- <h4><b>Give Noel a call, or fill out the form below to get started.</b></h4> -->
-        <!-- <h3 class="phone"><%= number_to_phone(2519438638, delimiter: '-') %></h3> -->
       </div>
     </div>
   </div>
@@ -56,26 +52,7 @@
               <%= label_tag(:drug_no, "No") %></p>
             </div>
 
-            <!-- <div class="form-group problems">
-              <p class="instr">Select all eye problems you've experienced from the list below: </p>
-              <p><%= claim.radio_button(:problems_armd, "Age-Related Macular Degeneration") %>
-              <%= label_tag(:problems_armd, "Age-Related Macular Degeneration") %></p>
-
-              <p><%= claim.radio_button(:problems_pigment, "Pigmentary Maculopathy") %>
-              <%= label_tag(:problems_pigment, "Pigmentary Maculopathy") %></p>
-
-              <p><%= claim.radio_button(:problems_blind_spots, "Blind Spots") %>
-              <%= label_tag(:problems_blind_spots, "Blind Spots") %></p>
-
-              <p><%= claim.radio_button(:problems_blurred, "Blurred Vision") %>
-              <%= label_tag(:problems_blurred, "Blurred Vision") %></p>
-
-              <p><%= claim.radio_button(:problems_blindness, "Blindness") %>
-              <%= label_tag(:problems_blindness, "Blindness") %></p>
-            </div> -->
-
             <div class="form-group problems">
-              <!-- <h2><%= @claim.armd %></h2> -->
               <p class="instr">*Select all eye problems you've experienced from the list below: </p>
               <p><%= claim.check_box :problems_armd %> <%= label_tag(:problems_armd, "Age-Related Macular Degeneration") %></p>
               <p><%= claim.check_box :problems_pigment %> <%= label_tag(:problems_pigment, "Pigmentary Maculopathy") %></p>
