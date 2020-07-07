@@ -2,8 +2,21 @@ Sender's Name: <%= @claim.full_name %>
 
 Phone Number: <%= @claim.phone %>
 
-Problems: <%= @claim.problems %>
+Email: <%= @claim.email %>
 
-Email: <<%= @claim.email %>>
+Have you taken Elmiron? <%= @claim.drug %>
+
+Problems:
+<!-- Age-Related Macular Degeneration: <%= @claim.problems_armd %> -->
+<%= @claim.armd %>
+Pigmentary Maculopathy: <%= @claim.problems_pigment %>
+Blind Spots: <%= @claim.problems_blind_spots %>
+Blurred Vision: <%= @claim.problems_blurred %>
+Blindness: <%= @claim.problems_blindness %>
+Dimming Vision: <%= @claim.problems_dimming %>
+Distorted Wavy Vision (metamorphopsia): <%= @claim.problems_distorted %>
+Problems Seeing at Night: <%= @claim.problems_night_vision %>
+Other Retinal Damage: <%= @claim.problems_other_retinal %>
+Other Vision Damage: <%= @claim.problems_other_vision %>
 
 Case Details: <%= @claim.content %>

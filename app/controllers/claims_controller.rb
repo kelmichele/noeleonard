@@ -18,6 +18,6 @@ class ClaimsController < ApplicationController
   private
 
   def claim_params
-    params.require(:claim).permit(:full_name, :phone, :email, :problems, :content, :honey)
+    params.require(:claim).permit(:full_name, :phone, :email, :drug, :problems_armd, :problems_pigment, :problems_blind_spots, :problems_blurred, :problems_blindness, :problems_dimming, :problems_distorted, :problems_night_vision, :problems_other_retinal, :problems_other_vision, :content, :honey)
   end
 end

@@ -22,7 +22,7 @@
     <div class="container-fluid">
       <div class="form">
         <%= form_for @claim, url: elmiron_path do |claim| %>
-          <h4>Free Case Evaluation</h4>
+          <h4>Free Elmiron Case Evaluation</h4>
           <fieldset>
             <% if flash[:notice] %>
               <div class="notice"><%= flash[:notice] %></div>
@@ -47,38 +47,50 @@
               <%= claim.email_field :email, onpaste: "return false" %>
             </div>
 
-            <div class="form-group problems">
-              <p class="instr">Select all eye problems you've experienced from the list below: </p>
+            <div class="form-group drug">
+              <p>*Have you taken the drug Elmiron? </p>
+              <p><%= claim.radio_button(:drug, "yes") %>
+              <%= label_tag(:drug_yes, "Yes") %></p>
 
-              <p><%= claim.radio_button(:problems, "Pigmentary Maculopathy") %>
-              <%= label_tag(:problems_pigment, "Pigmentary Maculopathy") %></p>
-
-              <p><%= claim.radio_button(:problems, "Blind Spots") %>
-              <%= label_tag(:problems_blind_spots, "Blind Spots") %></p>
-
-              <p><%= claim.radio_button(:problems, "Blurred Vision") %>
-              <%= label_tag(:problems_blurred, "Blurred Vision") %></p>
-
-              <p><%= claim.radio_button(:problems, "Blindness") %>
-              <%= label_tag(:problems_blindness, "Blindness") %></p>
+              <p><%= claim.radio_button(:drug, "Pigmentary Maculopathy") %>
+              <%= label_tag(:drug_no, "No") %></p>
             </div>
 
             <!-- <div class="form-group problems">
               <p class="instr">Select all eye problems you've experienced from the list below: </p>
-              <p><= claim.check_box :problems %> <%= label_tag(:problems_pigment, "Pigmentary Maculopathy") %></p>
-              <p><= claim.check_box :problems %> <%= label_tag(:problems_blind_spots, "Blind Spots") %></p>
-              <p><= claim.check_box :problems %> <%= label_tag(:problems_blurred, "Blurred Vision") %></p>
-              <p><= claim.check_box :problems %> <%= label_tag(:problems_blindness, "Blindness") %></p>
-              <p><= claim.check_box :problems %> <%= label_tag(:problems_dimming, "Dimming Vision ") %></p>
-              <p><= claim.check_box :problems %> <%= label_tag(:problems_distorted, "Distorted Wavy Vision (metamorphopsia)") %></p>
-              <p><= claim.check_box :problems %> <%= label_tag(:problems_night_vision, "Problems Seeing at Night") %></p>
-              <p><= claim.check_box :problems %> <%= label_tag(:problems_other_retinal, "Other Retinal Damage ") %></p>
-              <p><= claim.check_box :problems %> <%= label_tag(:problems_other_vision, "Other Vision Damage ") %></p>
+              <p><%= claim.radio_button(:problems_armd, "Age-Related Macular Degeneration") %>
+              <%= label_tag(:problems_armd, "Age-Related Macular Degeneration") %></p>
+
+              <p><%= claim.radio_button(:problems_pigment, "Pigmentary Maculopathy") %>
+              <%= label_tag(:problems_pigment, "Pigmentary Maculopathy") %></p>
+
+              <p><%= claim.radio_button(:problems_blind_spots, "Blind Spots") %>
+              <%= label_tag(:problems_blind_spots, "Blind Spots") %></p>
+
+              <p><%= claim.radio_button(:problems_blurred, "Blurred Vision") %>
+              <%= label_tag(:problems_blurred, "Blurred Vision") %></p>
+
+              <p><%= claim.radio_button(:problems_blindness, "Blindness") %>
+              <%= label_tag(:problems_blindness, "Blindness") %></p>
             </div> -->
 
+            <div class="form-group problems">
+              <!-- <h2><%= @claim.armd %></h2> -->
+              <p class="instr">*Select all eye problems you've experienced from the list below: </p>
+              <p><%= claim.check_box :problems_armd %> <%= label_tag(:problems_armd, "Age-Related Macular Degeneration") %></p>
+              <p><%= claim.check_box :problems_pigment %> <%= label_tag(:problems_pigment, "Pigmentary Maculopathy") %></p>
+              <p><%= claim.check_box :problems_blind_spots %> <%= label_tag(:problems_blind_spots, "Blind Spots") %></p>
+              <p><%= claim.check_box :problems_blurred %> <%= label_tag(:problems_blurred, "Blurred Vision") %></p>
+              <p><%= claim.check_box :problems_blindness %> <%= label_tag(:problems_blindness, "Blindness") %></p>
+              <p><%= claim.check_box :problems_dimming %> <%= label_tag(:problems_dimming, "Dimming Vision ") %></p>
+              <p><%= claim.check_box :problems_distorted %> <%= label_tag(:problems_distorted, "Distorted Wavy Vision (metamorphopsia)") %></p>
+              <p><%= claim.check_box :problems_night_vision %> <%= label_tag(:problems_night_vision, "Problems Seeing at Night") %></p>
+              <p><%= claim.check_box :problems_other_retinal %> <%= label_tag(:problems_other_retinal, "Other Retinal Damage ") %></p>
+              <p><%= claim.check_box :problems_other_vision %> <%= label_tag(:problems_other_vision, "Other Vision Damage ") %></p>
+            </div>
 
             <div class="form-group message">
-              <p>*Tell us about your case: </p>
+              <p>*Please briefly describe your experience with Elmiron: </p>
               <%= claim.text_area :content, onpaste: "return false" %>
             </div>
 
