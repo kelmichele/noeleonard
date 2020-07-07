@@ -1370,7 +1370,7 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 	}
 }
 
-.thank-you, .thanks, .thanks-for-submitting {
+.thank-you, .thanks, .thanks-for-submitting, .elmiron-submission {
 	.pa-header {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('blur.jpg')); height:auto; text-align: center;
 		.overlay{padding: 25px 0 15px;}
 		h1, h2 {color: $white; @include tshadow($black); font-weight: bold; }
@@ -1951,3 +1951,93 @@ hr.fancy {border-top:1px solid rgba($offwhite, .3); width: 60%; position: relati
 
 
 
+.elmiron_suits, .claims {
+	h1, h2, h3, h4, h5, p {font-family: $open; line-height: 1.4em;}
+	h1{letter-spacing: 0;}
+	.header-new{margin-top: -1px;
+		.topbar, .logo-block, .main-block{display: none;}
+		.main-header{padding:0; }
+	}
+	.title-line{width:50px; height: 1px; background-color: rgba($dark, .3); @include center-block(); margin-bottom: 20px;}
+
+	.sec1 {@include sec-default(); background-color: $white;
+		// @include sec-bgimage(); background-size: 30%; background-image: url(image_path('crash-mobileal.png')); background-position: bottom right;
+		.txt {width: 75%; text-align: center;padding-top:50px;@include center-block();}
+		h3{font-size: 18px;}
+		h1 {font-weight: 600;
+			b{font-weight: 800; color: $blue; text-decoration: underline;}
+		}
+		h4{font-size: 20px;}
+		h3.phone {color: $white; letter-spacing: 1px; font-size: 25px; width: 35%; padding: 5px; font-weight: bold; background-color: $dk-blue; @include center-block();}
+	}
+
+	.sec2 {@include sec-default(); background-color: lighten($blue, 20%); position: relative;z-index: 0; padding:30px 0 50px;
+		&::before {@include before(); height: 200px; background-color: $white;}
+	}
+
+	.form {width: 50%;@include center-block(); max-width:750px; padding: 10px 20px; background-color: $blue;
+		p span {font-style: italic; color: $white; font-size: 14px;}
+	}
+	.notice {color: red;}
+	form{@include sec-default(); padding-top:10px;
+		h4{font-weight: bold; color: $light; text-align: center; text-transform: uppercase; font-size: 22px; margin-bottom: 15px; @include tshadowl($dark);}
+	}
+	.form-group {@include sec-default();
+		&.message {width: 100%; @include center-block();}
+		&.submit {width: 100%; @include center-block(); font-size: 16px; .send-message {background-color: $dark; color: $white; padding: 10px 5px; text-transform: uppercase; @include tshadowl($dark);}}
+
+		p {font-size: 14px; margin-bottom: 4px; color: $light;}
+		p.types { margin-bottom:4px; font-size: 15px; label{font-weight: 600;}}
+		input,textarea {width:100%; background-color: $offwhite; padding: 5px; border: none; color: #000;}
+		textarea {height: 90px;}
+	}
+	.form-group.problems{
+		label, input{display: inline;}
+		input{float:left; width:20px; margin-right: 5px;}
+		p{margin-bottom: 7px;}
+	}
+
+
+	@include bp(tb) {
+		.header-new {padding-bottom: 10px;}
+		.form {margin-top: 30px;}
+	}
+
+	@include bp(md) {
+		header.header-new .off-canvas {margin-top:0; float: right;}
+
+		.sec1 {
+			.txt {width:98%;}
+			h3.phone {width: 50%;}
+		}
+
+		.sec2::before{height: 46%;}
+		.form {margin-top: 10px; width: 40%; margin-left: 0;}
+		.form-group {width: 100%;}
+	}
+
+	@include bp(ph) {
+		.title-line {margin-bottom: 10px;}
+		.sec1 {
+			height: auto; background-image: none;
+			.txt {padding: 20px 0;}
+			h1 {font-size: 27px;}
+			h3, h4{font-size: 16px;}
+			h3.phone{font-size: 20px;}
+		}
+
+		.form { width: 75%; @include center-block();}
+		.form-group{width: 48%;}
+		.sec2::before{display: none;}
+	}
+
+	@include bp(xs) {
+		.sec1 {
+			.container-fluid {padding:0;}
+			h1 {font-size: 24px}
+			h3, h4 {font-size: 15px; }
+			h3.phone {font-size: 18px; width: 85%;}
+		}
+		.form {width:99%;}
+	}
+}

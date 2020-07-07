@@ -1,0 +1,106 @@
+<% @page_title = "Elmiron Class Action Form" %>
+<% @page_description = "If you've been injured while driving in Mobile, Alabama, and need a real injury attorney that has worked cases in the Mobile area, call Noel B. Leonard for a free consultation." %>
+
+<div class="elmiron">
+  <div class="sec1">
+    <div class="container-fluid">
+      <div class="txt">
+        <h1>If you have experienced vision problems after taking the drug <b>Elmiron</b> (used to treat interstitial cystitis), you may be entitled to compensation!</h1>
+        <h2>Fill out the form below for a free case evaluation.</h2>
+        <div class="title-line"></div>
+        <div class="clearfix"></div>
+
+        <!-- <h3>Are you injured from an accident in Mobile, Alabama?<br> Contact Injury Attorney Noel B. Leonard today, to discuss your options.</h3> -->
+        <!-- <h4><b>Give Noel a call, or fill out the form below to get started.</b></h4> -->
+        <!-- <h3 class="phone"><%= number_to_phone(2519438638, delimiter: '-') %></h3> -->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="sec2">
+    <div class="container-fluid">
+      <div class="form">
+        <%= form_for @claim, url: elmiron_path do |claim| %>
+          <h4>Free Case Evaluation</h4>
+          <fieldset>
+            <% if flash[:notice] %>
+              <div class="notice"><%= flash[:notice] %></div>
+            <% end %>
+
+            <% if flash[:alert] %>
+              <div class="notice"><%= flash[:alert] %></div>
+            <% end %>
+
+            <div class="form-group name">
+              <p>*Full Name: </p>
+              <%= claim.text_field :full_name, onpaste: "return false" %>
+            </div>
+
+            <div class="form-group phone">
+              <p>*Phone Number: </p>
+              <%= claim.text_field :phone, onpaste: "return false" %>
+            </div>
+
+            <div class="form-group email">
+              <p>*Email address: </p>
+              <%= claim.email_field :email, onpaste: "return false" %>
+            </div>
+
+            <div class="form-group problems">
+              <p class="instr">Select all eye problems you've experienced from the list below: </p>
+
+              <p><%= claim.radio_button(:problems, "Pigmentary Maculopathy") %>
+              <%= label_tag(:problems_pigment, "Pigmentary Maculopathy") %></p>
+
+              <p><%= claim.radio_button(:problems, "Blind Spots") %>
+              <%= label_tag(:problems_blind_spots, "Blind Spots") %></p>
+
+              <p><%= claim.radio_button(:problems, "Blurred Vision") %>
+              <%= label_tag(:problems_blurred, "Blurred Vision") %></p>
+
+              <p><%= claim.radio_button(:problems, "Blindness") %>
+              <%= label_tag(:problems_blindness, "Blindness") %></p>
+            </div>
+
+            <!-- <div class="form-group problems">
+              <p class="instr">Select all eye problems you've experienced from the list below: </p>
+              <p><= claim.check_box :problems %> <%= label_tag(:problems_pigment, "Pigmentary Maculopathy") %></p>
+              <p><= claim.check_box :problems %> <%= label_tag(:problems_blind_spots, "Blind Spots") %></p>
+              <p><= claim.check_box :problems %> <%= label_tag(:problems_blurred, "Blurred Vision") %></p>
+              <p><= claim.check_box :problems %> <%= label_tag(:problems_blindness, "Blindness") %></p>
+              <p><= claim.check_box :problems %> <%= label_tag(:problems_dimming, "Dimming Vision ") %></p>
+              <p><= claim.check_box :problems %> <%= label_tag(:problems_distorted, "Distorted Wavy Vision (metamorphopsia)") %></p>
+              <p><= claim.check_box :problems %> <%= label_tag(:problems_night_vision, "Problems Seeing at Night") %></p>
+              <p><= claim.check_box :problems %> <%= label_tag(:problems_other_retinal, "Other Retinal Damage ") %></p>
+              <p><= claim.check_box :problems %> <%= label_tag(:problems_other_vision, "Other Vision Damage ") %></p>
+            </div> -->
+
+
+            <div class="form-group message">
+              <p>*Tell us about your case: </p>
+              <%= claim.text_area :content, onpaste: "return false" %>
+            </div>
+
+            <div class="form-group honey">
+              <%= label_tag :honey %>
+              <%= claim.text_field :honey %>
+              <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
+            </div>
+
+            <div class="form-group recap">
+              <% if ENV["RECAPTCHA_SITE_KEY"] != nil %>
+                <%= recaptcha_tags %>
+              <% end %>
+            </div>
+
+            <div class="form-group submit">
+              <%= claim.submit "Submit", :class=> "send-message" %>
+            </div>
+          </fieldset>
+        <% end %>
+        <p><span>*All fields are required.</span></p>
+      </div>
+    </div>
+  </div>
+</div>
