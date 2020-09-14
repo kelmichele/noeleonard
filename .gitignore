@@ -19,3 +19,6 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+.ruby-gemset.09.14.2020-11:18:33
+.ruby-version.09.14.2020-11:18:33
