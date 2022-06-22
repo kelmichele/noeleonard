@@ -71,85 +71,8 @@
 
         <div id="case_form" class="sec-form">
           <div class="container">
-            <div class="form">
-                <p class="text-center">Answer a few questions for us, and someone from our team will be in touch with you very soon.<br>
-                <span>*All fields are required.</span></p>
-                <%= form_for @client, url: contact_path do |client| %>
-                    <fieldset>
-                        <% if flash[:notice] %>
-                            <div class="notice"><%= flash[:notice] %></div>
-                        <% end %>
-
-                        <% if flash[:alert] %>
-                            <div class="notice"><%= flash[:alert] %></div>
-                        <% end %>
-
-                        <div class="form-group name">
-                            <p>First Name:</p>
-                            <%= client.text_field :first_name, onpaste: "return false" %>
-                        </div>
-
-                        <div class="form-group last-name">
-                            <p>Last Name: </p>
-                            <%= client.text_field :last_name, onpaste: "return false" %>
-                        </div>
-
-                        <div class="form-group phone">
-                            <p>Phone Number: </p>
-                            <%= client.text_field :phone, onpaste: "return false" %>
-                        </div>
-
-                        <div class="form-group address">
-                            <p>Address: </p>
-                            <%= client.text_field :address, onpaste: "return false" %>
-                        </div>
-
-                        <div class="form-group email">
-                            <p>Email address: </p>
-                            <%= client.email_field :email, onpaste: "return false" %>
-                        </div>
-
-                        <div class="form-group case_type">
-                            <p>I Need Help With: </p>
-
-                              <p><%= client.radio_button(:case_type, "Auto Injury", class: 'inline') %>
-                              <%= label_tag(:case_type_auto, "Injury from an Auto Accident", class: 'inline') %></p>
-
-                              <p><%= client.radio_button(:case_type, "Motorcycle Injury") %>
-                              <%= label_tag(:case_type_motorcycle, "Injury from a Motorcycle Accident") %></p>
-
-                              <p><%= client.radio_button(:case_type, "18-Wheeler Injury") %>
-                              <%= label_tag(:case_type_truck, "Injury from an 18-Wheeler Accident") %></p>
-
-                              <p><%= client.radio_button(:case_type, "Other") %>
-                              <%= label_tag(:case_type_other, "Other") %></p>
-                        </div>
-
-
-                        <div class="clearfix"></div>
-
-                        <div class="form-group message">
-                            <p>Additional details about your case, or services needed: </p>
-                            <%= client.text_area :content, onpaste: "return false" %>
-                        </div>
-
-                        <div class="form-group honey">
-                            <%= label_tag :honey %>
-                            <%= client.text_field :honey %>
-                            <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
-                        </div>
-
-                        <div class="form-group recap">
-                          <% if ENV["RECAPTCHA_SITE_KEY"] != nil %>
-                            <%= recaptcha_tags %>
-                          <% end %>
-                        </div>
-
-                        <div class="form-group submit">
-                            <%= client.submit "Submit", :class=> "send-message" %>
-                        </div>
-                    </fieldset>
-                <% end %>
+            <div class="form jform">
+                <script type="text/javascript" src="https://form.jotform.com/jsform/221674078809061"></script>
             </div>
           </div>
         </div>

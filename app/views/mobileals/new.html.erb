@@ -20,77 +20,20 @@
 
     <div class="sec2">
       <div class="container-fluid">
-        <div class="form">
-          <%= form_for @mobileal, url: mobile_accident_attorney_path do |mobileal| %>
-            <h4>Free Case Evaluation</h4>
-            <fieldset>
-              <% if flash[:notice] %>
-                <div class="notice"><%= flash[:notice] %></div>
-              <% end %>
-
-              <% if flash[:alert] %>
-                <div class="notice"><%= flash[:alert] %></div>
-              <% end %>
-
-              <div class="form-group name">
-                <p>*First Name:</p>
-                <%= mobileal.text_field :first_name, onpaste: "return false" %>
-              </div>
-
-              <div class="form-group last-name">
-                <p>*Last Name: </p>
-                <%= mobileal.text_field :last_name, onpaste: "return false" %>
-              </div>
-
-              <div class="form-group phone">
-                <p>*Phone Number: </p>
-                <%= mobileal.text_field :phone, onpaste: "return false" %>
-              </div>
-
-              <div class="form-group email">
-                <p>*Email address: </p>
-                <%= mobileal.email_field :email, onpaste: "return false" %>
-              </div>
-
-              <div class="form-group address">
-                <p>*Address: </p>
-                <%= mobileal.text_field :address, onpaste: "return false" %>
-              </div>
-
-              <div class="form-group message">
-                <p>*Tell us about your case: </p>
-                <%= mobileal.text_area :content, onpaste: "return false" %>
-              </div>
-
-              <div class="form-group honey">
-                <%= label_tag :honey %>
-                <%= mobileal.text_field :honey %>
-                <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
-              </div>
-
-              <div class="form-group recap">
-                <% if ENV["RECAPTCHA_SITE_KEY"] != nil %>
-                  <%= recaptcha_tags %>
-                <% end %>
-              </div>
-
-              <div class="form-group submit">
-                <%= mobileal.submit "Submit", :class=> "send-message" %>
-              </div>
-            </fieldset>
-          <% end %>
-          <p><span>*All fields are required.</span></p>
+        <div class="form jform">
+          <script type="text/javascript" src="https://form.jotform.com/jsform/221674620302042"></script>
         </div>
 
         <div class="text-sec">
           <div class="top">
             <p>
-              As an acting injury attorney,​ Noel B. Leonard has successfully represented injured Mobile, Alabama drivers, passengers, and accident victims for years, providing the crucial compensation needed to pay for accident-related expenses such as lost wages and medical bills​.
+              As an acting injury attorney, Noel B. Leonard has successfully represented injured Mobile, Alabama drivers, passengers, and accident victims for years, providing the crucial compensation needed to pay for accident-related expenses such as lost wages and medical bills.
             </p>
+            
             <%= image_tag('logo-nbl.png', class: 'img-responsive center-block') %>
           </div>
           <div class="bot">
-            <p>If you've been injured while driving in Mobile, Alabama - don't hesitate to call Noel!<br>
+            <p>If you've been injured while driving in Mobile, Alabama - don't hesitate to call Noel!<br class="kp">
             Get a free consultation with a real injury attorney that has worked cases in the Mobile Area.</p>
 
             <h3 class="phone"><%= number_to_phone(2519438638, delimiter: '-') %></h3>
@@ -102,4 +45,3 @@
     </div>
   </div>
 </div>
-          <!-- <%= video_tag("https://s3.amazonaws.com/noel-videos/noel-general.mp4", class: 'video img-responsive', :controls => true, :autobuffer => true) %> -->
