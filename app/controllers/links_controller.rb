@@ -1,7 +1,7 @@
 class LinksController < ApplicationController
 	layout false
 	def fb
-	    redirect_to('https://www.facebook.com/NoelBLeonard/')
+	    redirect_to('https://www.facebook.com/NBLPersonalInjuryAttorney')
 	end
 
 	def twitter
